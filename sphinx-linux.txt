@@ -1,0 +1,20 @@
+# More info: http://docs.readthedocs.io/en/latest/
+
+sudo apt-get install python-sphinx
+
+# skip these lines if you use the repository of GilaCMS/docs
+mkdir docs
+cd docs
+sphinx-quickstart
+
+# for Ubuntu 17.04 there is no need for python-pip, just with apt-get
+# sudo apt-get install python-recommonmark
+sudo apt-get install python-pip
+pip install recommonmark
+
+# in case you need to downgrade to fix a bug with docutils
+sudo pip install docutils==0.12
+
+# to build the html
+make html
+
