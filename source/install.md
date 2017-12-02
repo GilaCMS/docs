@@ -1,31 +1,31 @@
 
 # Installation
 
-### Prequesites
+### Preparation
 
-Before beginning with installation make sure that your server meets these requirements:
+Before beginning with installation make sure that your web host or local server meets these requirements:
 
 - Apache 2 server
-- MySQL server
+- MySQL / MariaDB server
 - PHP 5.4+ with the following extensions *mysqli, zip, mysqlnd, json* and *mod_rewrite* enabled
 
-If you are not sure how to prepare your server don't hesitate to ask for help on [Slack](https://gilacms.slack.com)
+If you want to install gila cms in your local machine and not sure how to prepare your server don't hesitate to ask for help on [Slack](https://gilacms.slack.com)
 
-### Preparing for installation
+First unzip gila in a public html folder e.g */var/www/html/gila* and make sure that the folder is writable from the application.
 
-1. First we create a new database in mysql and a user with all privileges in that schema.
+In order to proceed with the installation, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.
 
-2. We unzip gila in a public html folder e.g */var/www/html/gila* and make sure that the folder is writable from the application
+### Installer
 
-3. We access in installation with the browser e.g *http://localhost/gila/install*
+We access in installation page with the browser e.g *http://localhost/gila/install*
 
 ![Install](assets/install.jpg)
 
 In the installation page we must fill all the fields
 
-**Hostname:** the host name of the database, usually it is *localhost*
+**Hostname:** the hostname of the database, usually it is *localhost*
 
-**Database:** name of the database for the website
+**Database:** name of the database
 
 **DB Username, DB Password:** the username and the password in order to connect to the mysql
 
@@ -42,8 +42,8 @@ When installation is finished we can enter on the admin panel using the admin em
 ![alt text](assets/login.jpg)
 
 We can always access in the login page from these links
-- **/login** it redirects in the front page of the website
-- **/admin** it redirects in the administration
+*mysite.com/* **login** it redirects to the front page of the website
+*mysite.com/* **/admin** it redirects to the administration
 
 We enter in the administration dashboard.
 

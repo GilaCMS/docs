@@ -17,7 +17,9 @@ Gila CMS is a good option for self-hosted blogs or startup websites
 You can help us spread the word about Gila CMS! We would surely appreciate it!
 - Follow our [Facebook Page](https://www.facebook.com/gilacms/)
 - [Retweet](https://twitter.com/GilaCms) us!
+- Give a star on [Github](https://github.com/GilaCMS/gila)
 
-### Where to get help
+### Where you can get help
 
-Join [Slack](https://gilacms.slack.com) or [Discord](https://discord.gg/BGYFfx6)
+- Join [Slack](https://gilacms.slack.com) or [Discord](https://discord.gg/BGYFfx6)
+- Ask on stackoverflow using the tag **gilacms**

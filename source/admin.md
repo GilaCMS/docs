@@ -46,14 +46,14 @@ You can select the theme from Administration->Themes
 
 ![Themes](assets/themes.png)
 
-The selected theme usually shows an **Options** button. By clicking this button you can change some  options for the theme like the header image (banner) of the website or the main color.
-
+The selected theme usually shows an **Options** button. By clicking this button you can change some  options for the theme like the header image (logo) of the website or the main color.
 
 ### Settings
 
 On Administration->Settings page and we can make the following configurations
 
-- **Title** is the website title. It will appear up from the menu if we don't use a banner for the template.
+![Themes](assets/settings.png)
+- **Title** is the website title. It will appear up from the menu if we don't use a logo from the theme options.
 - **Description** is a small text that describes the website.
 - **Website URL** the url path like 'www.mysite.com' or 'https://mysite.com'
 - **Theme** changes the look and style of your website. You can select theme from *Administration->Themes*
