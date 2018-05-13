@@ -60,9 +60,9 @@ A simple **package.json** file:
 
 
 You can also add another index in the object called *options*. It will be an array of objects, the objects are the options to be stored. The index is the option name and it can have optional values with the following indexes:
-**title**  the option name to be displayed, if not specified, the index is used
-**type**  select | postcategory
-**options** array of {value:display_text}, it is required if is set type:select
+- **title**  the option name to be displayed, if not specified, the index is used
+- **type**  select | postcategory
+- **options** array of {value:display_text}, it is required if is set type:select
 
 ```
 {

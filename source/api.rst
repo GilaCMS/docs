@@ -96,7 +96,7 @@ Core Classes
 
     Registers and fires events (hooks)
 
-    .. method:: listen(event, $handler)
+    .. method:: listen($event, $handler)
 
         (static) Sets a new function to run when an event is triggered later.
 
@@ -109,3 +109,107 @@ Core Classes
 
         :param string $event: The event name.
         :param function $params: (optional) Parameters to send to handlers.
+
+
+
+.. class:: view
+
+    Have methods that outputs the HTML
+
+    .. method:: function set($param,$value)
+
+        (static) Sets a parameter from a controller action that can be used later from a view file.
+
+        :param string $param: The parameter name.
+        :param (any) $handler: The value.
+
+
+    .. method:: meta($meta,$value)
+
+        (static) Sets a meta value that is printed later from view::head().
+
+        :param string $meta: The meta name.
+        :param string $value: The value.
+
+
+    .. method:: stylesheet($href)
+
+        (static) Adds a new stylesheet link that is printed later from view::head().
+
+        :param string $href: The href attribute from the link.
+
+
+    .. method:: script($script)
+
+        (static) Adds a new script to be included in the output HTML.
+
+        :param string $script: The src attribute from the script.
+
+
+    .. method:: getThemePath()
+
+        (static) Returns the path of the current theme.
+
+    .. method:: head($meta=[])
+
+        (static) Prints all the head information in <head> tag.
+
+        :param Array $file: (optional) Meta values to be printed.
+
+
+    .. method:: findPath($file, $package = 'core')
+
+        (static) Returns the path of a file inside theme or package folder.
+
+        :param Array $file: The file path.
+        :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
+        :returns: False if file is not found.
+
+
+    .. method:: render($file, $package = 'core')
+
+        (static) Prints the view file adding the header.php and footer.php from theme.
+
+        :param string $file: The file path.
+        :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
+
+
+    .. method:: renderAdmin($file, $package = 'core')
+
+        (static) Prints the view file adding the admin/header.php and admin/footer.php from theme.
+
+        :param string $file: The file path.
+        :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
+
+
+    .. method:: renderFile($file, $package = 'core')
+
+        (static) Prints the view file alone from theme.
+
+        :param string $file: The file path.
+        :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
+
+
+    .. method:: includeFile($file, $package = 'core')
+
+        (static) Includes the view file without passing the.
+
+        :param string $file: The file path.
+        :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
+
+
+    .. method:: widget_area ($area,$div=true)
+
+        (static) Prints the widgets of a specific area.
+
+        :param string $area: The widget area name.
+        :param bool $div: (optional) Also print or not the widget inside a <div> tag with its title.
+
+
+    .. method:: widget_area ($area,$id,$max=180)
+
+        (static) Returns the path of a thumbnail image of specified dimensions. If thumbnail does not exist it will create one.
+
+        :param string $src: The path of original image.
+        :param string $id: The name of the thumbnail.
+        :param int $max: (optional) The maximum width or height of thumbnail in pixels.
