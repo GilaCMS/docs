@@ -9,7 +9,7 @@ The website is [gilacms.com](http://gilacms.com)
 Gila CMS is a good option for self-hosted blogs or startup websites
 - Installs by default a blogging system with social integrations.
 - No coding skills are required to install or maintain the website
-- Themes that includes are responsive, that makes it accessible in all devices.
+- Themes that include are responsive, that makes it accessible in all devices.
 - It is fast, and compresses the content where it needs to.
 
 ### Spreading the word!
@@ -21,5 +21,5 @@ You can help us spread the word about Gila CMS! We would surely appreciate it!
 
 ### Where you can get help
 
-- Join [Slack](https://gilacms.slack.com) or [Discord](https://discord.gg/BGYFfx6)
+- Join [Slack](https://gilacms.slack.com) or [Gitter](https://gitter.im/GilaCMS/Lobby)
 - Ask on stackoverflow using the tag **gilacms**
