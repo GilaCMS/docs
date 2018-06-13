@@ -24,6 +24,7 @@ Contents:
 
    structure
    package
+   package_examples
    api
 
 Indices and tables
