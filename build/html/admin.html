@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Administration &mdash; Gila CMS 24 Nov 2017 documentation</title>
+  <title>Administration &mdash; Gila CMS 1.7.2 documentation</title>
   
 
   
@@ -34,7 +34,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="Gila CMS 24 Nov 2017 documentation" href="index.html"/>
+    <link rel="top" title="Gila CMS 1.7.2 documentation" href="index.html"/>
         <link rel="next" title="Structure" href="structure.html"/>
         <link rel="prev" title="Content" href="content.html"/>
 
@@ -76,7 +76,7 @@
             
             
               <div class="version">
-                1.3
+                1.7.2
               </div>
             
           
@@ -99,43 +99,32 @@
             
                 <p class="caption"><span class="caption-text">User Manual</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about.html#why-choose-gila">Why choose Gila?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#spreading-the-word">Spreading the word!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#where-you-can-get-help">Where you can get help</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#preparation">Preparation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#installer">Installer</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="content.html">Content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="content.html#pages">Pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#posts">Posts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#categories">Categories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#media">Media</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">Content</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Administration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#users">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#users">Users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-roles">User Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#main-menu">Main Menu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#widgets">Widgets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#themes">Themes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-settings">Basic Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-setting">Advanced Setting</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Programmers Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#packages">Packages</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">Api</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#core-classes">Core Classes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="package_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Api</a></li>
 </ul>
 
             
@@ -182,23 +171,52 @@
             
   <div class="section" id="administration">
 <span id="administration"></span><h1>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">¶</a></h1>
-<p>In the administration menu you the Administration option gives a submenu of the basic administation areas</p>
+<p>In the administration menu you the Administration option gives a sub menu of the basic administration areas</p>
 <ul class="simple">
 <li><a class="reference external" href="#users"><strong>Users</strong></a></li>
+<li><a class="reference external" href="#mainmenu"><strong>Main Menu</strong></a></li>
 <li><a class="reference external" href="#widgets"><strong>Widgets</strong></a></li>
 <li><a class="reference external" href="#packages"><strong>Packages</strong></a></li>
 <li><a class="reference external" href="#themes"><strong>Themes</strong></a></li>
 <li><a class="reference external" href="#settings"><strong>Settings</strong></a></li>
 </ul>
+<p><br></p>
 <div class="section" id="users">
 <span id="users"></span><h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
-<p>Users are the persons that you can grand access to website and give theme privileges to create or edit content.</p>
-<p>....Under development....</p>
+<p>Users are the persons that you can grand access to website and give them privileges to create or edit content. On <em>Users</em> tab you can add new or modify existing users.
+<img alt="Themes" src="_images/users172.png" /></p>
+<div class="section" id="user-roles">
+<span id="user-roles"></span><h3>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this headline">¶</a></h3>
+<p>On <em>Roles</em> you can add new roles for the users. Roles represent job functions and through them users acquire specific permissions.
+<img alt="Roles" src="_images/user-roles.png" /></p>
+</div>
+<div class="section" id="permissions">
+<span id="permissions"></span><h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
+<p>On <em>Permissions</em> you can set the common permissions that all registered users can have or to specific user roles. Permissions grand to the users access to resources or perform certain operations.
+<img alt="Permissions" src="_images/user-permissions.png" /></p>
+<p><br></p>
+</div>
+</div>
+<div class="section" id="main-menu">
+<span id="main-menu"></span><h2>Main Menu<a class="headerlink" href="#main-menu" title="Permalink to this headline">¶</a></h2>
+<p>The main menu is displayed in the navigation bar of the front pages of the website. By default the menu will include a link to the home page, the post categories and the publish pages. In this area you can modify the with the menu editor.
+This <a class="reference external" href="https://www.youtube.com/watch?v=CFIQ-DWoeMY">video</a> demonstrates quickly how you can edit the menu:</p>
+<p><br></p>
 </div>
 <div class="section" id="widgets">
 <span id="widgets"></span><h2>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h2>
-<p>Widgets are some blocks that you can show them on the layout of the website and improve the user experiense of the visitors. Widgets can be for example <em>menus, comment sections, text blocks, lists of links</em>.</p>
-<p>....Under development....</p>
+<p>Widgets are some blocks that you can show them on the layout of the website and improve the user experience of the visitors. Widgets can be for example <em>menus, comment sections, text blocks, lists of links</em>.
+Every page have four values:</p>
+<ul class="simple">
+<li><strong>ID</strong>: a unique identifier</li>
+<li><strong>Title</strong>: the title of the widget</li>
+<li><strong>Type</strong>: widget type</li>
+<li><strong>Widget Area</strong>: is where the widget will be displayed. Can be an area in a view from the website theme or the administration.</li>
+<li><strong>Position</strong>: the position of the widget in the widget area.</li>
+<li><strong>Active</strong>: if the widget is visible or not.</li>
+</ul>
+<p><strong>Notice:</strong> When you create a new widget you can set the type of the widget, this field cannot not be changed later since it determines the widget&#8217;s structure of the data.</p>
+<p><br></p>
 </div>
 <div class="section" id="packages">
 <span id="packages"></span><h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
@@ -208,26 +226,43 @@ For example <em>Facebook Comments Plugin</em> add a facebook comments section be
 <p><img alt="Themes" src="_images/addons.png" /></p>
 <p>The installed packages usually show an <strong>Options</strong> button. By clicking this button you can change some  parameters for the specific package. When you save the settings the changes will take effect by reloading the page.</p>
 <p><img alt="Themes" src="_images/addon-options.png" /></p>
+<p><br></p>
 </div>
 <div class="section" id="themes">
 <span id="themes"></span><h2>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
 <p>Themes change the look and style of your website. They use different colors and fonts and helps your visitors identify your website and improve their user experience (UX).</p>
 <p>You can select the theme from Administration-&gt;Themes</p>
-<p><img alt="Themes" src="_images/themes.png" /></p>
+<p><img alt="Themes" src="_images/themes172.png" /></p>
 <p>The selected theme usually shows an <strong>Options</strong> button. By clicking this button you can change some  options for the theme like the header image (logo) of the website or the main color.</p>
+<p><br></p>
 </div>
 <div class="section" id="settings">
 <span id="settings"></span><h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
 <p>On Administration-&gt;Settings page and we can make the following configurations</p>
-<p><img alt="Themes" src="_images/settings.png" /></p>
+<div class="section" id="basic-settings">
+<span id="basic-settings"></span><h3>Basic Settings<a class="headerlink" href="#basic-settings" title="Permalink to this headline">¶</a></h3>
+<p><img alt="Themes" src="_images/settings172.png" /></p>
 <ul class="simple">
 <li><strong>Title</strong> is the website title. It will appear up from the menu if we don&#8217;t use a logo from the theme options.</li>
 <li><strong>Description</strong> is a small text that describes the website.</li>
-<li><strong>Website URL</strong> the url path like &#8216;www.mysite.com&#8217; or &#8216;https://mysite.com&#8217;</li>
-<li><strong>Theme</strong> changes the look and style of your website. You can select theme from <em>Administration-&gt;Themes</em></li>
+<li><strong>Website URL</strong> the url path for exmple &#8216;https://mysite.com&#8217;</li>
+<li><strong>Admin Email</strong> sets the email of the administration.</li>
+<li><strong>New users can register</strong> adds the registration form for the visitors so they can register as users.</li>
+<li><strong>Theme</strong> changes the look and style of your website. You can also change the theme from <em>Administration-&gt;Themes</em></li>
 <li><strong>Timezone</strong> The dates and times saved in posts, logs and the rest of the content will be based on the selected timezone.</li>
-<li><strong>Default controller</strong> The controller that will be used if the calling path do not provide it as first parameter. For example the <strong>Admin</strong> controller is used when we call mysite.com/admin but when we call <em>mysite.com</em> or <em>mysite.com/my-post</em> the default controller will be used, which is <strong>Blog</strong>, so these paths are egual with <em>mysite.com</em> and <em>mysite.com/my-post</em>. There is not need to change the default controller unless you want to change how the website will be used.</li>
+<li><strong>Language</strong> The language of the website and the administration menu.</li>
 </ul>
+</div>
+<div class="section" id="advanced-setting">
+<span id="advanced-setting"></span><h3>Advanced Setting<a class="headerlink" href="#advanced-setting" title="Permalink to this headline">¶</a></h3>
+<p>You change these setting if you are developing or set up the installtion.</p>
+<ul class="simple">
+<li><strong>Use CDN</strong> Use CDN for static files of popular libraries (jquery.js, vue.js). It&#8217;s not advised for local installation where internet connection may fail.</li>
+<li><strong>Default controller</strong> The controller that will be used if the calling path do not provide it as first parameter. For example the <strong>Admin</strong> controller is used when we call mysite.com/admin but when we call <em>mysite.com</em> or <em>mysite.com/my-post</em> the default controller will be used, which is <strong>Blog</strong>, so these paths are egual with <em>mysite.com</em> and <em>mysite.com/my-post</em>. There is not need to change the default controller unless you want to change how the website will be used.</li>
+<li><strong>Pretty Urls</strong> turns <em>?c=blog&amp;action=tag&amp;tag=linux</em> into <em>blog/tag/linux</em>. If is not selected by default then your apache server may not have the <em>mod_rewrite</em> enabled.</li>
+<li><strong>Environment</strong> If changes to <em>Development</em> the website wont use the combine <em>load.php</em> from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -272,7 +307,7 @@ For example <em>Facebook Comments Plugin</em> add a facebook comments section be
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'24 Nov 2017',
+            VERSION:'1.7.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

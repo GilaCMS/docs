@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Structure &mdash; Gila CMS 24 Nov 2017 documentation</title>
+  <title>Structure &mdash; Gila CMS 1.7.2 documentation</title>
   
 
   
@@ -34,8 +34,8 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="Gila CMS 24 Nov 2017 documentation" href="index.html"/>
-        <link rel="next" title="Api" href="api.html"/>
+    <link rel="top" title="Gila CMS 1.7.2 documentation" href="index.html"/>
+        <link rel="next" title="Examples" href="package_examples.html"/>
         <link rel="prev" title="Administration" href="admin.html"/>
 
 <script>
@@ -76,7 +76,7 @@
             
             
               <div class="version">
-                1.3
+                1.7.2
               </div>
             
           
@@ -99,32 +99,10 @@
             
                 <p class="caption"><span class="caption-text">User Manual</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about.html#why-choose-gila">Why choose Gila?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#spreading-the-word">Spreading the word!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#where-you-can-get-help">Where you can get help</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install.html#preparation">Preparation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install.html#installer">Installer</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="content.html">Content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="content.html#pages">Pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#posts">Posts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#categories">Categories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#media">Media</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="admin.html">Administration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#users">Users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#widgets">Widgets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#packages">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#themes">Themes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#settings">Settings</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Administration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programmers Guide</span></p>
 <ul class="current">
@@ -132,10 +110,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">Api</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#core-classes">Core Classes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="package_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Api</a></li>
 </ul>
 
             
@@ -210,6 +186,7 @@ config.php
 controllers/
 models/
 views/
+lang/
 package.json
 load.php
 </pre></div>
@@ -261,11 +238,11 @@ $lang = gila::option(&quot;my_package.lang&quot;,&quot;en_US&quot;); // use defa
 <div class="highlight-python"><div class="highlight"><pre>&lt;?php
 // display text below any post
 event::listen(&#39;post.after&#39;,function(){
-    echo &#39;The post has ended&#39;;
+    echo &#39;This is printed after post.&#39;;
 }
 </pre></div>
 </div>
-<p><strong>IMPORTANT:</strong> The first line of the file should include only the opening tag, and not use later the closing tag.</p>
+<p><strong>IMPORTANT:</strong> The first line of the load.php file should include only the opening tag <em>&lt;?php</em> and not close with the closing tag.</p>
 <p>For any question/feature proposal/help needed
 <a class="reference external" href="https://github.com/GilaCMS/gila/issues/new">Make a new issue</a></p>
 </div>
@@ -278,7 +255,7 @@ event::listen(&#39;post.after&#39;,function(){
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api.html" class="btn btn-neutral float-right" title="Api" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="package_examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="admin.html" class="btn btn-neutral" title="Administration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -312,7 +289,7 @@ event::listen(&#39;post.after&#39;,function(){
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'24 Nov 2017',
+            VERSION:'1.7.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

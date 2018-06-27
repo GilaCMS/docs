@@ -23,6 +23,7 @@ location / {
 
 In order to proceed with the installation, you will need your **database settings**. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.
 
+<br>
 ### Installer
 
 We access in installation page with the browser e.g *http:\/\/localhost/gila/install*
@@ -58,6 +59,6 @@ We enter in the administration dashboard.
 
 ![alt text](assets/dash.jpg)
 
-From the administation menu we choose Administration->Settings in order to fill more information about the website.
-
-![alt text](assets/settings.jpg)
+On the administration menu we see two submenus
+- **Content** to add or edit content like pages, posts or files
+- **Administration** to edit users or change the settings of the website.

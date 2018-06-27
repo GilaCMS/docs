@@ -41,6 +41,7 @@ assets/
 controllers/
 models/
 views/
+lang/
 package.json
 load.php
 ```
@@ -98,11 +99,11 @@ A simple **load.php** file could be:
 <?php
 // display text below any post
 event::listen('post.after',function(){
-	echo 'The post has ended';
+	echo 'This is printed after post.';
 }
 
 ```
-**IMPORTANT:** The first line of the file should include only the opening tag, and not use later the closing tag.
+**IMPORTANT:** The first line of the load.php file should include only the opening tag *<?php* and not close with the closing tag.
 
 
 

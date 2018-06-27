@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; Gila CMS 24 Nov 2017 documentation</title>
+  <title>Installation &mdash; Gila CMS 1.7.2 documentation</title>
   
 
   
@@ -34,7 +34,7 @@
   
         <link rel="author" title="About these documents"
               href="about.html"/>
-    <link rel="top" title="Gila CMS 24 Nov 2017 documentation" href="index.html"/>
+    <link rel="top" title="Gila CMS 1.7.2 documentation" href="index.html"/>
         <link rel="next" title="Content" href="content.html"/>
         <link rel="prev" title="About" href="about.html"/>
 
@@ -76,7 +76,7 @@
             
             
               <div class="version">
-                1.3
+                1.7.2
               </div>
             
           
@@ -99,43 +99,20 @@
             
                 <p class="caption"><span class="caption-text">User Manual</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="about.html">About</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about.html#why-choose-gila">Why choose Gila?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#spreading-the-word">Spreading the word!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="about.html#where-you-can-get-help">Where you can get help</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#preparation">Preparation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installer">Installer</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="content.html">Content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="content.html#pages">Pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#posts">Posts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#categories">Categories</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content.html#media">Media</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="admin.html">Administration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#users">Users</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#widgets">Widgets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#packages">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#themes">Themes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="admin.html#settings">Settings</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">Content</a></li>
+<li class="toctree-l1"><a class="reference internal" href="admin.html">Administration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programmers Guide</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#packages">Packages</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">Api</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#core-classes">Core Classes</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="package_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Api</a></li>
 </ul>
 
             
@@ -188,22 +165,32 @@
 <ul class="simple">
 <li>Apache 2 server</li>
 <li>MySQL / MariaDB server</li>
-<li>PHP 5.4+ with the following extensions <em>mysqli, zip, mysqlnd, json</em> and <em>mod_rewrite</em> enabled</li>
+<li>PHP 5.4+ with the following extensions <em>mysqli, zip, mysqlnd, json, gd</em> and <em>mod_rewrite</em> enabled</li>
 </ul>
 <p>If you want to install gila cms in your local machine and not sure how to prepare your server don&#8217;t hesitate to ask for help on <a class="reference external" href="https://gilacms.slack.com">Slack</a></p>
 <p>First unzip gila in a public html folder e.g <em>/var/www/html/gila</em> and make sure that the folder is writable from the application.</p>
-<p>In order to proceed with the installation, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.</p>
+<p>On nginx server you will need to configure the redirects in <em>/etc/nginx/sites-enabled/default</em> <a class="reference external" href="https://github.com/GilaCMS/gila/issues/1">(issue #1)</a></p>
+<div class="highlight-python"><div class="highlight"><pre>location / {
+    index index.php index.html index.htm;
+    rewrite gila/(?!install)(?!src)(?!themes)(?!lib)(?!assets)(?!tmp)(?!robots.txt)(.*)$ /gila/index.php?url=$1 last;
+}
+</pre></div>
+</div>
+<p>In order to proceed with the installation, you will need your <strong>database settings</strong>. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.</p>
+<p><br></p>
 </div>
 <div class="section" id="installer">
 <span id="installer"></span><h2>Installer<a class="headerlink" href="#installer" title="Permalink to this headline">¶</a></h2>
 <p>We access in installation page with the browser e.g <em>http://localhost/gila/install</em></p>
 <p><img alt="Install" src="_images/install.jpg" /></p>
 <p>In the installation page we must fill all the fields</p>
-<p><strong>Hostname:</strong> the hostname of the database, usually it is <em>localhost</em></p>
-<p><strong>Database:</strong> name of the database</p>
-<p><strong>DB Username, DB Password:</strong> the username and the password in order to connect to the mysql</p>
-<p><strong>Admin Username, Admin Email, Admin Password:</strong> a user will be created for the website as administrator with these data</p>
-<p><strong>Base Url:</strong> the web address of the website must finish with &#8216;/&#8217; e.g. <em>mywebsite.com/</em></p>
+<ul class="simple">
+<li><strong>Hostname:</strong> the hostname of the database, usually it is <em>localhost</em></li>
+<li><strong>Database:</strong> name of the database</li>
+<li><strong>DB Username, DB Password:</strong> the username and the password in order to connect to the mysql</li>
+<li><strong>Admin Username, Admin Email, Admin Password:</strong> a user will be created for the website as administrator with these data</li>
+<li><strong>Base Url:</strong> the web address of the website must finish with &#8216;/&#8217; e.g. <em>mywebsite.com/</em></li>
+</ul>
 <p>After filling the data and submit them, we wait a few seconds untill the installation is finished.</p>
 <p><img alt="alt text" src="_images/installed.jpg" /></p>
 <p>When installation is finished we can enter on the admin panel using the admin email and password that we wrote before.</p>
@@ -213,8 +200,11 @@
 <em>mysite.com/</em> <strong>/admin</strong> it redirects to the administration</p>
 <p>We enter in the administration dashboard.</p>
 <p><img alt="alt text" src="_images/dash.jpg" /></p>
-<p>From the administation menu we choose Administration-&gt;Settings in order to fill more information about the website.</p>
-<p><img alt="alt text" src="_images/settings.jpg" /></p>
+<p>On the administration menu we see two submenus</p>
+<ul class="simple">
+<li><strong>Content</strong> to add or edit content like pages, posts or files</li>
+<li><strong>Administration</strong> to edit users or change the settings of the website.</li>
+</ul>
 </div>
 </div>
 
@@ -259,7 +249,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'24 Nov 2017',
+            VERSION:'1.7.2',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
