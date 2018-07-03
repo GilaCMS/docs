@@ -13,7 +13,7 @@ If you want to install gila cms in your local machine and not sure how to prepar
 
 First unzip gila in a public html folder e.g */var/www/html/gila* and make sure that the folder is writable from the application.
 
-On nginx server you will need to configure the redirects in */etc/nginx/sites-enabled/default* [(issue #1)](https://github.com/GilaCMS/gila/issues/1)
+On **nginx** server you will need to configure the redirects in */etc/nginx/sites-enabled/default* [(issue #1)](https://github.com/GilaCMS/gila/issues/1)
 ```
 location / {
     index index.php index.html index.htm;

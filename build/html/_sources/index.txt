@@ -1,33 +1,25 @@
-.. Gila CMS documentation master file, created by
-   sphinx-quickstart on Tue Nov  7 13:39:49 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
-Welcome to Gila CMS's documentation!
-====================================
+# About
 
-Contents:
+Gila CMS is an open-source and free content management system built with php7. Built with MVC architecture, is very easy to develop on it any customized solution. It is licensed under BSD 3-Clause License.
+The website is [gilacms.com](http://gilacms.com)
 
-.. toctree::
-   :maxdepth: 2
-   :caption: User Manual
+### Why choose Gila?
 
-   about
-   install
-   content
-   admin
-   imigration
+Gila CMS is a good option for self-hosted blogs or startup websites
+- Installs by default a blogging system with social integrations.
+- No coding skills are required to install or maintain the website
+- Themes that include are responsive, that makes it accessible in all devices.
+- It is fast, and compresses the content where it needs to.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Programmers Guide
+### Spreading the word!
 
-   structure
-   package
-   package_examples
-   api
+You can help us spread the word about Gila CMS! We would surely appreciate it!
+- Follow our [Facebook Page](https://www.facebook.com/gilacms/)
+- [Retweet](https://twitter.com/GilaCms) us!
+- Give a star on [Github](https://github.com/GilaCMS/gila)
 
-Indices and tables
-==================
+### Where you can get help
 
-* :ref:`genindex`
+- Join [Slack](https://gilacms.slack.com) or [Gitter](https://gitter.im/GilaCMS/Lobby)
+- Ask on stackoverflow using the tag **gilacms**

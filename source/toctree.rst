@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
    :caption: User Manual
 
-   about
+   index
    install
    content
    admin
