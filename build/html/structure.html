@@ -160,7 +160,6 @@
 <span id="structure"></span><h1>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h1>
 <p>In the main folder we can see these folders and files.</p>
 <div class="highlight-python"><div class="highlight"><pre>assets/
-install/
 lib/
 log/
 tmp/
@@ -171,14 +170,14 @@ config.php
 </pre></div>
 </div>
 <p><strong>assets/</strong> A public folder where we upload our media files.</p>
-<p><strong>install/</strong> A public folder used only for the installation.</p>
 <p><strong>lib/</strong> A public folder. Third-party libraries are inside this folder.</p>
 <p><strong>log/</strong> A private folder that save logs and the user sessions.</p>
 <p><strong>tmp/</strong> A public folder with temporally files created.</p>
 <p><strong>src/</strong> The folder of installed packages. Here is all the code of the system.</p>
 <p><strong>themes/</strong> The folder of installed themes.</p>
-<p><strong>index.html</strong> The main index file. For any call, execution starts from here.</p>
+<p><strong>index.php</strong> The main index file. For any call, execution starts from here.</p>
 <p><strong>config.php</strong> The configuration file. It is generated after installation.</p>
+<p><br></p>
 <div class="section" id="packages">
 <span id="packages"></span><h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
 <p>The source code of Gila CMS is split into packages, even the core files are part of the main package called <em>core</em>. The package folders are placed inside <em>src/</em> folder and desirably have a similar structure:</p>
@@ -219,7 +218,7 @@ load.php
             &quot;title&quot;:&quot;Language&quot;,
             &quot;type&quot;:&quot;select&quot;,
             &quot;options&quot;:{
-                &quot;en_US&quot;:&quot;English&quot;,&quot;es_ES&quot;:&quot;Spanish&quot;,&quot;gr_GR&quot;:&quot;Greek&quot;
+                &quot;en&quot;:&quot;English&quot;,&quot;es&quot;:&quot;Spanish&quot;,&quot;el&quot;:&quot;Greek&quot;
             }
         }
     }
@@ -231,7 +230,7 @@ load.php
 // for example if the package has the folder my_package/
 
 $option1 = gila::option(&quot;my_package.option1&quot;);
-$lang = gila::option(&quot;my_package.lang&quot;,&quot;en_US&quot;); // use default value
+$lang = gila::option(&quot;my_package.lang&quot;,&quot;en&quot;); // use default value &#39;en&#39;
 </pre></div>
 </div>
 <p>A simple <strong>load.php</strong> file could be:</p>

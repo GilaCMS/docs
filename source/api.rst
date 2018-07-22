@@ -1,38 +1,108 @@
 Api
 ===
 
-Core Classes
-------------
-
+Class gila
+----------
 .. class:: gila
 
     Common methods for Gila CMS
 
-    .. method:: controllers($list)
+    .. method:: controller($c, $file, $name=null)
 
-        (static) Register new controllers.
+        (static) Register a new controller.
 
-        :param Assoc Array $list: Example: `{'ctrl'=>'my_package/controllers/ctrl'}`
+        :param String $c: Controllers name
+        :param String $file: Controller's filepath without the php extension
+        :param String $name: Optional. Controller's class name, $c is used by default
+
+        Example: ``gila::controller('my-ctrl', 'my_package/controllers/ctrl','myctrl');``
+
+    .. method:: route($r, $fn)
+
+        (static) Registers a function call on a specific path.
+
+        :param String $r The path
+        :param Function $fn Callback for the route
+
+        Example: ``gila::route('some.txt', function(){ echo 'Some text.'; });``
+
+    .. method:: onController($c, $fn)
+
+        (static) Registers a function to run right after the controller class construction.
+
+        :param String $c The controller's class name
+        :param Function $fn Callback
+
+        Example: ``gila::route('blog', function(){ blog::ppp = 24; });``
+
+    .. method:: action($c, $action, $fn)
+
+        (static) Registers a new action or replaces an existing for a controller.
+
+        :param String $c The controller's class name
+        :param String $action The action
+        :param Function $fn Callback
+
+        Example: ``gila::action('blog', 'topics', function(){ blog::tagsAction(); });``
+
+    .. method:: before($c, $action, $fn)
+
+        (static) Registers a function to run before the function of a specific action.
+
+        :param String $c The controller's class name
+        :param String $action The action
+        :param Function $fn Callback
+
+        Example: ``gila::action('blog', 'topics', function(){ blog::tagsAction(); });``
+
+    .. method:: addLang($path)
+
+        (static) Adds language translations from a json file.
+
+        :param String $path Path to the folder/prefix of language json files
+
+        Example: ``gila::addLang('mypackages/lang/');``
 
     .. method:: widgets($list)
 
         (static) Register new widgets.
 
-        :param Array $list: Example: `{'wdg'=>'my_package/widgets/wdg'}`
+        :param Array $list
 
-    .. method:: amenu($list)
+        Example: ``gila::widgets( [‘wdg’=>’my_package/widgets/wdg’] );``
+
+    .. method:: content($key, $path)
+
+        (static) Register new widgets.
+
+        :param String $key Name of content type
+        :param String $path Path to the table file
+
+        Example: ``gila::content( 'mytable', 'package_name/content/mytable.php' );``
+
+    .. method:: packages($list)
+
+        (static) Returns the list of active packages.
+
+
+    .. method:: amenu($key,$item)
 
         (static) Add new elements on administration menu.
 
-        :param Array $list: Example: ``['Item','controller/action','icon'=>'item-icon']``
+        :param Array $key Index name
+        :param Array $item
+
+        Example: ``gila::amenu('item', ['Item','controller/action','icon'=>'item-icon']);``
 
 
-    .. method:: amenu_child($h,$item)
+    .. method:: amenu_child($key,$item)
 
-        (static) Add a child element on administration menu item.
+        (static) Add a child element on administration menu.
 
-        :param string $h: Index of the parent item.
-        :param Array $item: Example: ``['SubItem','controller/action_1','icon'=>'item-icon']``
+        :param string $key: Index of the parent item.
+        :param Array $item
+
+        Example: ``gila::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon']);``
 
     .. method:: config($key, $value = null)
 
@@ -44,7 +114,7 @@ Core Classes
 
     .. method:: updateConfigFile()
 
-        (static) Updats the configuration file.
+        (static) Updates the configuration file.
 
     .. method:: equal($v1,$v2)
 
@@ -57,7 +127,7 @@ Core Classes
 
     .. method:: hash($pass)
 
-    (static) Generates a hash passwrd from a string.
+    (static) Generates a hash password from a string.
 
     :param string $pass: The string to be hashed.
     :returns: Hashed password.
@@ -70,12 +140,26 @@ Core Classes
         :param string $default: (optional) The value to return if there option has not saved value.
         :returns: The option value.
 
+    .. method:: setOption($option,$value='')
+
+        (static) Sets an option value.
+
+        :param string $option: Option name.
+        :param string $default: The value to set.
+
     .. method:: hasPrivilege ($pri)
 
         (static) Checks if logged in user has at least one of the required privileges.
 
         :param string/Array $pri: The privilege(s) to check.
         :returns: True or false.
+
+    .. method:: dir ($path)
+
+        (static) Creates the folder if does not exist and return the path.
+
+        :param string $path: Folder path.
+        :returns: string
 
     .. method:: make_url($c, $action='', $args=[])
 
@@ -92,6 +176,10 @@ Core Classes
         ``$url1 = gila::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
 
 
+
+
+Class event
+-----------
 .. class:: event
 
     Registers and fires events (hooks)
@@ -112,6 +200,8 @@ Core Classes
 
 
 
+Class view
+----------
 .. class:: view
 
     Have methods that outputs the HTML
@@ -139,11 +229,12 @@ Core Classes
         :param string $href: The href attribute from the link.
 
 
-    .. method:: script($script)
+    .. method:: script($script, $prop = '')
 
         (static) Adds a new script to be included in the output HTML.
 
         :param string $script: The src attribute from the script.
+        :param string $prop: Optional. A property for the script.
 
 
     .. method:: getThemePath()
@@ -157,7 +248,7 @@ Core Classes
         :param Array $file: (optional) Meta values to be printed.
 
 
-    .. method:: findPath($file, $package = 'core')
+    .. method:: getViewFile($file, $package = 'core')
 
         (static) Returns the path of a file inside theme or package folder.
 
@@ -197,6 +288,12 @@ Core Classes
         :param string $file: The file path.
         :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
 
+    .. method:: menu ($menu='mainmenu', $tpl='tpl/menu.php')
+
+        (static) Displays a menu.
+
+        :param string $menu: Optional. Name of the menu.
+        :param string $tpl:  Optional. The view template to generate html.
 
     .. method:: widget_area ($area,$div=true)
 
@@ -206,10 +303,31 @@ Core Classes
         :param bool $div: (optional) Also print or not the widget inside a <div> tag with its title.
 
 
-    .. method:: widget_area ($area,$id,$max=180)
+    .. method:: thumb ($area, $prefix, $max=180)
 
         (static) Returns the path of a thumbnail image of specified dimensions. If thumbnail does not exist it will create one.
 
         :param string $src: The path of original image.
-        :param string $id: The name of the thumbnail.
+        :param string $prefix: The prefix name of the thumbnail.
         :param int $max: (optional) The maximum width or height of thumbnail in pixels.
+
+    .. method:: thumb_stack ($src_array, $file, $max=180)
+
+        (static) Returns the path of a stacked image. If image does not exist it will be created on the fly.
+
+        :param Array $src_array: The images to stack.
+        :param string $file: The name of the stucked image. It must have png extension.
+        :param int $max: (optional) The maximum width or height of thumbnails in pixels.
+        :returns: The path to revisioned stucked image and the list of stucked photos.
+
+        Example:
+
+        ``$img = ["image1.png","image2.png"];``
+        ``list($file,$stacked) = view::thumb_stack($img, "tmp/stacked_file.png",80);``
+
+        $file: ``tmp/stacked_file.png?12``
+
+        $stacked[0]: ``["src"=>"image1.png","src_width"=>200,"src_height"=>150,"width"=>80,"height"=>60,"type"=>2,"top"=>0],``
+
+        $stacked[1]: ``false``
+        2nd image was not stacked

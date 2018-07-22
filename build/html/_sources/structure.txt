@@ -5,7 +5,6 @@
 In the main folder we can see these folders and files.
 ```
 assets/
-install/
 lib/
 log/
 tmp/
@@ -15,8 +14,6 @@ index.php
 config.php
 ```
 **assets/** A public folder where we upload our media files.
-
-**install/** A public folder used only for the installation.
 
 **lib/** A public folder. Third-party libraries are inside this folder.
 
@@ -28,11 +25,11 @@ config.php
 
 **themes/** The folder of installed themes.
 
-**index.html** The main index file. For any call, execution starts from here.
+**index.php** The main index file. For any call, execution starts from here.
 
 **config.php** The configuration file. It is generated after installation.
 
-
+<br>
 ### Packages
 
 The source code of Gila CMS is split into packages, even the core files are part of the main package called *core*. The package folders are placed inside *src/* folder and desirably have a similar structure:
@@ -77,7 +74,7 @@ You can also add another index in the object called *options*. It will be an arr
             "title":"Language",
             "type":"select",
 			"options":{
-				"en_US":"English","es_ES":"Spanish","gr_GR":"Greek"
+				"en":"English","es":"Spanish","el":"Greek"
 			}
 		}
 	}
@@ -91,7 +88,7 @@ You can get the option values like that:
 // for example if the package has the folder my_package/
 
 $option1 = gila::option("my_package.option1");
-$lang = gila::option("my_package.lang","en_US"); // use default value
+$lang = gila::option("my_package.lang","en"); // use default value 'en'
 ```
 
 A simple **load.php** file could be:

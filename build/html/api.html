@@ -108,7 +108,9 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package_examples.html">Examples</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Api</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#core-classes">Core Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-gila">Class gila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-event">Class event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-view">Class view</a></li>
 </ul>
 </li>
 </ul>
@@ -157,70 +159,124 @@
             
   <div class="section" id="api">
 <h1>Api<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="core-classes">
-<h2>Core Classes<a class="headerlink" href="#core-classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-gila">
+<h2>Class gila<a class="headerlink" href="#class-gila" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="gila">
 <em class="property">class </em><code class="descname">gila</code><a class="headerlink" href="#gila" title="Permalink to this definition">¶</a></dt>
 <dd><p>Common methods for Gila CMS</p>
 <dl class="method">
-<dt id="gila.controllers">
-<code class="descname">controllers</code><span class="sig-paren">(</span><em>$list</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.controllers" title="Permalink to this definition">¶</a></dt>
-<dd><p>(static) Register new controllers.</p>
+<dt id="gila.controller">
+<code class="descname">controller</code><span class="sig-paren">(</span><em>$c</em>, <em>$file</em>, <em>$name=null</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.controller" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Register a new controller.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>Array $list</strong> (<em>Assoc</em>) &#8211; Example: <cite>{&#8216;ctrl&#8217;=&gt;&#8217;my_package/controllers/ctrl&#8217;}</cite></td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$c</strong> (<em>String</em>) &#8211; Controllers name</li>
+<li><strong>$file</strong> (<em>String</em>) &#8211; Controller&#8217;s filepath without the php extension</li>
+<li><strong>$name</strong> (<em>String</em>) &#8211; Optional. Controller&#8217;s class name, $c is used by default</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
+<p>Example: <code class="docutils literal"><span class="pre">gila::controller('my-ctrl',</span> <span class="pre">'my_package/controllers/ctrl','myctrl');</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.route">
+<code class="descname">route</code><span class="sig-paren">(</span><em>$r</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.route" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Registers a function call on a specific path.</p>
+<p>:param String $r The path
+:param Function $fn Callback for the route</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::route('some.txt',</span> <span class="pre">function(){</span> <span class="pre">echo</span> <span class="pre">'Some</span> <span class="pre">text.';</span> <span class="pre">});</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.onController">
+<code class="descname">onController</code><span class="sig-paren">(</span><em>$c</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.onController" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Registers a function to run right after the controller class construction.</p>
+<p>:param String $c The controller&#8217;s class name
+:param Function $fn Callback</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::route('blog',</span> <span class="pre">function(){</span> <span class="pre">blog::ppp</span> <span class="pre">=</span> <span class="pre">24;</span> <span class="pre">});</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.action">
+<code class="descname">action</code><span class="sig-paren">(</span><em>$c</em>, <em>$action</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Registers a new action or replaces an existing for a controller.</p>
+<p>:param String $c The controller&#8217;s class name
+:param String $action The action
+:param Function $fn Callback</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::action('blog',</span> <span class="pre">'topics',</span> <span class="pre">function(){</span> <span class="pre">blog::tagsAction();</span> <span class="pre">});</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.before">
+<code class="descname">before</code><span class="sig-paren">(</span><em>$c</em>, <em>$action</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.before" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Registers a function to run before the function of a specific action.</p>
+<p>:param String $c The controller&#8217;s class name
+:param String $action The action
+:param Function $fn Callback</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::action('blog',</span> <span class="pre">'topics',</span> <span class="pre">function(){</span> <span class="pre">blog::tagsAction();</span> <span class="pre">});</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.addLang">
+<code class="descname">addLang</code><span class="sig-paren">(</span><em>$path</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.addLang" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Adds language translations from a json file.</p>
+<p>:param String $path Path to the folder/prefix of language json files</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::addLang('mypackages/lang/');</span></code></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.widgets">
 <code class="descname">widgets</code><span class="sig-paren">(</span><em>$list</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.widgets" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Register new widgets.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$list</strong> (<em>Array</em>) &#8211; Example: <cite>{&#8216;wdg&#8217;=&gt;&#8217;my_package/widgets/wdg&#8217;}</cite></td>
-</tr>
-</tbody>
-</table>
+<p>:param Array $list</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::widgets(</span> <span class="pre">[‘wdg’=&gt;’my_package/widgets/wdg’]</span> <span class="pre">);</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.content">
+<code class="descname">content</code><span class="sig-paren">(</span><em>$key</em>, <em>$path</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Register new widgets.</p>
+<p>:param String $key Name of content type
+:param String $path Path to the table file</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::content(</span> <span class="pre">'mytable',</span> <span class="pre">'package_name/content/mytable.php'</span> <span class="pre">);</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.packages">
+<code class="descname">packages</code><span class="sig-paren">(</span><em>$list</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Returns the list of active packages.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.amenu">
-<code class="descname">amenu</code><span class="sig-paren">(</span><em>$list</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.amenu" title="Permalink to this definition">¶</a></dt>
+<code class="descname">amenu</code><span class="sig-paren">(</span><em>$key</em>, <em>$item</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.amenu" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Add new elements on administration menu.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$list</strong> (<em>Array</em>) &#8211; Example: <code class="docutils literal"><span class="pre">['Item','controller/action','icon'=&gt;'item-icon']</span></code></td>
-</tr>
-</tbody>
-</table>
+<p>:param Array $key Index name
+:param Array $item</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::amenu('item',</span> <span class="pre">['Item','controller/action','icon'=&gt;'item-icon']);</span></code></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.amenu_child">
-<code class="descname">amenu_child</code><span class="sig-paren">(</span><em>$h</em>, <em>$item</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.amenu_child" title="Permalink to this definition">¶</a></dt>
-<dd><p>(static) Add a child element on administration menu item.</p>
+<code class="descname">amenu_child</code><span class="sig-paren">(</span><em>$key</em>, <em>$item</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.amenu_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Add a child element on administration menu.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$h</strong> (<em>string</em>) &#8211; Index of the parent item.</li>
-<li><strong>$item</strong> (<em>Array</em>) &#8211; Example: <code class="docutils literal"><span class="pre">['SubItem','controller/action_1','icon'=&gt;'item-icon']</span></code></li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$key</strong> (<em>string</em>) &#8211; Index of the parent item.</td>
 </tr>
 </tbody>
 </table>
+<p>:param Array $item</p>
+<p>Example: <code class="docutils literal"><span class="pre">gila::amenu_child('item',</span> <span class="pre">['Child</span> <span class="pre">Item','controller/action','icon'=&gt;'item-icon']);</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -247,7 +303,7 @@
 <dl class="method">
 <dt id="gila.updateConfigFile">
 <code class="descname">updateConfigFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gila.updateConfigFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>(static) Updats the configuration file.</p>
+<dd><p>(static) Updates the configuration file.</p>
 </dd></dl>
 
 <dl class="method">
@@ -276,7 +332,7 @@
 <code class="descname">hash</code><span class="sig-paren">(</span><em>$pass</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.hash" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<p>(static) Generates a hash passwrd from a string.</p>
+<p>(static) Generates a hash password from a string.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -309,6 +365,24 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="gila.setOption">
+<code class="descname">setOption</code><span class="sig-paren">(</span><em>$option</em>, <em>$value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.setOption" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Sets an option value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$option</strong> (<em>string</em>) &#8211; Option name.</li>
+<li><strong>$default</strong> (<em>string</em>) &#8211; The value to set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="gila.hasPrivilege">
 <code class="descname">hasPrivilege</code><span class="sig-paren">(</span><em>$pri</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.hasPrivilege" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Checks if logged in user has at least one of the required privileges.</p>
@@ -319,6 +393,22 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$pri</strong> (<em>string/Array</em>) &#8211; The privilege(s) to check.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True or false.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.dir">
+<code class="descname">dir</code><span class="sig-paren">(</span><em>$path</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Creates the folder if does not exist and return the path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$path</strong> (<em>string</em>) &#8211; Folder path.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string</td>
 </tr>
 </tbody>
 </table>
@@ -351,6 +441,9 @@
 
 </dd></dl>
 
+</div>
+<div class="section" id="class-event">
+<h2>Class event<a class="headerlink" href="#class-event" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="event">
 <em class="property">class </em><code class="descname">event</code><a class="headerlink" href="#event" title="Permalink to this definition">¶</a></dt>
@@ -393,6 +486,9 @@
 
 </dd></dl>
 
+</div>
+<div class="section" id="class-view">
+<h2>Class view<a class="headerlink" href="#class-view" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="view">
 <em class="property">class </em><code class="descname">view</code><a class="headerlink" href="#view" title="Permalink to this definition">¶</a></dt>
@@ -449,13 +545,17 @@
 
 <dl class="method">
 <dt id="view.script">
-<code class="descname">script</code><span class="sig-paren">(</span><em>$script</em><span class="sig-paren">)</span><a class="headerlink" href="#view.script" title="Permalink to this definition">¶</a></dt>
+<code class="descname">script</code><span class="sig-paren">(</span><em>$script</em>, <em>$prop = ''</em><span class="sig-paren">)</span><a class="headerlink" href="#view.script" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Adds a new script to be included in the output HTML.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$script</strong> (<em>string</em>) &#8211; The src attribute from the script.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$script</strong> (<em>string</em>) &#8211; The src attribute from the script.</li>
+<li><strong>$prop</strong> (<em>string</em>) &#8211; Optional. A property for the script.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
@@ -482,8 +582,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="view.findPath">
-<code class="descname">findPath</code><span class="sig-paren">(</span><em>$file</em>, <em>$package = 'core'</em><span class="sig-paren">)</span><a class="headerlink" href="#view.findPath" title="Permalink to this definition">¶</a></dt>
+<dt id="view.getViewFile">
+<code class="descname">getViewFile</code><span class="sig-paren">(</span><em>$file</em>, <em>$package = 'core'</em><span class="sig-paren">)</span><a class="headerlink" href="#view.getViewFile" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Returns the path of a file inside theme or package folder.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -575,6 +675,24 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="view.menu">
+<code class="descname">menu</code><span class="sig-paren">(</span><em>$menu='mainmenu'</em>, <em>$tpl='tpl/menu.php'</em><span class="sig-paren">)</span><a class="headerlink" href="#view.menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Displays a menu.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$menu</strong> (<em>string</em>) &#8211; Optional. Name of the menu.</li>
+<li><strong>$tpl</strong> (<em>string</em>) &#8211; Optional. The view template to generate html.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="view.widget_area">
 <code class="descname">widget_area</code><span class="sig-paren">(</span><em>$area</em>, <em>$div=true</em><span class="sig-paren">)</span><a class="headerlink" href="#view.widget_area" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Prints the widgets of a specific area.</p>
@@ -593,8 +711,8 @@
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">widget_area</code><span class="sig-paren">(</span><em>$area</em>, <em>$id</em>, <em>$max=180</em><span class="sig-paren">)</span></dt>
+<dt id="view.thumb">
+<code class="descname">thumb</code><span class="sig-paren">(</span><em>$area</em>, <em>$prefix</em>, <em>$max=180</em><span class="sig-paren">)</span><a class="headerlink" href="#view.thumb" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Returns the path of a thumbnail image of specified dimensions. If thumbnail does not exist it will create one.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -602,13 +720,42 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>$src</strong> (<em>string</em>) &#8211; The path of original image.</li>
-<li><strong>$id</strong> (<em>string</em>) &#8211; The name of the thumbnail.</li>
+<li><strong>$prefix</strong> (<em>string</em>) &#8211; The prefix name of the thumbnail.</li>
 <li><strong>$max</strong> (<em>int</em>) &#8211; (optional) The maximum width or height of thumbnail in pixels.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+</dd></dl>
+
+<dl class="method">
+<dt id="view.thumb_stack">
+<code class="descname">thumb_stack</code><span class="sig-paren">(</span><em>$src_array</em>, <em>$file</em>, <em>$max=180</em><span class="sig-paren">)</span><a class="headerlink" href="#view.thumb_stack" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Returns the path of a stacked image. If image does not exist it will be created on the fly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>$src_array</strong> (<em>Array</em>) &#8211; The images to stack.</li>
+<li><strong>$file</strong> (<em>string</em>) &#8211; The name of the stucked image. It must have png extension.</li>
+<li><strong>$max</strong> (<em>int</em>) &#8211; (optional) The maximum width or height of thumbnails in pixels.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The path to revisioned stucked image and the list of stucked photos.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<p><code class="docutils literal"><span class="pre">$img</span> <span class="pre">=</span> <span class="pre">[&quot;image1.png&quot;,&quot;image2.png&quot;];</span></code>
+<code class="docutils literal"><span class="pre">list($file,$stacked)</span> <span class="pre">=</span> <span class="pre">view::thumb_stack($img,</span> <span class="pre">&quot;tmp/stacked_file.png&quot;,80);</span></code></p>
+<p>$file: <code class="docutils literal"><span class="pre">tmp/stacked_file.png?12</span></code></p>
+<p>$stacked[0]: <code class="docutils literal"><span class="pre">[&quot;src&quot;=&gt;&quot;image1.png&quot;,&quot;src_width&quot;=&gt;200,&quot;src_height&quot;=&gt;150,&quot;width&quot;=&gt;80,&quot;height&quot;=&gt;60,&quot;type&quot;=&gt;2,&quot;top&quot;=&gt;0],</span></code></p>
+<p>$stacked[1]: <code class="docutils literal"><span class="pre">false</span></code>
+2nd image was not stacked</p>
 </dd></dl>
 
 </dd></dl>
