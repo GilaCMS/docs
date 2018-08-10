@@ -52,7 +52,7 @@ When installation is finished we can enter on the admin panel using the admin em
 ![alt text](assets/login.jpg)
 
 We can always access in the login page from these links
-*mysite.com/* **login** it redirects to the front page of the website
+*mysite.com/* **/login** it redirects to the front page of the website
 *mysite.com/* **/admin** it redirects to the administration
 
 We enter in the administration dashboard.

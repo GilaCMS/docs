@@ -25,6 +25,7 @@ Contents:
    structure
    package
    package_examples
+   themes
    api
 
 Indices and tables

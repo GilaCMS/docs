@@ -33,7 +33,7 @@
 
   
     <link rel="top" title="Gila CMS 1.7.2 documentation" href="index.html"/>
-        <link rel="prev" title="Examples" href="package_examples.html"/>
+        <link rel="prev" title="Themes" href="themes.html"/>
 
 
 
@@ -107,10 +107,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package_examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">Themes</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Api</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#class-gila">Class gila</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#class-event">Class event</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#class-view">Class view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#class-db">Class db</a></li>
 </ul>
 </li>
 </ul>
@@ -761,6 +763,186 @@
 </dd></dl>
 
 </div>
+<div class="section" id="class-db">
+<h2>Class db<a class="headerlink" href="#class-db" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="db">
+<em class="property">class </em><code class="descname">db</code><a class="headerlink" href="#db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Class db prepare statements for mysql queries to the connected database.
+We use the global <code class="docutils literal"><span class="pre">$db</span></code> instance to access its methods.</p>
+<dl class="method">
+<dt>
+<code class="descname">function query($q, $args)</code></dt>
+<dd><p>Runs a query and returns the result.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
+<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<p><code class="docutils literal"><span class="pre">$result</span> <span class="pre">=</span> <span class="pre">$db-&gt;query(&quot;SELECT</span> <span class="pre">title,author</span> <span class="pre">FROM</span> <span class="pre">post;&quot;);</span></code>
+<code class="docutils literal"><span class="pre">$result</span> <span class="pre">=</span> <span class="pre">$db-&gt;query(&quot;SELECT</span> <span class="pre">title,author</span> <span class="pre">FROM</span> <span class="pre">post</span> <span class="pre">WHERE</span> <span class="pre">user_id=?;&quot;,[session::user_id()]);</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function get($q, $args)</code></dt>
+<dd><p>Runs a query and returns the results as an array.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
+<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$result = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<span class="x">// Returns</span>
+<span class="x">[</span>
+<span class="x">    0=&gt;[0=&gt;&#39;Lorem ipsum&#39;, &#39;title&#39;=&gt;&#39;Lorem ipsum&#39;, 1=&gt;&#39;John&#39;, &#39;author&#39;=&gt;&#39;John&#39;],</span>
+<span class="x">    1=&gt;[0=&gt;&#39;Duis aute irure&#39;, &#39;title&#39;=&gt;&#39;Duis aute irure&#39;, 1=&gt;&#39;John&#39;, &#39;author&#39;=&gt;&#39;John&#39;],</span>
+<span class="x">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function gen($q, $args)</code></dt>
+<dd><p>Runs a query and returns a generator that yields the rows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
+<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<p><code class="docutils literal"><span class="pre">$generator</span> <span class="pre">=</span> <span class="pre">$db-&gt;gen(&quot;SELECT</span> <span class="pre">title,author</span> <span class="pre">FROM</span> <span class="pre">post;&quot;);</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function getRows($q, $args)</code></dt>
+<dd><p>Runs a query and returns the results as an array. With rows fetched with mysqli_fetch_row().</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
+<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$result = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<span class="x">// Returns</span>
+<span class="x">[</span>
+<span class="x">    0=&gt;[0=&gt;&#39;Lorem ipsum&#39;,1=&gt;&#39;John&#39;],``</span>
+<span class="x">    1=&gt;[0=&gt;&#39;Duis aute irure&#39;,1=&gt;&#39;John&#39;],``</span>
+<span class="x">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function getList($q, $args)</code></dt>
+<dd><p>Runs a query and returns an array with the values of the first columns from the results.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param string $q:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The query.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param (array) $args:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Optional. Values to prepare the statement.</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$titles = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<span class="x">// Returns</span>
+<span class="x">[0=&gt;&#39;Lorem ipsum&#39;, 1=&gt;&#39;Duis aute irure&#39;]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function value($q, $args)</code></dt>
+<dd><p>Runs a query and returns the value of the first column of the first row of the results.</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">param string $q:</th></tr>
+<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The query.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">param (array) $args:</th></tr>
+<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Optional. Values to prepare the statement.</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$res = $db-&gt;get(&quot;SELECT title FROM post WHERE id=1;&quot;);</span>
+<span class="x">// returns</span>
+<span class="x">&#39;Lorem ipsum&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function error()</code></dt>
+<dd><p>Return an error if exists from the last query executed.</p>
+<blockquote>
+<div><p>Example</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="x">$res = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<span class="x">if ($error = $db-&gt;error()) {</span>
+<span class="x">    trigger_error($error);</span>
+<span class="x">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt>
+<code class="descname">function close()</code></dt>
+<dd><p>Closes the connection to the database.</p>
+<blockquote>
+<div>Example <code class="docutils literal"><span class="pre">$db-&gt;close();</span></code></div></blockquote>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -771,7 +953,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="package_examples.html" class="btn btn-neutral" title="Examples" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="themes.html" class="btn btn-neutral" title="Themes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
