@@ -11,7 +11,7 @@ package.json
 load.php
 logo.png
 ```
-**package.json** is essential so the package can be seen from the package manager. Put these values in it:
+**package.json**
 ```
 {
 	"name":"Post Tags",
@@ -37,7 +37,7 @@ This function will run when the *post.after* event is dispatched. That happens w
 Activate the package in */admin/packages*. After that you should see the list of TAGS below any blog post.
 
 
-
+<br>
 ## Widget: Twitter Timeline
 
 In this example we will create a widget that displays the last tweets of an account. Instead of using an event to run the code we let the user create instances of the widget choose in which widget area want to display the twitter plugin. Inside *src/* create a folder *twitter-timelines* and add the following files:
@@ -82,6 +82,7 @@ $account = gila::option('twitter-timelines.accountID','gilacms');
 <a class="twitter-timeline" data-height="400" href="https://twitter.com/<?=$account?>">Tweets by <?=$account?></a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
-*gila::option()* gets the option of the package that we set up in the package settings. A default value can be used if the option is null.
+**gila::option()** gets the option of the package that we set up in the package settings. A default value can be used if the option is null.
 
 Activate the package. Now in */admin/widgets* you can create a new widget with type *twitter-timeline* and set the widget area *sidebar* or *dashboard* to see it.
+
