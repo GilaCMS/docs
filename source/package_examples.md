@@ -116,7 +116,7 @@ gila::contentInit('user', function($table){
         'type'=>'meta',       //the values of the field will be stored in a meta table
         'input-type'=>'text', //use the text input type
         'edit'=>true,         //is editable from user
-        'values'=>1,          //a single value for a user
+        'values'=>1,          //this field gets only one value
         "mt"=>['usermeta', 'user_id', 'value'], //meta table, meta column that links to user table,meta column of the value
         'metatype'=>['vartype', 'address'] //meta column of the value type, value type
     ];

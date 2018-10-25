@@ -76,7 +76,7 @@ The selected theme usually shows an **Options** button. By clicking this button 
 On Administration->Settings page and we can make the following configurations
 
 ### Basic Settings
-![Themes](assets/settings172.png)
+![Themes](assets/settings180.png)
 - **Title** is the website title. It will appear up from the menu if we don't use a logo from the theme options.
 - **Description** is a small text that describes the website.
 - **Website URL** the url path for exmple 'https://mysite.com'
@@ -85,12 +85,14 @@ On Administration->Settings page and we can make the following configurations
 - **Theme** changes the look and style of your website. You can also change the theme from *Administration->Themes*
 - **Timezone** The dates and times saved in posts, logs and the rest of the content will be based on the selected timezone.
 - **Language** The language of the website and the administration menu.
+- **Admin Logo** set the image to display to administration menu and login screen.
 
 ### Advanced Setting
 
 You change these setting if you are developing or set up the installtion.
 
 - **Use CDN** Use CDN for static files of popular libraries (jquery.js, vue.js). It's not advised for local installation where internet connection may fail.
-- **Default controller** The controller that will be used if the calling path do not provide it as first parameter. For example the **Admin** controller is used when we call mysite.com/admin but when we call *mysite.com* or *mysite.com/my-post* the default controller will be used, which is **Blog**, so these paths are egual with *mysite.com* and *mysite.com/my-post*. There is not need to change the default controller unless you want to change how the website will be used.
 - **Pretty Urls** turns *?c=blog&action=tag&tag=linux* into *blog/tag/linux*. If is not selected by default then your apache server may not have the *mod_rewrite* enabled.
+- **Default controller** The controller that will be used if the calling path do not provide it as first parameter. For example the **Admin** controller is used when we call mysite.com/admin but when we call *mysite.com* or *mysite.com/my-post* the default controller will be used, which is **Blog**, so these paths are egual with *mysite.com* and *mysite.com/my-post*. There is not need to change the default controller unless you want to change how the website will be used.
 - **Environment** If changes to *Development* the website wont use the combine *load.php* from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.
+- **Check For Updates** will automatically search for new updates on packages and display alerts.

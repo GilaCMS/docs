@@ -270,8 +270,6 @@ Class gila
         
 
 
-<br>
-<br>
 Class event
 -----------
 .. class:: event
@@ -295,8 +293,6 @@ Class event
 
 
 
-<br>
-<br>
 Class view
 ----------
 .. class:: view
@@ -386,12 +382,14 @@ Class view
         :param string $file: The file path.
         :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
 
+
     .. method:: menu ($menu='mainmenu', $tpl='tpl/menu.php')
 
         (static) Displays a menu.
 
         :param string $menu: Optional. Name of the menu.
         :param string $tpl:  Optional. The view template to generate html.
+
 
     .. method:: widget_area ($area,$div=true)
 
@@ -438,7 +436,7 @@ Class db
 Class db prepare statements for mysql queries to the connected database.
 We use the global ``$db`` instance to access its methods.
 
-.. method:: function query($q, $args)
+.. method:: query($q, $args)
 
     Runs a query and returns the result.
 
@@ -450,7 +448,8 @@ We use the global ``$db`` instance to access its methods.
     ``$result = $db->query("SELECT title,author FROM post;");``
     ``$result = $db->query("SELECT title,author FROM post WHERE user_id=?;",[session::user_id()]);``
 
-.. method:: function get($q, $args)
+
+.. method:: get($q, $args)
 
     Runs a query and returns the results as an array.
 
@@ -469,7 +468,7 @@ We use the global ``$db`` instance to access its methods.
         ]
 
 
-.. method:: function gen($q, $args)
+.. method:: gen($q, $args)
 
     Runs a query and returns a generator that yields the rows.
 
@@ -482,7 +481,8 @@ We use the global ``$db`` instance to access its methods.
 
         $generator = $db->gen("SELECT title,author FROM post;");
 
-.. method:: function getRows($q, $args)
+
+.. method:: getRows($q, $args)
 
     Runs a query and returns the results as an array. With rows fetched with mysqli_fetch_row().
 
@@ -500,7 +500,7 @@ We use the global ``$db`` instance to access its methods.
             1=>[0=>'Duis aute irure',1=>'John'],
         ]
 
-.. method:: function getList($q, $args)
+.. method:: getList($q, $args)
 
     Runs a query and returns an array with the values of the first columns from the results.
 
@@ -517,7 +517,7 @@ We use the global ``$db`` instance to access its methods.
 
 
 
-.. method:: function value($q, $args)
+.. method:: value($q, $args)
 
     Runs a query and returns the value of the first column of the first row of the results.
 
@@ -533,7 +533,7 @@ We use the global ``$db`` instance to access its methods.
             'Lorem ipsum'
 
 
-.. method:: function error()
+.. method:: error()
 
     Return an error if exists from the last query executed.
 
@@ -547,7 +547,7 @@ We use the global ``$db`` instance to access its methods.
             }
 
 
-.. method:: function close()
+.. method:: close()
 
     Closes the connection to the database.
 
