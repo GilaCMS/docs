@@ -23,7 +23,7 @@ Contents:
    :caption: Programmers Guide
 
    structure
-   package
+   packages
    package_examples
    themes
    api

@@ -38,6 +38,7 @@ Activate the package in */admin/packages*. After that you should see the list of
 
 
 <br>
+<br>
 ## Widget: Twitter Timeline
 
 In this example we will create a widget that displays the last tweets of an account. Instead of using an event to run the code we let the user create instances of the widget choose in which widget area want to display the twitter plugin. Inside *src/* create a folder *twitter-timelines* and add the following files:
@@ -86,3 +87,39 @@ $account = gila::option('twitter-timelines.accountID','gilacms');
 
 Activate the package. Now in */admin/widgets* you can create a new widget with type *twitter-timeline* and set the widget area *sidebar* or *dashboard* to see it.
 
+<br>
+<br>
+## User: Address
+
+In this example we will add a new field for the users. Instead of adding a new column in the database table we will use the usermeta table to store new values that link to the users. Inside *src/* create a folder *user-address* and add the following files:
+```
+package.json
+load.php
+```
+**package.json**:
+```
+{
+	"name":"User Address",
+	"version":"1.0.0",
+	"description":"Adds a new field for the users."
+}
+```
+**load.php**:
+```
+<?php
+
+// make changes to the user content type
+
+gila::contentInit('user', function($table){
+    $table['fields']['useraddress'] = [
+        'title'=>"Address",   //the label
+        'type'=>'meta',       //the values of the field will be stored in a meta table
+        'input-type'=>'text', //use the text input type
+        'edit'=>true,         //is editable from user
+        'values'=>1,          //a single value for a user
+        "mt"=>['usermeta', 'user_id', 'value'], //meta table, meta column that links to user table,meta column of the value
+        'metatype'=>['vartype', 'address'] //meta column of the value type, value type
+    ];
+});
+``` 
+This package will add a new new Address field for users in *Administration->Users*
