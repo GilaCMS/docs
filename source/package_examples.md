@@ -110,7 +110,7 @@ load.php
 
 // make changes to the user content type
 
-gila::contentInit('user', function($table){
+gila::contentInit('user', function(&$table){
     $table['fields']['useraddress'] = [
         'title'=>"Address",   //the label
         'type'=>'meta',       //the values of the field will be stored in a meta table

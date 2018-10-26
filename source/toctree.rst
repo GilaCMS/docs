@@ -26,6 +26,7 @@ Contents:
    packages
    package_examples
    themes
+   schemas
    api
 
 Indices and tables
