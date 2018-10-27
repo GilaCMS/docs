@@ -59,6 +59,8 @@ You can get the option values like that:
 $option1 = gila::option("my_package.option1");
 $lang = gila::option("my_package.lang","en"); // use default value 'en'
 ```
+More information for [**package.json schema**](schemas.html##package-json).
+
 
 A simple **load.php** file could be:
 ```

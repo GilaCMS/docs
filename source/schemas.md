@@ -1,7 +1,7 @@
 
 # Schemas
 
-Schemas are
+
 
 ## package.json
 package.json is used from both packages and themes to set their values. This schema is daved in json format and uses these indeces:
@@ -139,6 +139,8 @@ The first value is the event name and the second value is the function that will
 
 ## Field Schema
 Fields are used as options from packages and widgets or as columns from table schemas. When are used as options from packages their format is JSON, the other cases are as php associative arrays.
+
+[Field Schema is still unfinished, please join a chat for more information]
 
 - **title** (string)
 
