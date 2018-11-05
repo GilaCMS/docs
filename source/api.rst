@@ -357,9 +357,29 @@ Class view
 
         (static) Returns the path of a file inside theme or package folder.
 
-        :param Array $file: The file path.
+        :param string $file: The file path.
         :param string $package: (optional) The package folder where the file is located if is not found in theme folder.
         :returns: False if file is not found.
+
+
+    .. method:: setViewFile($file, $package)
+
+        (static) Overrides the path of a view file.
+
+        :param string $file: The file path.
+        :param string $package: The package folder where the file is located.
+
+        Example
+
+        .. code-block:: php
+
+            view::setViewFile('admin/settings.php','new-package');
+            /*
+            src/new-package/views/admin/settings.php
+            overrides
+            themes/my-theme/admin/settings.php
+            src/core/views/admin/settings.php
+            */
 
 
     .. method:: render($file, $package = 'core')
