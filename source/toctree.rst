@@ -28,6 +28,7 @@ Contents:
    themes
    schemas
    api
+   cm
 
 Indices and tables
 ==================

@@ -4,7 +4,7 @@
 
 
 ## package.json
-package.json is used from both packages and themes to set their values. This schema is daved in json format and uses these indeces:
+package.json is used from both packages and themes to set their values. This schema is saved in json format and uses these indeces:
 
 - **name** (string)
 
@@ -32,15 +32,15 @@ An image path to display as screenshot. Used only by themes.
 
 - **parent** (string)
 
-The parennt package. Used only by themes.
+The parent theme. Used only by themes.
 
 - **options** (object)
 
-An array of options that uses this package. They use the [Field Schema](#field-schema).
+An array of fields that uses this package as options. See [Field Schema](#field-schema).
 
 - **permissions** (object)
 
-An image path to display as logo. Used only by packages.
+A list of new permissions that this package uses. Used only by packages.
 
 Example
 ```
@@ -60,7 +60,7 @@ The table schema is used for a content type. It gives to the application the str
 
 - **name** (string)
 
-The name of database table that data is stored.
+The name of the database table that data is stored.
 
 - **title** (string)
 
@@ -68,11 +68,11 @@ The title to display at content administration.
 
 - **id** (string)
 
-The field index that is the primary key on database table. Default value is *id*.
+(Optional) The field name that is the primary key on database table. Default value is *id*.
 
 - **permissions** (assoc array)
 
-Associative array of user permissions required to run the actions. Example:
+(Optional) Associative array of user permissions required to run the actions. Example:
 ```
 'permissions'=>[
         'create'=>['admin','content-contributor'],
@@ -85,7 +85,7 @@ Associative array of user permissions required to run the actions. Example:
 
 Associative array of the content fields. They follow the [Field Schema](#field-schema). Example:
 ```
-'title'=> [
+'field_name'=> [
             'title'=>'Title',
         ],
 ```
@@ -96,27 +96,27 @@ Number of results per page in content administration.
 
 - **lang** (string)
 
-A relative path to the language prefix that translates the strings set in thetable schema like permissions and field titles.
+(Optional) A relative path to the language prefix that translates the strings set in thetable schema like permissions and field titles.
 
 - **search-box** (boolean)
 
-If true, it displays a search box in content administration.
+(Optional) If true, it displays a search box in content administration.
 
 - **tools** (array)
 
-An array of tools that will be displayed in content administration.
+(Optional) An array of tools that will be displayed in content administration.
 
 - **commands** (array)
 
-An array of commands that will be displayed in content administration.
+(Optional) An array of commands that will be displayed in content administration.
 
 - **search-boxes**
 
-An array of field names.  Their search filters will be displayed in content administration as.
+(Optional) An array of field names.  Their search filters will be displayed in content administration as.
 
 - **children** (assoc array)
 
-References to other content types that are partials of the parent content. The index of a child must be an existing content type. The child is an associative array with two indeces:
+(Optional) References to other content types that are partials of the parent content. The index of a child must be an existing content type. The child is an associative array with two indeces:
     - **parent_id** (string) The field of child table that points to the parent's id.
     - **list** (array) The listed fields of child table. The schema of the child must result in the same list of fields.
 
@@ -132,7 +132,7 @@ Example child for a *shop_order* content type:
 
 - **events** (array of [string,function])
 
-The first value is the event name and the second value is the function that will be triggered. The function gets a reference to the specific row of the table. Posible values for the event:
+(Optional) The first value is the event name and the second value is the function that will be triggered. The function gets a reference to the specific row of the table. Posible values for the event:
     - **change** Runs when a row is created or updated
 
 
