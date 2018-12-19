@@ -1,8 +1,8 @@
-<h1>CM Controller</h1>
+# CM Controller
 
 [Under Developmet]
 
-Content Manager controller gets call from the front ens ad responses with json format.
+Content Manager controller gets calls from the front end and responds in json format.
 
 <h2>Actions</h2>
 <table>
