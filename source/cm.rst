@@ -18,12 +18,17 @@ Actions
 Parameters
 ----------
 * ``t`` The name of the table
-* ``id`` The id of the requested row
+* ``orderby`` Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC``
+* ``groupby`` Groups the results by a field or more (comma seperated)
 * ``<field_name>`` A filter to apply on any field. More options:
-** ``<field_name>[gt]`` Greater than
-** ``<field_name>[lt]`` Less than
-** ``<field_name>[begin]`` A string that begins with
-** ``<field_name>[end]`` A string that ends with
+    
+    * ``<field_name>[gt]`` Greater than
+    * ``<field_name>[ge]`` Greater or equal than
+    * ``<field_name>[lt]`` Less than
+    * ``<field_name>[le]`` Less or equal than
+    * ``<field_name>[begin]`` A string that begins with
+    * ``<field_name>[end]`` A string that ends with
+    * ``<field_name>[has]`` A string includes value
 
 
 **Example:**
