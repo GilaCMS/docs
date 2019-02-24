@@ -10,18 +10,19 @@ Actions
 * ``describe`` Returns the schema of a content type
 * ``list_rows`` Returns the rows as array
 * ``update_rows`` Updates entries
-* ``empty_row`` Returns a row with the deafault values
+* ``empty_row`` Returns a row with the default values
 * ``insert_row`` Inserts a new row in the content table
 * ``delete`` Deletes a row
 * ``csv`` Returns the rows in csv format
 
-Parameters
-----------
+GET Parameters
+--------------
+Theses parameters are use the listing actions: 
 * ``t`` The name of the table
 * ``orderby`` Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC``
 * ``groupby`` Groups the results by a field or more (comma seperated)
 * ``<field_name>`` A filter to apply on any field. More options:
-    
+
     * ``<field_name>[gt]`` Greater than
     * ``<field_name>[ge]`` Greater or equal than
     * ``<field_name>[lt]`` Less than
@@ -29,6 +30,11 @@ Parameters
     * ``<field_name>[begin]`` A string that begins with
     * ``<field_name>[end]`` A string that ends with
     * ``<field_name>[has]`` A string includes value
+
+POST Parameters
+---------------
+* ``id`` The id of row for the delete action.
+* ``<field_name>`` The value of the field for the update or insert action
 
 
 **Example:**

@@ -5,9 +5,9 @@
 
 Before beginning with installation make sure that your web host or local server meets these requirements:
 
-- Apache 2 server
+- Apache 2/ Nginx server
 - MySQL / MariaDB server
-- PHP 5.4+ with the following extensions *mysqli, zip, mysqlnd, json, gd* and *mod_rewrite* enabled
+- PHP 7.0+ with the following extensions *mysqli, zip, mysqlnd, json, gd* and *mod_rewrite* enabled
 
 If you want to install gila cms in your local machine and not sure how to prepare your server don't hesitate to ask for help on [Slack](https://gilacms.slack.com)
 
@@ -20,6 +20,23 @@ location / {
     rewrite gila/(?!install)(?!src)(?!themes)(?!lib)(?!assets)(?!tmp)(?!robots.txt)(.*)$ /gila/index.php?url=$1 last;
 }
 ```
+
+On **apache 2** server you may need to edit default VirtualHost file in order let .htaccess work. On ubuntu/debian you run
+```
+sudo nano /etc/apache2/sites-available/000-default.conf
+```
+And add these lines after *DocumentRoot /var/www/html*
+```
+<Directory "/var/www/html">
+    AllowOverride All
+</Directory>
+```
+If you need to activate mod_rewrite for apache
+```
+sudo a2enmod rewrite
+```
+
+Don't forget to restart your server if you made any changes.
 
 In order to proceed with the installation, you will need your **database settings**. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.
 

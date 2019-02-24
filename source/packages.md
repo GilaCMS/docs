@@ -10,9 +10,12 @@ views/
 lang/
 package.json
 load.php
+logo.png
 ```
 
 The folders are optional but very useful to organize better the code. The file **package.json** is a must have as it has the basic information of the package -without it the package is invisible- and the **load.php** is the file that will register new values and events of the package.
+
+## package.json
 
 A simple **package.json** file:
 ```
@@ -61,7 +64,9 @@ $lang = gila::option("my_package.lang","en"); // use default value 'en'
 ```
 More information for [**package.json schema**](schemas.html##package-json).
 
+## load.php
 
+This file is excecuted in every request to the website, so instead of adding many lines of code we usually register to the system new controllers, new routes or include on more files only when is needed.
 A simple **load.php** file could be:
 ```
 <?php
@@ -73,4 +78,43 @@ event::listen('post.after',function(){
 ```
 **IMPORTANT:** The first line of the load.php file should include only the opening tag *<?php* and not close with the closing tag.
 
+Some things you can do in a load file:
+```
+<?php
 
+// add menu item or menu sub item
+gila::amenu(['mymenuitem'=>['Item',"myctr",'icon'=>'link']]);
+gila::amenu_child('mymenuitem',['Sub Item',"myctr/sub",'icon'=>'link']);
+
+// add an event listener
+event::listen('load', function() {
+  // this function will run after all load.php from active packages
+  if(gila::hasPrivilege('admin')==false) {
+    view::renderFile('landing-page.php', 'mypackage');
+    exit;
+  }
+}
+
+// register new content type
+gila::content('mytable', 'mypackage/tables/mytable.php');
+
+// add new column on an existing content type
+gila::contentInit('mytable', function(&$table) {
+    $table['fields']['newfield'] = [
+        'title'=>"New Field",   // the label to display
+        'qtype'=>'varchar(80)', // the column type at database schema
+    ];
+});
+
+// register a controller
+// all /blog/* request are processed from class Blog in
+// blog/controllers/blogController.php
+gila::controller('blog', 'blog/controllers/blogController', 'Blog');
+
+// add a new action for blog controller (/blog/topics)
+gila::action('blog','topics',function(){
+  view::render('blog-topics.php', 'mypackage');
+});
+
+
+```

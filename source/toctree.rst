@@ -28,6 +28,7 @@ Contents:
    themes
    schemas
    api
+   web_api
 
 
 Indices and tables
