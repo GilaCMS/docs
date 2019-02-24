@@ -8,6 +8,7 @@ Content Manager controller gets calls from the front end and responds in json fo
 Returns the schema of a content type
 
 Parameters
+
 * ``t`` The name of the table (GET)
 
 **Example:**
@@ -169,6 +170,7 @@ Parameters
 Returns the rows as array
 
 Parameters
+
 * ``t`` The name of the table (GET)
 * ``orderby`` Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC`` (GET)
 * ``groupby`` Groups the results by a field or more (comma seperated) (GET)
@@ -187,6 +189,7 @@ Parameters
 Updates entry
 
 Parameters
+
 * ``t`` The name of the table (GET)
 * ``id`` The id of row to update, if is not set it will create a new entry. (GET)
 * ``<field_name>`` The value of the field for the update or insert action (POST)
@@ -196,6 +199,7 @@ Parameters
 Returns a row with the default values
 
 Parameters
+
 * ``t`` The name of the table (GET)
 
 /insert_row
@@ -203,6 +207,7 @@ Parameters
 Inserts a new row in the content table
 
 Parameters
+
 * ``t`` The name of the table (GET)
 * ``<field_name>`` The value of the field for the update or insert action (POST)
 
@@ -211,6 +216,7 @@ Parameters
 Deletes a row
 
 Parameters
+
 * ``t`` The name of the table (GET)
 * ``id`` The id of row to delete (POST)
 
