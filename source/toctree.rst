@@ -29,12 +29,12 @@ Contents:
    schemas
    api
 
-   .. toctree::
-      :maxdepth: 2
-      :caption: Web Api:
-   
-      cm
-      fm
+.. toctree::
+   :maxdepth: 2
+   :caption: Web Api:
+
+   cm
+   fm
 
 
 Indices and tables

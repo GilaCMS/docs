@@ -1,41 +1,14 @@
 CM Controller
 =============
 
-[Under Developmet]
-
 Content Manager controller gets calls from the front end and responds in json format.
 
-Actions
--------
-* ``describe`` Returns the schema of a content type
-* ``list_rows`` Returns the rows as array
-* ``update_rows`` Updates entries
-* ``empty_row`` Returns a row with the default values
-* ``insert_row`` Inserts a new row in the content table
-* ``delete`` Deletes a row
-* ``csv`` Returns the rows in csv format
+/describe
+---------
+Returns the schema of a content type
 
-GET Parameters
---------------
-Theses parameters are use the listing actions: 
-* ``t`` The name of the table
-* ``orderby`` Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC``
-* ``groupby`` Groups the results by a field or more (comma seperated)
-* ``<field_name>`` A filter to apply on any field. More options:
-
-    * ``<field_name>[gt]`` Greater than
-    * ``<field_name>[ge]`` Greater or equal than
-    * ``<field_name>[lt]`` Less than
-    * ``<field_name>[le]`` Less or equal than
-    * ``<field_name>[begin]`` A string that begins with
-    * ``<field_name>[end]`` A string that ends with
-    * ``<field_name>[has]`` A string includes value
-
-POST Parameters
----------------
-* ``id`` The id of row for the delete action.
-* ``<field_name>`` The value of the field for the update or insert action
-
+Parameters
+* ``t`` The name of the table (GET)
 
 **Example:**
 
@@ -191,4 +164,58 @@ POST Parameters
         ]
     }
 
+/list_rows
+----------
+Returns the rows as array
 
+Parameters
+* ``t`` The name of the table (GET)
+* ``orderby`` Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC`` (GET)
+* ``groupby`` Groups the results by a field or more (comma seperated) (GET)
+* ``<field_name>`` A filter to apply on any field (GET) More options:
+
+    * ``<field_name>[gt]`` Greater than
+    * ``<field_name>[ge]`` Greater or equal than
+    * ``<field_name>[lt]`` Less than
+    * ``<field_name>[le]`` Less or equal than
+    * ``<field_name>[begin]`` A string that begins with
+    * ``<field_name>[end]`` A string that ends with
+    * ``<field_name>[has]`` A string includes value
+
+/update_rows
+-------------
+Updates entry
+
+Parameters
+* ``t`` The name of the table (GET)
+* ``id`` The id of row to update, if is not set it will create a new entry. (GET)
+* ``<field_name>`` The value of the field for the update or insert action (POST)
+
+/empty_row
+----------
+Returns a row with the default values
+
+Parameters
+* ``t`` The name of the table (GET)
+
+/insert_row
+-----------
+Inserts a new row in the content table
+
+Parameters
+* ``t`` The name of the table (GET)
+* ``<field_name>`` The value of the field for the update or insert action (POST)
+
+/delete
+-------
+Deletes a row
+
+Parameters
+* ``t`` The name of the table (GET)
+* ``id`` The id of row to delete (POST)
+
+
+/csv
+----
+Returns the rows in csv format for download
+Parameters are like ``/list_rows``
