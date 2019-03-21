@@ -27,7 +27,15 @@ Contents:
    package_examples
    themes
    schemas
-   api
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Api:
+
+   api-gila
+   api-view
+   api-event
+   api-db
 
 .. toctree::
    :maxdepth: 2

@@ -75,3 +75,14 @@ Make a copy of *gila-blog* and name it *my-clone-theme*. In *package.json* file 
 ...
 ```
 
+## load.php
+
+Some use case of load.php
+```
+// add new widget areas that theme includes
+array_push(gila::$widget_area, 'footer','sidebar','post.after');
+
+// include stylesheet
+view::stylesheet('lib/font-awesome/css/font-awesome.min.css');
+
+```

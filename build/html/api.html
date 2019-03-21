@@ -15,29 +15,33 @@
   
     <link rel="shortcut icon" href="_static/gila-logo.svg"/>
   
+  
+  
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="search" title="Search" href="search.html" />
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
+<style>
+  .highlight-json{max-height: 320px; overflow-y: scroll}
+</style>
 
-  
-
-  
-    <link rel="top" title="Gila CMS 1.7.2 documentation" href="index.html"/>
-        <link rel="prev" title="Themes" href="themes.html"/>
-
-
-
-<script>
+<!--script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -46,22 +50,18 @@
   ga('create', 'UA-92259816-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
+</script-->
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
+   
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -96,7 +96,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">User Manual</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Manual</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
@@ -104,17 +107,24 @@
 <li class="toctree-l1"><a class="reference internal" href="admin.html">Administration</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Programmers Guide</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="package_examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="themes.html">Themes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Api</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#class-gila">Class gila</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#class-event">Class event</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#class-view">Class view</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#class-db">Class db</a></li>
+<li class="toctree-l1"><a class="reference internal" href="schemas.html">Schemas</a></li>
 </ul>
-</li>
+<p class="caption"><span class="caption-text">Api:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api-gila.html">Class gila</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-view.html">Class view</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-event.html">Class event</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-db.html">Class db</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Web Api:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="cm.html">CM Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fm.html">CM Controller</a></li>
 </ul>
 
             
@@ -126,34 +136,54 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="toctree.html">Gila CMS</a>
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="toctree.html">Gila CMS</a>
+        
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="toctree.html">Docs</a> &raquo;</li>
-      
-    <li>Api</li>
+    
+      <li><a href="toctree.html">Docs</a> &raquo;</li>
+        
+      <li>Api</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/api.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -176,93 +206,209 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$c</strong> (<em>String</em>) &#8211; Controllers name</li>
-<li><strong>$file</strong> (<em>String</em>) &#8211; Controller&#8217;s filepath without the php extension</li>
-<li><strong>$name</strong> (<em>String</em>) &#8211; Optional. Controller&#8217;s class name, $c is used by default</li>
+<li><strong>$c</strong> (<em>string</em>) – Controllers name</li>
+<li><strong>$file</strong> (<em>string</em>) – Controller’s filepath without the php extension</li>
+<li><strong>$name</strong> (<em>string</em>) – Optional. Controller’s class name, $c is used by default</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Example: <code class="docutils literal"><span class="pre">gila::controller('my-ctrl',</span> <span class="pre">'my_package/controllers/ctrl','myctrl');</span></code></p>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::controller(&#39;my-ctrl&#39;, &#39;my_package/controllers/ctrl&#39;,&#39;myctrl&#39;);</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.route">
 <code class="descname">route</code><span class="sig-paren">(</span><em>$r</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.route" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Registers a function call on a specific path.</p>
-<p>:param String $r The path
-:param Function $fn Callback for the route</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::route('some.txt',</span> <span class="pre">function(){</span> <span class="pre">echo</span> <span class="pre">'Some</span> <span class="pre">text.';</span> <span class="pre">});</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$r</strong> (<em>string</em>) – The path</li>
+<li><strong>$fn</strong> (<em>Function</em>) – Callback for the route</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::route(&#39;some.txt&#39;, function(){ echo &#39;Some text.&#39;; });</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.onController">
 <code class="descname">onController</code><span class="sig-paren">(</span><em>$c</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.onController" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Registers a function to run right after the controller class construction.</p>
-<p>:param String $c The controller&#8217;s class name
-:param Function $fn Callback</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::route('blog',</span> <span class="pre">function(){</span> <span class="pre">blog::ppp</span> <span class="pre">=</span> <span class="pre">24;</span> <span class="pre">});</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$c</strong> (<em>string</em>) – The controller’s class name</li>
+<li><strong>$fn</strong> (<em>Function</em>) – Callback</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::route(&#39;blog&#39;, function(){ blog::ppp = 24; });</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.action">
 <code class="descname">action</code><span class="sig-paren">(</span><em>$c</em>, <em>$action</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.action" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Registers a new action or replaces an existing for a controller.</p>
-<p>:param String $c The controller&#8217;s class name
-:param String $action The action
-:param Function $fn Callback</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::action('blog',</span> <span class="pre">'topics',</span> <span class="pre">function(){</span> <span class="pre">blog::tagsAction();</span> <span class="pre">});</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$c</strong> (<em>string</em>) – The controller’s class name</li>
+<li><strong>$action</strong> (<em>string</em>) – The action</li>
+<li><strong>$fn</strong> (<em>Function</em>) – Callback</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::action(&#39;blog&#39;, &#39;topics&#39;, function(){ blog::tagsAction(); });</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.before">
 <code class="descname">before</code><span class="sig-paren">(</span><em>$c</em>, <em>$action</em>, <em>$fn</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.before" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Registers a function to run before the function of a specific action.</p>
-<p>:param String $c The controller&#8217;s class name
-:param String $action The action
-:param Function $fn Callback</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::action('blog',</span> <span class="pre">'topics',</span> <span class="pre">function(){</span> <span class="pre">blog::tagsAction();</span> <span class="pre">});</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$c</strong> (<em>string</em>) – The controller’s class name</li>
+<li><strong>$action</strong> (<em>string</em>) – The action</li>
+<li><strong>$fn</strong> (<em>Function</em>) – Callback</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::action(&#39;blog&#39;, &#39;topics&#39;, function(){ blog::tagsAction(); });</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.addLang">
 <code class="descname">addLang</code><span class="sig-paren">(</span><em>$path</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.addLang" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Adds language translations from a json file.</p>
-<p>:param String $path Path to the folder/prefix of language json files</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::addLang('mypackages/lang/');</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$path</strong> (<em>string</em>) – Path to the folder/prefix of language json files</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::addLang(&#39;mypackages/lang/&#39;);</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.widgets">
 <code class="descname">widgets</code><span class="sig-paren">(</span><em>$list</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.widgets" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Register new widgets.</p>
-<p>:param Array $list</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::widgets(</span> <span class="pre">[‘wdg’=&gt;’my_package/widgets/wdg’]</span> <span class="pre">);</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$list</strong> (<em>Array</em>) – </td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::widgets( [‘wdg’=&gt;’my_package/widgets/wdg’] );</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.content">
 <code class="descname">content</code><span class="sig-paren">(</span><em>$key</em>, <em>$path</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.content" title="Permalink to this definition">¶</a></dt>
-<dd><p>(static) Register new widgets.</p>
+<dd><p>(static) Register new content type.</p>
 <p>:param String $key Name of content type
 :param String $path Path to the table file</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::content(</span> <span class="pre">'mytable',</span> <span class="pre">'package_name/content/mytable.php'</span> <span class="pre">);</span></code></p>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::content( &#39;mytable&#39;, &#39;package_name/content/mytable.php&#39; );</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.contentInit">
+<code class="descname">contentInit</code><span class="sig-paren">(</span><em>$key</em>, <em>$init</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.contentInit" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Make changes on an existing content type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$key</strong> (<em>String</em>) – Name of content type</li>
+<li><strong>$init</strong> (<em>Function</em>) – Function to run when initializes the content type object</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::contentInit( &#39;mytable&#39;, function(&amp;$table){</span>
+<span class="x">    // unlist a column from content administration</span>
+<span class="x">    &amp;$table[&#39;fields&#39;][&#39;column1&#39;][&#39;list] = false;</span>
+<span class="x">} );</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.packages">
 <code class="descname">packages</code><span class="sig-paren">(</span><em>$list</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.packages" title="Permalink to this definition">¶</a></dt>
-<dd><p>(static) Returns the list of active packages.</p>
+<dd><p>(static) Returns an array with the active packages names.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="gila.amenu">
 <code class="descname">amenu</code><span class="sig-paren">(</span><em>$key</em>, <em>$item</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.amenu" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Add new elements on administration menu.</p>
-<p>:param Array $key Index name
-:param Array $item</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::amenu('item',</span> <span class="pre">['Item','controller/action','icon'=&gt;'item-icon']);</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$key</strong> (<em>Array</em>) – Index name</li>
+<li><strong>$item</strong> (<em>Array</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::amenu(&#39;item&#39;, [&#39;Item&#39;,&#39;controller/action&#39;,&#39;icon&#39;=&gt;&#39;item-icon&#39;]);</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -273,12 +419,18 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$key</strong> (<em>string</em>) &#8211; Index of the parent item.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$key</strong> (<em>string</em>) – Index of the parent item.</li>
+<li><strong>$item</strong> (<em>Array</em>) – </li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
-<p>:param Array $item</p>
-<p>Example: <code class="docutils literal"><span class="pre">gila::amenu_child('item',</span> <span class="pre">['Child</span> <span class="pre">Item','controller/action','icon'=&gt;'item-icon']);</span></code></p>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::amenu_child(&#39;item&#39;, [&#39;Child Item&#39;,&#39;controller/action&#39;,&#39;icon&#39;=&gt;&#39;item-icon&#39;]);</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -290,8 +442,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$key</strong> (<em>string</em>) &#8211; Index of the element.</li>
-<li><strong>$value</strong> (<em>*</em>) &#8211; (optional) The value.</li>
+<li><strong>$key</strong> (<em>string</em>) – Index of the element.</li>
+<li><strong>$value</strong> (<em>*</em>) – (optional) The value.</li>
 </ul>
 </td>
 </tr>
@@ -303,9 +455,27 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="gila.setConfig">
+<code class="descname">setConfig</code><span class="sig-paren">(</span><em>$key</em>, <em>$value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.setConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Sets the value of configuration element.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$key</strong> (<em>string</em>) – Index of the element.</li>
+<li><strong>$value</strong> (<em>*</em>) – The value to set.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="gila.updateConfigFile">
 <code class="descname">updateConfigFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gila.updateConfigFile" title="Permalink to this definition">¶</a></dt>
-<dd><p>(static) Updates the configuration file.</p>
+<dd><p>(static) Updates the config.php file.</p>
 </dd></dl>
 
 <dl class="method">
@@ -317,8 +487,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$v1</strong> (<em>*</em>) &#8211; First value.</li>
-<li><strong>$v2</strong> (<em>*</em>) &#8211; Second value.</li>
+<li><strong>$v1</strong> (<em>*</em>) – First value.</li>
+<li><strong>$v2</strong> (<em>*</em>) – Second value.</li>
 </ul>
 </td>
 </tr>
@@ -339,7 +509,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$pass</strong> (<em>string</em>) &#8211; The string to be hashed.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$pass</strong> (<em>string</em>) – The string to be hashed.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Hashed password.</td>
 </tr>
@@ -354,8 +524,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$option</strong> (<em>string</em>) &#8211; Option name.</li>
-<li><strong>$default</strong> (<em>string</em>) &#8211; (optional) The value to return if there option has not saved value.</li>
+<li><strong>$option</strong> (<em>string</em>) – Option name.</li>
+<li><strong>$default</strong> (<em>string</em>) – (optional) The value to return if there option has not saved value.</li>
 </ul>
 </td>
 </tr>
@@ -375,8 +545,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$option</strong> (<em>string</em>) &#8211; Option name.</li>
-<li><strong>$default</strong> (<em>string</em>) &#8211; The value to set.</li>
+<li><strong>$option</strong> (<em>string</em>) – Option name.</li>
+<li><strong>$default</strong> (<em>string</em>) – The value to set.</li>
 </ul>
 </td>
 </tr>
@@ -392,7 +562,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$pri</strong> (<em>string/Array</em>) &#8211; The privilege(s) to check.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$pri</strong> (<em>string/Array</em>) – The privilege(s) to check.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True or false.</td>
 </tr>
@@ -408,7 +578,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$path</strong> (<em>string</em>) &#8211; Folder path.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$path</strong> (<em>string</em>) – Folder path.</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string</td>
 </tr>
@@ -425,20 +595,62 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$c</strong> (<em>string</em>) &#8211; The controller.</li>
-<li><strong>$action</strong> (<em>string</em>) &#8211; The action.</li>
-<li><strong>$args</strong> (<em>Array</em>) &#8211; The parameters in array.</li>
+<li><strong>$c</strong> (<em>string</em>) – The controller.</li>
+<li><strong>$action</strong> (<em>string</em>) – The action.</li>
+<li><strong>$args</strong> (<em>Array</em>) – The parameters in array.</li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The full url to print.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The full url path to print.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>Examples:</p>
-<p><code class="docutils literal"><span class="pre">$url1</span> <span class="pre">=</span> <span class="pre">gila::make_url('blog','post',[1]);</span></code> returns mysite.com/blog/post/1
-<code class="docutils literal"><span class="pre">$url1</span> <span class="pre">=</span> <span class="pre">gila::make_url('blog','',['page1']);</span></code> returns mysite.com/blog/page1</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$url1 = gila::make_url(&#39;blog&#39;,&#39;post&#39;,[1]);`` returns mysite.com/blog/post/1</span>
+<span class="x">$url1 = gila::make_url(&#39;blog&#39;,&#39;&#39;,[&#39;page1&#39;]);`` returns mysite.com/blog/page1</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.mt">
+<code class="descname">mt</code><span class="sig-paren">(</span><em>$arg</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.mt" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Returns modification times in seconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$arg</strong> (<em>string/Array</em>) – Names of keys.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string/Array</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::mt(&#39;my-table&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="gila.updateMt">
+<code class="descname">updateMt</code><span class="sig-paren">(</span><em>$arg</em><span class="sig-paren">)</span><a class="headerlink" href="#gila.updateMt" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Updates modification time in seconds. You can use this function from your model classes. The <em>cm</em> controller runs <em>updateMt()</em> for any content type in update action.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$arg</strong> (<em>string/Array</em>) – Names of keys.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string/Array</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">gila::updateMt(&#39;my-table&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -459,8 +671,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$event</strong> (<em>string</em>) &#8211; The event name.</li>
-<li><strong>$handler</strong> (<em>function</em>) &#8211; The function to call.</li>
+<li><strong>$event</strong> (<em>string</em>) – The event name.</li>
+<li><strong>$handler</strong> (<em>function</em>) – The function to call.</li>
 </ul>
 </td>
 </tr>
@@ -477,8 +689,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$event</strong> (<em>string</em>) &#8211; The event name.</li>
-<li><strong>$params</strong> (<em>function</em>) &#8211; (optional) Parameters to send to handlers.</li>
+<li><strong>$event</strong> (<em>string</em>) – The event name.</li>
+<li><strong>$params</strong> (<em>function</em>) – (optional) Parameters to send to handlers.</li>
 </ul>
 </td>
 </tr>
@@ -496,16 +708,16 @@
 <em class="property">class </em><code class="descname">view</code><a class="headerlink" href="#view" title="Permalink to this definition">¶</a></dt>
 <dd><p>Have methods that outputs the HTML</p>
 <dl class="method">
-<dt>
-<code class="descname">function set($param,$value)</code></dt>
+<dt id="view.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>$param</em>, <em>$value</em><span class="sig-paren">)</span><a class="headerlink" href="#view.set" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Sets a parameter from a controller action that can be used later from a view file.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$param</strong> (<em>string</em>) &#8211; The parameter name.</li>
-<li><strong>$handler</strong> (<em>(any)</em>) &#8211; The value.</li>
+<li><strong>$param</strong> (<em>string</em>) – The parameter name.</li>
+<li><strong>$handler</strong> (<em>(</em><em>any</em><em>)</em>) – The value.</li>
 </ul>
 </td>
 </tr>
@@ -522,8 +734,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$meta</strong> (<em>string</em>) &#8211; The meta name.</li>
-<li><strong>$value</strong> (<em>string</em>) &#8211; The value.</li>
+<li><strong>$meta</strong> (<em>string</em>) – The meta name.</li>
+<li><strong>$value</strong> (<em>string</em>) – The value.</li>
 </ul>
 </td>
 </tr>
@@ -539,7 +751,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$href</strong> (<em>string</em>) &#8211; The href attribute from the link.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$href</strong> (<em>string</em>) – The href attribute from the link.</td>
 </tr>
 </tbody>
 </table>
@@ -554,8 +766,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$script</strong> (<em>string</em>) &#8211; The src attribute from the script.</li>
-<li><strong>$prop</strong> (<em>string</em>) &#8211; Optional. A property for the script.</li>
+<li><strong>$script</strong> (<em>string</em>) – The src attribute from the script.</li>
+<li><strong>$prop</strong> (<em>string</em>) – Optional. A property for the script.</li>
 </ul>
 </td>
 </tr>
@@ -577,7 +789,7 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$file</strong> (<em>Array</em>) &#8211; (optional) Meta values to be printed.</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>$file</strong> (<em>Array</em>) – (optional) Meta values to be printed.</td>
 </tr>
 </tbody>
 </table>
@@ -592,8 +804,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$file</strong> (<em>Array</em>) &#8211; The file path.</li>
-<li><strong>$package</strong> (<em>string</em>) &#8211; (optional) The package folder where the file is located if is not found in theme folder.</li>
+<li><strong>$file</strong> (<em>string</em>) – The file path.</li>
+<li><strong>$package</strong> (<em>string</em>) – (optional) The package folder where the file is located if is not found in theme folder.</li>
 </ul>
 </td>
 </tr>
@@ -605,6 +817,34 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="view.setViewFile">
+<code class="descname">setViewFile</code><span class="sig-paren">(</span><em>$file</em>, <em>$package</em><span class="sig-paren">)</span><a class="headerlink" href="#view.setViewFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>(static) Overrides the path of a view file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>$file</strong> (<em>string</em>) – The file path.</li>
+<li><strong>$package</strong> (<em>string</em>) – The package folder where the file is located.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Example</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">view::setViewFile(&#39;admin/settings.php&#39;,&#39;new-package&#39;);</span>
+<span class="x">/*</span>
+<span class="x">src/new-package/views/admin/settings.php</span>
+<span class="x">overrides</span>
+<span class="x">themes/my-theme/admin/settings.php</span>
+<span class="x">src/core/views/admin/settings.php</span>
+<span class="x">*/</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="view.render">
 <code class="descname">render</code><span class="sig-paren">(</span><em>$file</em>, <em>$package = 'core'</em><span class="sig-paren">)</span><a class="headerlink" href="#view.render" title="Permalink to this definition">¶</a></dt>
 <dd><p>(static) Prints the view file adding the header.php and footer.php from theme.</p>
@@ -613,8 +853,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$file</strong> (<em>string</em>) &#8211; The file path.</li>
-<li><strong>$package</strong> (<em>string</em>) &#8211; (optional) The package folder where the file is located if is not found in theme folder.</li>
+<li><strong>$file</strong> (<em>string</em>) – The file path.</li>
+<li><strong>$package</strong> (<em>string</em>) – (optional) The package folder where the file is located if is not found in theme folder.</li>
 </ul>
 </td>
 </tr>
@@ -631,8 +871,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$file</strong> (<em>string</em>) &#8211; The file path.</li>
-<li><strong>$package</strong> (<em>string</em>) &#8211; (optional) The package folder where the file is located if is not found in theme folder.</li>
+<li><strong>$file</strong> (<em>string</em>) – The file path.</li>
+<li><strong>$package</strong> (<em>string</em>) – (optional) The package folder where the file is located if is not found in theme folder.</li>
 </ul>
 </td>
 </tr>
@@ -649,8 +889,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$file</strong> (<em>string</em>) &#8211; The file path.</li>
-<li><strong>$package</strong> (<em>string</em>) &#8211; (optional) The package folder where the file is located if is not found in theme folder.</li>
+<li><strong>$file</strong> (<em>string</em>) – The file path.</li>
+<li><strong>$package</strong> (<em>string</em>) – (optional) The package folder where the file is located if is not found in theme folder.</li>
 </ul>
 </td>
 </tr>
@@ -667,8 +907,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$file</strong> (<em>string</em>) &#8211; The file path.</li>
-<li><strong>$package</strong> (<em>string</em>) &#8211; (optional) The package folder where the file is located if is not found in theme folder.</li>
+<li><strong>$file</strong> (<em>string</em>) – The file path.</li>
+<li><strong>$package</strong> (<em>string</em>) – (optional) The package folder where the file is located if is not found in theme folder.</li>
 </ul>
 </td>
 </tr>
@@ -685,8 +925,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$menu</strong> (<em>string</em>) &#8211; Optional. Name of the menu.</li>
-<li><strong>$tpl</strong> (<em>string</em>) &#8211; Optional. The view template to generate html.</li>
+<li><strong>$menu</strong> (<em>string</em>) – Optional. Name of the menu.</li>
+<li><strong>$tpl</strong> (<em>string</em>) – Optional. The view template to generate html.</li>
 </ul>
 </td>
 </tr>
@@ -703,8 +943,8 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$area</strong> (<em>string</em>) &#8211; The widget area name.</li>
-<li><strong>$div</strong> (<em>bool</em>) &#8211; (optional) Also print or not the widget inside a &lt;div&gt; tag with its title.</li>
+<li><strong>$area</strong> (<em>string</em>) – The widget area name.</li>
+<li><strong>$div</strong> (<em>bool</em>) – (optional) Also print or not the widget inside a &lt;div&gt; tag with its title.</li>
 </ul>
 </td>
 </tr>
@@ -721,9 +961,9 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$src</strong> (<em>string</em>) &#8211; The path of original image.</li>
-<li><strong>$prefix</strong> (<em>string</em>) &#8211; The prefix name of the thumbnail.</li>
-<li><strong>$max</strong> (<em>int</em>) &#8211; (optional) The maximum width or height of thumbnail in pixels.</li>
+<li><strong>$src</strong> (<em>string</em>) – The path of original image.</li>
+<li><strong>$prefix</strong> (<em>string</em>) – The prefix name of the thumbnail.</li>
+<li><strong>$max</strong> (<em>int</em>) – (optional) The maximum width or height of thumbnail in pixels.</li>
 </ul>
 </td>
 </tr>
@@ -740,9 +980,9 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>$src_array</strong> (<em>Array</em>) &#8211; The images to stack.</li>
-<li><strong>$file</strong> (<em>string</em>) &#8211; The name of the stucked image. It must have png extension.</li>
-<li><strong>$max</strong> (<em>int</em>) &#8211; (optional) The maximum width or height of thumbnails in pixels.</li>
+<li><strong>$src_array</strong> (<em>Array</em>) – The images to stack.</li>
+<li><strong>$file</strong> (<em>string</em>) – The name of the stucked image. It must have png extension.</li>
+<li><strong>$max</strong> (<em>int</em>) – (optional) The maximum width or height of thumbnails in pixels.</li>
 </ul>
 </td>
 </tr>
@@ -752,12 +992,19 @@
 </tbody>
 </table>
 <p>Example:</p>
-<p><code class="docutils literal"><span class="pre">$img</span> <span class="pre">=</span> <span class="pre">[&quot;image1.png&quot;,&quot;image2.png&quot;];</span></code>
-<code class="docutils literal"><span class="pre">list($file,$stacked)</span> <span class="pre">=</span> <span class="pre">view::thumb_stack($img,</span> <span class="pre">&quot;tmp/stacked_file.png&quot;,80);</span></code></p>
-<p>$file: <code class="docutils literal"><span class="pre">tmp/stacked_file.png?12</span></code></p>
-<p>$stacked[0]: <code class="docutils literal"><span class="pre">[&quot;src&quot;=&gt;&quot;image1.png&quot;,&quot;src_width&quot;=&gt;200,&quot;src_height&quot;=&gt;150,&quot;width&quot;=&gt;80,&quot;height&quot;=&gt;60,&quot;type&quot;=&gt;2,&quot;top&quot;=&gt;0],</span></code></p>
-<p>$stacked[1]: <code class="docutils literal"><span class="pre">false</span></code>
-2nd image was not stacked</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$img = [&quot;image1.png&quot;,&quot;image2.png&quot;];</span>
+<span class="x">list($file,$stacked) = view::thumb_stack($img, &quot;tmp/stacked_file.png&quot;,80);</span>
+
+<span class="x">/* Returned values</span>
+
+<span class="x">$file: tmp/stacked_file.png?12</span>
+
+<span class="x">$stacked[0]: [&quot;src&quot;=&gt;&quot;image1.png&quot;,&quot;src_width&quot;=&gt;200,&quot;src_height&quot;=&gt;150,&quot;width&quot;=&gt;80,&quot;height&quot;=&gt;60,&quot;type&quot;=&gt;2,&quot;top&quot;=&gt;0]</span>
+
+<span class="x">$stacked[1]: false (2nd image was not stacked)</span>
+<span class="x">*/</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -768,49 +1015,49 @@
 <dl class="class">
 <dt id="db">
 <em class="property">class </em><code class="descname">db</code><a class="headerlink" href="#db" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<p>Class db prepare statements for mysql queries to the connected database.
-We use the global <code class="docutils literal"><span class="pre">$db</span></code> instance to access its methods.</p>
+<dd><p>Class db prepare statements for mysql queries to the connected database.
+We use the global <code class="docutils literal notranslate"><span class="pre">$db</span></code> instance to access its methods.</p>
 <dl class="method">
-<dt>
-<code class="descname">function query($q, $args)</code></dt>
+<dt id="db.query">
+<code class="descname">query</code><span class="sig-paren">(</span><em>$q</em>, <em>$args</em><span class="sig-paren">)</span><a class="headerlink" href="#db.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs a query and returns the result.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
-<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+<li><strong>$q</strong> (<em>string</em>) – The query.</li>
+<li><strong>$args</strong> (<em>(</em><em>array</em><em>)</em>) – Optional. Values to prepare the statement.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>Example</p>
-<p><code class="docutils literal"><span class="pre">$result</span> <span class="pre">=</span> <span class="pre">$db-&gt;query(&quot;SELECT</span> <span class="pre">title,author</span> <span class="pre">FROM</span> <span class="pre">post;&quot;);</span></code>
-<code class="docutils literal"><span class="pre">$result</span> <span class="pre">=</span> <span class="pre">$db-&gt;query(&quot;SELECT</span> <span class="pre">title,author</span> <span class="pre">FROM</span> <span class="pre">post</span> <span class="pre">WHERE</span> <span class="pre">user_id=?;&quot;,[session::user_id()]);</span></code></p>
+<p>Examples</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$result1 = $db-&gt;query(&quot;SELECT title,author FROM post;&quot;);</span>
+<span class="x">$result2 = $db-&gt;query(&quot;SELECT title,author FROM post WHERE user_id=?;&quot;,[session::user_id()]);</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function get($q, $args)</code></dt>
+<dt id="db.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>$q</em>, <em>$args</em><span class="sig-paren">)</span><a class="headerlink" href="#db.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs a query and returns the results as an array.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
-<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+<li><strong>$q</strong> (<em>string</em>) – The query.</li>
+<li><strong>$args</strong> (<em>(</em><em>array</em><em>)</em>) – Optional. Values to prepare the statement.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <p>Example</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">$result = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$result = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
 <span class="x">// Returns</span>
 <span class="x">[</span>
 <span class="x">    0=&gt;[0=&gt;&#39;Lorem ipsum&#39;, &#39;title&#39;=&gt;&#39;Lorem ipsum&#39;, 1=&gt;&#39;John&#39;, &#39;author&#39;=&gt;&#39;John&#39;],</span>
@@ -821,55 +1068,57 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function gen($q, $args)</code></dt>
+<dt id="db.gen">
+<code class="descname">gen</code><span class="sig-paren">(</span><em>$q</em>, <em>$args</em><span class="sig-paren">)</span><a class="headerlink" href="#db.gen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs a query and returns a generator that yields the rows.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
-<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+<li><strong>$q</strong> (<em>string</em>) – The query.</li>
+<li><strong>$args</strong> (<em>(</em><em>array</em><em>)</em>) – Optional. Values to prepare the statement.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <p>Example</p>
-<p><code class="docutils literal"><span class="pre">$generator</span> <span class="pre">=</span> <span class="pre">$db-&gt;gen(&quot;SELECT</span> <span class="pre">title,author</span> <span class="pre">FROM</span> <span class="pre">post;&quot;);</span></code></p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$generator = $db-&gt;gen(&quot;SELECT title,author FROM post;&quot;);</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function getRows($q, $args)</code></dt>
+<dt id="db.getRows">
+<code class="descname">getRows</code><span class="sig-paren">(</span><em>$q</em>, <em>$args</em><span class="sig-paren">)</span><a class="headerlink" href="#db.getRows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs a query and returns the results as an array. With rows fetched with mysqli_fetch_row().</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>$q</strong> (<em>string</em>) &#8211; The query.</li>
-<li><strong>$args</strong> (<em>(array)</em>) &#8211; Optional. Values to prepare the statement.</li>
+<li><strong>$q</strong> (<em>string</em>) – The query.</li>
+<li><strong>$args</strong> (<em>(</em><em>array</em><em>)</em>) – Optional. Values to prepare the statement.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <p>Example</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">$result = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$result = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
 <span class="x">// Returns</span>
 <span class="x">[</span>
-<span class="x">    0=&gt;[0=&gt;&#39;Lorem ipsum&#39;,1=&gt;&#39;John&#39;],``</span>
-<span class="x">    1=&gt;[0=&gt;&#39;Duis aute irure&#39;,1=&gt;&#39;John&#39;],``</span>
+<span class="x">    0=&gt;[0=&gt;&#39;Lorem ipsum&#39;,1=&gt;&#39;John&#39;],</span>
+<span class="x">    1=&gt;[0=&gt;&#39;Duis aute irure&#39;,1=&gt;&#39;John&#39;],</span>
 <span class="x">]</span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function getList($q, $args)</code></dt>
+<dt id="db.getList">
+<code class="descname">getList</code><span class="sig-paren">(</span><em>$q</em>, <em>$args</em><span class="sig-paren">)</span><a class="headerlink" href="#db.getList" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs a query and returns an array with the values of the first columns from the results.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
@@ -877,15 +1126,15 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">param string $q:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The query.</td>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The query.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">param (array) $args:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Optional. Values to prepare the statement.</td>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Optional. Values to prepare the statement.</td>
 </tr>
 </tbody>
 </table>
 <p>Example</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">$titles = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$titles = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
 <span class="x">// Returns</span>
 <span class="x">[0=&gt;&#39;Lorem ipsum&#39;, 1=&gt;&#39;Duis aute irure&#39;]</span>
 </pre></div>
@@ -894,8 +1143,8 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function value($q, $args)</code></dt>
+<dt id="db.value">
+<code class="descname">value</code><span class="sig-paren">(</span><em>$q</em>, <em>$args</em><span class="sig-paren">)</span><a class="headerlink" href="#db.value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Runs a query and returns the value of the first column of the first row of the results.</p>
 <blockquote>
 <div><table class="docutils field-list" frame="void" rules="none">
@@ -903,15 +1152,15 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name" colspan="2">param string $q:</th></tr>
-<tr class="field-odd field"><td>&nbsp;</td><td class="field-body">The query.</td>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The query.</td>
 </tr>
 <tr class="field-even field"><th class="field-name" colspan="2">param (array) $args:</th></tr>
-<tr class="field-even field"><td>&nbsp;</td><td class="field-body">Optional. Values to prepare the statement.</td>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Optional. Values to prepare the statement.</td>
 </tr>
 </tbody>
 </table>
 <p>Example</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">$res = $db-&gt;get(&quot;SELECT title FROM post WHERE id=1;&quot;);</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$res = $db-&gt;get(&quot;SELECT title FROM post WHERE id=1;&quot;);</span>
 <span class="x">// returns</span>
 <span class="x">&#39;Lorem ipsum&#39;</span>
 </pre></div>
@@ -920,12 +1169,12 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function error()</code></dt>
+<dt id="db.error">
+<code class="descname">error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return an error if exists from the last query executed.</p>
 <blockquote>
 <div><p>Example</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="x">$res = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">$res = $db-&gt;get(&quot;SELECT title,author FROM post;&quot;);</span>
 <span class="x">if ($error = $db-&gt;error()) {</span>
 <span class="x">    trigger_error($error);</span>
 <span class="x">}</span>
@@ -935,11 +1184,13 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 </dd></dl>
 
 <dl class="method">
-<dt>
-<code class="descname">function close()</code></dt>
+<dt id="db.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#db.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Closes the connection to the database.</p>
 <blockquote>
-<div>Example <code class="docutils literal"><span class="pre">$db-&gt;close();</span></code></div></blockquote>
+<div>Example <code class="docutils literal notranslate"><span class="pre">$db-&gt;close();</span></code></div></blockquote>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -947,22 +1198,16 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
 
 
            </div>
+           
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="themes.html" class="btn btn-neutral" title="Themes" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2018, Vasileios Zoumpourlis.
+        &copy; Copyright 2017-2018, Vasileios Zoumpourlis
 
     </p>
   </div> 
@@ -978,35 +1223,15 @@ We use the global <code class="docutils literal"><span class="pre">$db</span></c
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'1.7.2',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
-
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+
+  
+  
+    
    
 
 </body>

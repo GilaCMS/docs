@@ -1,4 +1,4 @@
-CM Controller
+Content Manager
 =============
 
 Content Manager controller gets calls from the front end and responds in json format.
@@ -191,7 +191,7 @@ Updates entry
 Parameters
 
 * ``t`` The name of the table (GET)
-* ``id`` The id of row to update, if is not set it will create a new entry. (GET)
+* ``id`` The id of row to update or a comma seperated list od ids, if is not set it will create a new entry. (GET)
 * ``<field_name>`` The value of the field for the update or insert action (POST)
 
 /empty_row
@@ -220,6 +220,11 @@ Parameters
 * ``t`` The name of the table (GET)
 * ``id`` The id of row to delete (POST)
 
+
+/list
+----
+Returns the rows as an array of objects in json format. I wont return the total rows
+Parameters are like ``/list_rows``
 
 /csv
 ----
