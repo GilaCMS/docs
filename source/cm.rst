@@ -3,7 +3,7 @@ Content Manager
 
 Content Manager controller gets calls from the front end and responds in json format.
 
-/describe
+/cm/describe
 ---------
 Returns the schema of a content type
 
@@ -165,7 +165,7 @@ Parameters
         ]
     }
 
-/list_rows
+/cm/list_rows
 ----------
 Returns the rows as array
 
@@ -184,7 +184,7 @@ Parameters
     * ``<field_name>[end]`` A string that ends with
     * ``<field_name>[has]`` A string includes value
 
-/update_rows
+/cm/update_rows
 -------------
 Updates entry
 
@@ -194,7 +194,7 @@ Parameters
 * ``id`` The id of row to update or a comma seperated list od ids, if is not set it will create a new entry. (GET)
 * ``<field_name>`` The value of the field for the update or insert action (POST)
 
-/empty_row
+/cm/empty_row
 ----------
 Returns a row with the default values
 
@@ -202,7 +202,7 @@ Parameters
 
 * ``t`` The name of the table (GET)
 
-/insert_row
+/cm/insert_row
 -----------
 Inserts a new row in the content table
 
@@ -211,7 +211,7 @@ Parameters
 * ``t`` The name of the table (GET)
 * ``<field_name>`` The value of the field for the update or insert action (POST)
 
-/delete
+/cm/delete
 -------
 Deletes a row
 
@@ -221,12 +221,12 @@ Parameters
 * ``id`` The id of row to delete (POST)
 
 
-/list
+/cm/list
 ----
 Returns the rows as an array of objects in json format. I wont return the total rows
 Parameters are like ``/list_rows``
 
-/csv
+/cm/csv
 ----
 Returns the rows in csv format for download
 Parameters are like ``/list_rows``
