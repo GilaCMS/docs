@@ -43,7 +43,7 @@
   .highlight-json{max-height: 320px; overflow-y: scroll}
 </style>
 
-<!--script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -52,7 +52,7 @@
   ga('create', 'UA-92259816-1', 'auto');
   ga('send', 'pageview');
 
-</script-->
+</script>
 
 </head>
 
@@ -107,10 +107,20 @@
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content.html">Content</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Administration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#user-roles">User Roles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#permissions">Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#basic-settings">Basic Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#advanced-setting">Advanced Setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#users">Users</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-roles">User Roles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#main-menu">Main Menu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#widgets">Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#themes">Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-settings">Basic Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-setting">Advanced Setting</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -131,8 +141,8 @@
 </ul>
 <p class="caption"><span class="caption-text">Web Api:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="cm.html">CM Controller</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fm.html">CM Controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm.html">Content Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fm.html">File Manager</a></li>
 </ul>
 
             
@@ -208,23 +218,30 @@
 <li><a class="reference external" href="#themes"><strong>Themes</strong></a></li>
 <li><a class="reference external" href="#settings"><strong>Settings</strong></a></li>
 </ul>
-<br>
-## Users<p>Users are the persons that you can grand access to website and give them privileges to create or edit content. On <em>Users</em> tab you can add new or modify existing users.
-<img alt="_images/users172.png" src="_images/users172.png" />Themes</p>
+<br><div class="section" id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<p>Users are the persons that you can grand access to website and give them privileges to create or edit content. On <em>Users</em> tab you can add new or modify existing users.</p>
 <div class="section" id="user-roles">
-<h2>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this headline">¶</a></h2>
+<h3>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this headline">¶</a></h3>
 <p>On <em>Roles</em> you can add new roles for the users. Roles represent job functions and through them users acquire specific permissions.
 <img alt="_images/user-roles.png" src="_images/user-roles.png" />Roles</p>
 </div>
 <div class="section" id="permissions">
-<h2>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h2>
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
 <p>On <em>Permissions</em> you can set the common permissions that all registered users can have or to specific user roles. Permissions grand to the users access to resources or perform certain operations.
-<img alt="_images/user-permissions.png" src="_images/user-permissions.png" />Permissions</p>
-<br>
-## Main Menu
-The main menu is displayed in the navigation bar of the front pages of the website. By default the menu will include a link to the home page, the post categories and the publish pages. In this area you can modify the with the menu editor.
-This [video](https://www.youtube.com/watch?v=CFIQ-DWoeMY) demonstrates quickly how you can edit the menu:<br>
-## Widgets<p>Widgets are some blocks that you can show them on the layout of the website and improve the user experience of the visitors. Widgets can be for example <em>menus, comment sections, text blocks, lists of links</em>.
+<img alt="_images/user-permissions.png" src="_images/user-permissions.png" />Permissions
+<br></p>
+</div>
+</div>
+<div class="section" id="main-menu">
+<h2>Main Menu<a class="headerlink" href="#main-menu" title="Permalink to this headline">¶</a></h2>
+<p>The main menu is displayed in the navigation bar of the front pages of the website. By default the menu will include a link to the home page, the post categories and the publish pages. In this area you can modify the with the menu editor.
+This <a class="reference external" href="https://www.youtube.com/watch?v=CFIQ-DWoeMY">video</a> demonstrates quickly how you can edit the menu:
+<br></p>
+</div>
+<div class="section" id="widgets">
+<h2>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h2>
+<p>Widgets are some blocks that you can show them on the layout of the website and improve the user experience of the visitors. Widgets can be for example <em>menus, comment sections, text blocks, lists of links</em>.
 Every page have four values:</p>
 <ul class="simple">
 <li><strong>ID</strong>: a unique identifier</li>
@@ -234,25 +251,32 @@ Every page have four values:</p>
 <li><strong>Position</strong>: the position of the widget in the widget area.</li>
 <li><strong>Active</strong>: if the widget is visible or not.</li>
 </ul>
-<p><strong>Notice:</strong> When you create a new widget you can set the type of the widget, this field cannot not be changed later since it determines the widget’s structure of the data.</p>
-<br>
-## Packages<p>Packages give new functionalities on your web application. They may add a specific widget, a few new links in the administration menu or add new content and new templates to show the content.
+<p><strong>Notice:</strong> When you create a new widget you can set the type of the widget, this field cannot not be changed later since it determines the widget’s structure of the data.
+<br></p>
+</div>
+<div class="section" id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
+<p>Packages give new functionalities on your web application. They may add a specific widget, a few new links in the administration menu or add new content and new templates to show the content.
 For example <em>Facebook Comments Plugin</em> add a facebook comments section below every page post. <em>Featured Posts Grid</em> show the thumbnails photos from featured posts in the front page of a blog theme.</p>
 <p>You can administrate packages from Administration-&gt;Packages</p>
-<p><img alt="_images/addons.png" src="_images/addons.png" />Themes</p>
+<p><img alt="_images/packages.png" src="_images/packages.png" />Packages</p>
 <p>The installed packages usually show an <strong>Options</strong> button. By clicking this button you can change some  parameters for the specific package. When you save the settings the changes will take effect by reloading the page.</p>
-<p><img alt="_images/addon-options.png" src="_images/addon-options.png" />Themes</p>
-<br>
-## Themes<p>Themes change the look and style of your website. They use different colors and fonts and helps your visitors identify your website and improve their user experience (UX).</p>
-<p>You can select the theme from Administration-&gt;Themes</p>
-<p><img alt="_images/themes172.png" src="_images/themes172.png" />Themes</p>
-<p>The selected theme usually shows an <strong>Options</strong> button. By clicking this button you can change some  options for the theme like the header image (logo) of the website or the main color.</p>
-<br>
-## Settings<p>On Administration-&gt;Settings page and we can make the following configurations</p>
+<p><img alt="_images/packages-options.png" src="_images/packages-options.png" />Packages
+<br></p>
 </div>
+<div class="section" id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
+<p>Themes change the look and style of your website. They use different colors and fonts and helps your visitors identify your website and improve their user experience (UX).</p>
+<p>You can select the theme from Administration-&gt;Themes</p>
+<p><img alt="_images/themes.png" src="_images/themes.png" />Themes</p>
+<p>The selected theme usually shows an <strong>Options</strong> button. By clicking this button you can change some  options for the theme like the header image (logo) of the website or the main color.
+<br></p>
+</div>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<p>On Administration-&gt;Settings page and we can make the following configurations</p>
 <div class="section" id="basic-settings">
-<h2>Basic Settings<a class="headerlink" href="#basic-settings" title="Permalink to this headline">¶</a></h2>
-<p><img alt="_images/settings180.png" src="_images/settings180.png" />Themes</p>
+<h3>Basic Settings<a class="headerlink" href="#basic-settings" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><strong>Title</strong> is the website title. It will appear up from the menu if we don’t use a logo from the theme options.</li>
 <li><strong>Description</strong> is a small text that describes the website.</li>
@@ -266,7 +290,7 @@ For example <em>Facebook Comments Plugin</em> add a facebook comments section be
 </ul>
 </div>
 <div class="section" id="advanced-setting">
-<h2>Advanced Setting<a class="headerlink" href="#advanced-setting" title="Permalink to this headline">¶</a></h2>
+<h3>Advanced Setting<a class="headerlink" href="#advanced-setting" title="Permalink to this headline">¶</a></h3>
 <p>You change these setting if you are developing or set up the installtion.</p>
 <ul class="simple">
 <li><strong>Use CDN</strong> Use CDN for static files of popular libraries (jquery.js, vue.js). It’s not advised for local installation where internet connection may fail.</li>
@@ -274,7 +298,9 @@ For example <em>Facebook Comments Plugin</em> add a facebook comments section be
 <li><strong>Default controller</strong> The controller that will be used if the calling path do not provide it as first parameter. For example the <strong>Admin</strong> controller is used when we call mysite.com/admin but when we call <em>mysite.com</em> or <em>mysite.com/my-post</em> the default controller will be used, which is <strong>Blog</strong>, so these paths are egual with <em>mysite.com</em> and <em>mysite.com/my-post</em>. There is not need to change the default controller unless you want to change how the website will be used.</li>
 <li><strong>Environment</strong> If changes to <em>Development</em> the website wont use the combine <em>load.php</em> from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.</li>
 <li><strong>Check For Updates</strong> will automatically search for new updates on packages and display alerts.</li>
+<li><strong>Use WEBP</strong> your website will save resized images as webp images, their size is al least 10% small from jpeg or png.</li>
 </ul>
+</div>
 </div>
 </div>
 
