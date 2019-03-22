@@ -36,9 +36,9 @@ This function will run when the *post.after* event is dispatched. That happens w
 
 Activate the package in */admin/packages*. After that you should see the list of TAGS below any blog post.
 
+<br>
+<br>
 
-<br>
-<br>
 ## Widget: Twitter Timeline
 
 In this example we will create a widget that displays the last tweets of an account. Instead of using an event to run the code we let the user create instances of the widget choose in which widget area want to display the twitter plugin. Inside *src/* create a folder *twitter-timelines* and add the following files:
@@ -89,6 +89,7 @@ Activate the package. Now in */admin/widgets* you can create a new widget with t
 
 <br>
 <br>
+
 ## User: Address
 
 In this example we will add a new field for the users. Instead of adding a new column in the database table we will use the usermeta table to store new values that link to the users. Inside *src/* create a folder *user-address* and add the following files:

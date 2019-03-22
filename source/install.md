@@ -39,8 +39,8 @@ sudo a2enmod rewrite
 Don't forget to restart your server if you made any changes.
 
 In order to proceed with the installation, you will need your **database settings**. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.
-
 <br>
+
 ### Installer
 
 We access in installation page with the browser e.g *http:\/\/localhost/gila/install*
@@ -57,16 +57,16 @@ In the installation page we must fill all the fields
 
 - **Admin Username, Admin Email, Admin Password:** a user will be created for the website as administrator with these data
 
-- **Base Url:** the web address of the website must finish with '/' e.g. *mywebsite.com/*
+- **Base Url:** the web address of the website e.g. *https://mywebsite.com/*
 
 
 After filling the data and submit them, we wait a few seconds untill the installation is finished.
 
-![alt text](assets/installed.jpg)
+![](assets/installed.jpg)
 
 When installation is finished we can enter on the admin panel using the admin email and password that we wrote before.
 
-![alt text](assets/login.jpg)
+![](assets/login.png)
 
 We can always access in the login page from these links
 *mysite.com/* **/login** it redirects to the front page of the website
@@ -74,7 +74,7 @@ We can always access in the login page from these links
 
 We enter in the administration dashboard.
 
-![alt text](assets/dash.jpg)
+![Dashboard](assets/dash.png)
 
 On the administration menu we see two submenus
 - **Content** to add or edit content like pages, posts or files

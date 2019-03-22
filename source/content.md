@@ -28,9 +28,8 @@ To **create a new page** click on button **New** that you see on the up-right co
 
 The posts can be news or articles about your business or the interests of the website. They are organized in categories and are listed in chronological order.
 
-
 To **create a new post** click on button **New** that you see on the up-right corner of the table.
-![New Post](assets/new-post.png)
+![New Post](assets/post-new.png)
 <br>
 
 ## Categories
@@ -44,3 +43,11 @@ You only add or edit the names of the categories.
 Media are the images that you want to use for your posts. They are saved as files and not in the database like the other content types. The root directory of media is */assets*. The files and subfolders of */assets* are visible in the public by the path *mysite.com/assets* so you should not upload files or images that you don't want to be found from search engines.
 
 ![Media](assets/media.png)
+
+## File Manager
+
+In this page you can navigate inside the files of the installation.
+
+## DB Backups
+
+You can create a new database backup and then download it or restore(Load) it later.
