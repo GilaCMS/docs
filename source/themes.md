@@ -4,10 +4,12 @@
 Themes change the look and style of your website. You can also change the theme from *Administration->Themes*. They are located in **themes/**.
 
 **What themes do**
+
 - They override the view files from the packages. View files in packages are placed in a **views/** folder, in themes are placed directly in their root folder. For example when a controller will try to render a view file from the package core it will call **view::renderFile('blog-post.php','core')**. If exists the file **themes/<selected-theme>/blog-post.php** it will rendered instead of **src/core/views/blog-post**
 - They override the response files of the widgets. These files are placed in **widgets/** folder of the theme. For example, **themes/<selected-theme>/widgets/text.php** will replace **src/core/widgets/text/text.php** when a widget of text will be rendered. This is useful when you want to add styling to widgets similar to the theme. Note that you don't have to create folders for each widget.
 
 **Structure**
+
 Inside a theme folder we need to have the following files:
 ```
 package.json

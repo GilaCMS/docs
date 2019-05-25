@@ -36,6 +36,8 @@ Contents:
    api-view
    api-event
    api-db
+   api-gpost
+   api-gForm
 
 .. toctree::
    :maxdepth: 2

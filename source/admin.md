@@ -86,6 +86,7 @@ On Administration->Settings page and we can make the following configurations
 - **Timezone** The dates and times saved in posts, logs and the rest of the content will be based on the selected timezone.
 - **Language** The language of the website and the administration menu.
 - **Admin Logo** set the image to display to administration menu and login screen.
+- **Favicon** set the icon for your website.
 
 ### Advanced Setting
 
@@ -97,3 +98,7 @@ You change these setting if you are developing or set up the installtion.
 - **Environment** If changes to *Development* the website wont use the combine *load.php* from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.
 - **Check For Updates** will automatically search for new updates on packages and display alerts.
 - **Use WEBP** your website will save resized images as webp images, their size is al least 10% small from jpeg or png.
+
+## PHPinfo
+
+This option will display the settings of the php moduls on the server. This is for informational purposes only. DO NOT share screenshots in the public of this page as it includes data about the server configuration.

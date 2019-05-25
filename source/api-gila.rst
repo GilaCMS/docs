@@ -98,6 +98,18 @@ Class gila
         
             gila::addLang('mypackages/lang/');
 
+    .. method:: addList($list, $el)
+
+        (static) Adds en element in a global array.
+
+        :param string $list: Name of the list
+        :param mixed $el: Value
+
+    .. method:: getList($list)
+
+        (static) Returns the array of a list.
+
+        :param string $list: Name of the list
 
     .. method:: widgets($list)
 
@@ -145,18 +157,19 @@ Class gila
         (static) Returns an array with the active packages names.
 
 
-    .. method:: amenu($key,$item)
+    .. method:: amenu($items)
 
         (static) Add new elements on administration menu.
 
-        :param Array $key: Index name
-        :param Array $item:
+        :param Assoc Array $items: menu items
 
         Example: 
         
         .. code-block:: php
         
-            gila::amenu('item', ['Item','controller/action','icon'=>'item-icon']);
+            gila::amenu([
+              'item'=>['Item','controller/action','icon'=>'item-icon']
+            ]);
 
 
     .. method:: amenu_child($key,$item)
