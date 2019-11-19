@@ -36,6 +36,7 @@ Contents:
    api-view
    api-event
    api-db
+   api-table
    api-gpost
    api-gForm
 
