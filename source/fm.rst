@@ -4,7 +4,7 @@ File Manager
 File Manager controller gets calls from the front end and responds in json format.
 
 /fm/dir
----------
+-------
 Returns the contents of a directory
 
 Parameters
@@ -33,7 +33,7 @@ Parameters
     ]
 
 /fm/save
-----------
+--------
 Saves contents in a file
 
 Parameters
@@ -52,7 +52,7 @@ Parameters
 
 
 /fm/newfile
-----------
+-----------
 Creates a new empty file
 
 Parameters
@@ -61,7 +61,7 @@ Parameters
 
 
 /fm/move
------------
+--------
 Renames a folder or a file
 
 Parameters
@@ -70,7 +70,7 @@ Parameters
 * ``newpath`` The destination relative path (POST)
 
 /fm/delete
--------
+----------
 Deletes a folder or a file
 
 Parameters
