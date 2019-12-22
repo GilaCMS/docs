@@ -2,6 +2,9 @@ Content Manager
 ===============
 
 Content Manager controller gets calls from the front end and responds in json format.
+In order to make these calls sucessfully you need to be recognised as a user who has the permissions for these actions.
+For your admin user, you can generate a *Unique Token Key* from **/admin/profile** and send it as GET/POST parameter.
+This token should be kept private and not used from javascript calls.
 
 /cm/describe
 ------------
@@ -15,7 +18,7 @@ Parameters
 
 .. code-block:: bash
 
-   curl 'https://gilacms.com/cm/describe/?t=post'
+   curl 'https://gilacms.com/cm/describe/?t=post&token=<unique_token_key>'
 
 **Result:**
 
@@ -97,7 +100,7 @@ Parameters
                 "title": "User",
                 "type": "select",
                 "options": {
-                    "1": "Vasilis"
+                    "1": "Admin"
                 }
             },
             "updated": {
@@ -172,9 +175,10 @@ Returns the rows as array
 Parameters
 
 * ``t`` The name of the table (GET)
-* ``orderby`` Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC`` (GET)
-* ``groupby`` Groups the results by a field or more (comma seperated) (GET)
-* ``<field_name>`` A filter to apply on any field (GET) More options:
+* ``select`` (optional) The fields to return (GET)
+* ``orderby`` (optional) Ordering the results: Examples: ``id`` ``id_ASC`` ``id_DESC`` (GET)
+* ``groupby`` (optional) Groups the results by a field or more (comma seperated) (GET)
+* ``<field_name>`` (optional) A filter to apply on any field (GET) More options:
 
     * ``<field_name>[gt]`` Greater than
     * ``<field_name>[ge]`` Greater or equal than
@@ -230,3 +234,11 @@ Parameters are like ``/list_rows``
 -------
 Returns the rows in csv format for download
 Parameters are like ``/list_rows``
+
+Multiqueries
+------------
+These actions can be used in a /cm multiquery(https://gilacms.com/blog/43)
+
+* list
+* list_rows
+* describe
