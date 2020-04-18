@@ -187,6 +187,7 @@ Parameters
     * ``<field_name>[begin]`` A string that begins with
     * ``<field_name>[end]`` A string that ends with
     * ``<field_name>[has]`` A string includes value
+    * ``<field_name>[in]`` A number that is in a list
 
 /cm/update_rows
 ---------------

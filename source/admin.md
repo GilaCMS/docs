@@ -98,6 +98,12 @@ You change these setting if you are developing or set up the installtion.
 - **Environment** If changes to *Development* the website wont use the combine *load.php* from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.
 - **Check For Updates** will automatically search for new updates on packages and display alerts.
 - **Use WEBP** your website will save resized images as webp images, their size is al least 10% small from jpeg or png.
+- **Max Media Upload (px)** The maximum width and height of uploaded images (in pixels). If these values are set, then the uploaded images with bigger sizes will be resized. This is a way to avoid excessive use of disk space from photos.
+
+The following settings can be set directly in *config.php* but be careful, because they could create security issues with your website.
+
+- **CORS** (Cross-Origin Resource Sharing) This option lets your website respond in calls from different domains. Values: '0','1'
+<br>
 
 ## PHPinfo
 
