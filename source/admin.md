@@ -102,7 +102,8 @@ You change these setting if you are developing or set up the installtion.
 
 The following settings can be set directly in *config.php* but be careful, because they could create security issues with your website.
 
-- **CORS** (Cross-Origin Resource Sharing) This option lets your website respond in calls from different domains. Values: '0','1'
+- **trusted_domains** An array of domains that your website will work. For exmple the main domain, the ip and parked domains.
+- **cors** (Cross-Origin Resource Sharing) An array of domains that your website respond in requests.
 <br>
 
 ## PHPinfo
