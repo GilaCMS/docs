@@ -4,7 +4,7 @@
 In the administration menu you the Administration option gives a sub menu of the basic administration areas
 
 - [**Users**](#users)
-- [**Main Menu**](#mainmenu)
+- [**Main Menu**](#main-menu)
 - [**Widgets**](#widgets)
 - [**Packages**](#packages)
 - [**Themes**](#themes)
@@ -100,12 +100,20 @@ You change these setting if you are developing or set up the installtion.
 - **Use WEBP** your website will save resized images as webp images, their size is al least 10% small from jpeg or png.
 - **Max Media Upload (px)** The maximum width and height of uploaded images (in pixels). If these values are set, then the uploaded images with bigger sizes will be resized. This is a way to avoid excessive use of disk space from photos.
 
-The following settings can be set directly in *config.php* but be careful, because they could create security issues with your website.
+The following settings can be set directly in *config.php* but you be careful, because they could create security issues with your website.
 
-- **trusted_domains** An array of domains that your website will work. For exmple the main domain, the ip and parked domains.
-- **cors** (Cross-Origin Resource Sharing) An array of domains that your website respond in requests.
+- **trusted_domains** An array of domains that your website will work. For example the main domain, the ip and parked domains.
+- **cors** (Cross-Origin Resource Sharing) An array of domains that your website will respond in requests.
 <br>
 
 ## PHPinfo
 
 This option will display the settings of the php moduls on the server. This is for informational purposes only. DO NOT share screenshots in the public of this page as it includes data about the server configuration.
+
+## /admin/sql
+
+In this page you can review your database, only administrators have access.
+
+## /admin/content
+
+In this page you can see all the registered tables in your system.

@@ -24,11 +24,14 @@ $list = $response->json();
 - method:string Default: POST
 - url:string the url, applies only on method set() (see below)
 
+
 ### body ()
 Returns the row contents of the response
 
+
 ### json ()
 Returns the response data in object format or null
+
 
 ### header ()
 Returns a header value. If header is not specified, it returns the array of headers
@@ -36,7 +39,8 @@ Returns a header value. If header is not specified, it returns the array of head
 **Parameters**
 - $key: (optional) the header name
 
-### set ($name, $args)
+
+### set ()
 (static) Sets the prefix arguments of a base gpost
 
 **Parameters**
@@ -60,6 +64,7 @@ $response = new gpost('get', $postData, 'api_ex');
 
 ```
 
+
 ## Class gForm
 
 Displays forms
@@ -72,7 +77,7 @@ be removed in this function. Return boolean.
 **Parameters**
 - $name: (optional) the form token name.
 
-### verifyToken ($name, $check)
+### verifyToken ()
 Compares a value to the stored token in session. Returns boolean
 
 **Parameters**
@@ -85,7 +90,7 @@ Compares a value to the stored token in session. Returns boolean
 **Parameters**
 - $name: the form token name
 
-### hiddenInput ($name)
+### hiddenInput ()
 (static) Prints a hidden input with the value of the form token.
 
 **Parameters**
@@ -113,7 +118,8 @@ gForm::html([
 ]);
 ```
 
-### input ($name, $op[,$ov, $key])
+
+### input ()
 (static) Prints an input tag.
 
 **Parameters**
@@ -122,7 +128,8 @@ gForm::html([
 - $ov:string (optional) current value
 - $key:string (optional) input label
 
-### addInputType ($name, $function)
+
+### addInputType ()
 (static) Create a new input type for gForm class.
 
 **Parameters**

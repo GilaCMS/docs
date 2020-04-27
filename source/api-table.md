@@ -23,11 +23,14 @@ The permissions that will be send will override this array:
 ```
 So, by default the created gTable instance uses the admin permission, and it will compare them with the permissions that the table [schema](schemas.html#table-schema) accepts. The The keys of the array can have a string array of permissions or boolean (true|false) for value.
 
+
 ### name ()
 Returns the table name
 
+
 ### id ()
 Returns the field name used as primary key
+
 
 ### can ()
 Returns true if an action is permited based on permissions. When a field name is no specified the response applies for the default permission for all the fields.
@@ -44,11 +47,14 @@ $userTable->can('read', 'password');
 $userTable->can('delete'); // create & delete are not specified for fields 
 ```
 
+
 ### getTable ()
 Returns all table schema
 
+
 ### getFields ()
 Returns field schemas
+
 
 ### getEmpty ()
 Returns a new row with empty and predefined values
@@ -90,6 +96,7 @@ $userNames = $user->getRows([
 ]);
 ```
 
+
 ### getRowsIndexed ()
 Like getRows(), but rows are indexed arrays not associative arrays 
 
@@ -97,11 +104,13 @@ Like getRows(), but rows are indexed arrays not associative arrays
 - $filters:assoc (optional) the filters
 - $args:assoc (optional) more arguments
 
+
 ### totalRows ()
 Returns the number of rows found
 
 **Parameters**
 - $filters:assoc (optional) the filters
+
 
 ### deleteRow ()
 Deletes a row from the database table
