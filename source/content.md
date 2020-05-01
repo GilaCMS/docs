@@ -44,9 +44,9 @@ Media are the images that you want to use for your posts. They are saved as file
 
 ![Media](assets/media.png)
 
-## File Manager
+## Logs
 
-In this page you can navigate inside the files of the installation.
+In this page you can navigate inside the log files of the installation.
 
 ## DB Backups
 

@@ -44,6 +44,7 @@ Contents:
    :maxdepth: 2
    :caption: Web Api:
 
+   auth
    cm
    fm
 
