@@ -41,7 +41,7 @@ Returns true if an action is permited based on permissions. When a field name is
 
 The permissions that will be send will override this array:
 ```
-$permissions = user::permissions(session::user_id());
+$permissions = user::permissions(Session::user_id());
 $userTable = new gTable('user', $permissions);
 $userTable->can('read', 'password');
 $userTable->can('delete'); // create & delete are not specified for fields 

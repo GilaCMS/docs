@@ -75,10 +75,10 @@ The title to display at content administration.
 (Optional) Associative array of user permissions required to run the actions. Example:
 ```
 'permissions'=>[
-        'create'=>['admin','content-contributor'],
-        'update'=>['admin','content-editor'],
-        'delete'=>['admin']
-    ],
+    'create'=>['admin','content-contributor'],
+    'update'=>['admin','content-editor'],
+    'delete'=>['admin']
+],
 ```
 
 - **fields** (assoc array)
@@ -86,8 +86,8 @@ The title to display at content administration.
 Associative array of the content fields. They follow the [Field Schema](#field-schema). Example:
 ```
 'field_name'=> [
-            'title'=>'Title',
-        ],
+    'title'=>'Title',
+],
 ```
 
 - **pagination** (int)
@@ -123,17 +123,27 @@ Number of results per page in content administration.
 Example child for a *shop_order* content type:
 ```
 'children'=>[
-        'shop_orderitem'=>[
-            'parent_id'=>'order_id', 
-            'list'=>['id','image','product_id','description','qty','cost']
-        ]
+    'shop_orderitem'=>[
+        'parent_id'=>'order_id', 
+        'list'=>['id','image','product_id','description','qty','cost']
     ]
+]
 ```
 
 - **events** (array of [string,function])
 
-(Optional) The first value is the event name and the second value is the function that will be triggered. The function gets a reference to the specific row of the table. Posible values for the event:
-    - **change** Runs when a row is created or updated
+(Optional) The first value is the event name and the second value is the function that will be triggered. The function gets a reference to the specific row of the table. Examples:
+```
+'events'=>[
+    ['change', function(&$row) {
+      // runs when a row is created or updated
+      // update $row values
+    }],
+    ['delete', function($id) {
+      // runs on deletion of a row 
+    }]
+]
+```
 
 
 
@@ -159,17 +169,7 @@ The field type. Specifies how the data is processed. If *input-type* is not spec
 
 - **input-type** (string)
 
-Specifies what input type will be used. Default values for 1.8.0:
-    - select
-    - meta
-    - radio
-    - postcategory
-    - media
-    - textarea
-    - tinymce
-    - checkbox
-    - switcher
-    - list (cannot be used in table schemas)
+Specifies what input type will be used. Default values for 1.8.0: select, meta, radio, postcategory, media, textarea, tinymce, checkbox, switcher, list (list cannot be used in table schemas)
 
 - **allow-tags** (boolean/string)
 

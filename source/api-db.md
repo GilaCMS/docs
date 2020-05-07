@@ -12,7 +12,7 @@ Runs a query and returns the result.
 Examples:
 ```
 $result1 = $db->query("SELECT title,author FROM post;");
-$result2 = $db->query("SELECT title,author FROM post WHERE user_id=?;",[session::user_id()]);
+$result2 = $db->query("SELECT title,author FROM post WHERE user_id=?;",[Session::user_id()]);
 ```
 
 

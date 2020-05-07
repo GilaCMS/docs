@@ -59,8 +59,8 @@ You can get the option values like that:
 // options are saved using as prefix the package's folder name
 // for example if the package has the folder my_package/
 
-$option1 = gila::option("my_package.option1");
-$lang = gila::option("my_package.lang","en"); // use default value 'en'
+$option1 = Gila::option("my_package.option1");
+$lang = Gila::option("my_package.lang","en"); // use default value 'en'
 ```
 More information for [**package.json schema**](schemas.html##package-json).
 
@@ -71,7 +71,7 @@ A simple **load.php** file could be:
 ```
 <?php
 // display text below any post
-event::listen('post.after',function(){
+Event::listen('post.after',function(){
 	echo 'This is printed after post.';
 }
 
@@ -83,23 +83,23 @@ Some things you can do in a load file:
 <?php
 
 // add menu item or menu sub item
-gila::amenu(['mymenuitem'=>['Item',"myctr",'icon'=>'link']]);
-gila::amenu_child('mymenuitem',['Sub Item',"myctr/sub",'icon'=>'link']);
+Gila::amenu(['mymenuitem'=>['Item',"myctr",'icon'=>'link']]);
+Gila::amenu_child('mymenuitem',['Sub Item',"myctr/sub",'icon'=>'link']);
 
 // add an event listener
-event::listen('load', function() {
+Event::listen('load', function() {
   // this function will run after all load.php from active packages
-  if(gila::hasPrivilege('admin')==false) {
-    view::renderFile('landing-page.php', 'mypackage');
+  if(Gila::hasPrivilege('admin')==false) {
+    View::renderFile('landing-page.php', 'mypackage');
     exit;
   }
 }
 
 // register new content type
-gila::content('mytable', 'mypackage/tables/mytable.php');
+Gila::content('mytable', 'mypackage/tables/mytable.php');
 
 // add new column on an existing content type
-gila::contentInit('mytable', function(&$table) {
+Gila::contentInit('mytable', function(&$table) {
     $table['fields']['newfield'] = [
         'title'=>"New Field",   // the label to display
         'qtype'=>'varchar(80)', // the column type at database schema
@@ -109,11 +109,11 @@ gila::contentInit('mytable', function(&$table) {
 // register a controller
 // all /blog/* request are processed from class Blog in
 // blog/controllers/blogController.php
-gila::controller('blog', 'blog/controllers/blogController', 'Blog');
+Gila::controller('blog', 'blog/controllers/blogController', 'Blog');
 
 // add a new action for blog controller (/blog/topics)
-gila::action('blog','topics',function(){
-  view::render('blog-topics.php', 'mypackage');
+Gila::action('blog','topics',function(){
+  View::render('blog-topics.php', 'mypackage');
 });
 
 

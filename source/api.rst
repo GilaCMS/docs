@@ -19,7 +19,7 @@ Class gila
         
         .. code-block:: php
 
-            gila::controller('my-ctrl', 'my_package/controllers/ctrl','myctrl');
+            Gila::controller('my-ctrl', 'my_package/controllers/ctrl','myctrl');
 
     .. method:: route($r, $fn)
 
@@ -32,7 +32,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::route('some.txt', function(){ echo 'Some text.'; });
+            Gila::route('some.txt', function(){ echo 'Some text.'; });
 
     .. method:: onController($c, $fn)
 
@@ -45,7 +45,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::route('blog', function(){ blog::ppp = 24; });
+            Gila::route('blog', function(){ blog::ppp = 24; });
 
     .. method:: action($c, $action, $fn)
 
@@ -59,7 +59,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::action('blog', 'topics', function(){ blog::tagsAction(); });
+            Gila::action('blog', 'topics', function(){ blog::tagsAction(); });
 
     .. method:: before($c, $action, $fn)
 
@@ -73,7 +73,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::action('blog', 'topics', function(){ blog::tagsAction(); });
+            Gila::action('blog', 'topics', function(){ blog::tagsAction(); });
 
     .. method:: addLang($path)
 
@@ -85,7 +85,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::addLang('mypackages/lang/');
+            Gila::addLang('mypackages/lang/');
 
 
     .. method:: widgets($list)
@@ -98,7 +98,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::widgets( [‘wdg’=>’my_package/widgets/wdg’] );
+            Gila::widgets( [‘wdg’=>’my_package/widgets/wdg’] );
 
     .. method:: content($key, $path)
 
@@ -111,7 +111,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::content( 'mytable', 'package_name/content/mytable.php' );
+            Gila::content( 'mytable', 'package_name/content/mytable.php' );
 
     .. method:: contentInit($key, $init)
 
@@ -124,7 +124,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::contentInit( 'mytable', function(&$table){
+            Gila::contentInit( 'mytable', function(&$table){
                 // unlist a column from content administration
                 &$table['fields']['column1']['list] = false;
             } );
@@ -145,7 +145,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::amenu('item', ['Item','controller/action','icon'=>'item-icon']);
+            Gila::amenu('item', ['Item','controller/action','icon'=>'item-icon']);
 
 
     .. method:: amenu_child($key,$item)
@@ -159,7 +159,7 @@ Class gila
         
         .. code-block:: php
         
-            gila::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon']);
+            Gila::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon']);
 
 
     .. method:: config($key, $value = null)
@@ -247,8 +247,8 @@ Class gila
 
         .. code-block:: php
 
-            $url1 = gila::make_url('blog','post',[1]);`` returns mysite.com/blog/post/1
-            $url1 = gila::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
+            $url1 = Gila::make_url('blog','post',[1]);`` returns mysite.com/blog/post/1
+            $url1 = Gila::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
 
 
     .. method:: mt ($arg)
@@ -262,7 +262,7 @@ Class gila
         
         .. code-block:: php
 
-            gila::mt('my-table')
+            Gila::mt('my-table')
 
 
     .. method:: updateMt ($arg)
@@ -276,7 +276,7 @@ Class gila
         
         .. code-block:: php
 
-            gila::updateMt('my-table')
+            Gila::updateMt('my-table')
 
         
 
@@ -320,7 +320,7 @@ Class view
 
     .. method:: meta($meta,$value)
 
-        (static) Sets a meta value that is printed later from view::head().
+        (static) Sets a meta value that is printed later from View::head().
 
         :param string $meta: The meta name.
         :param string $value: The value.
@@ -328,7 +328,7 @@ Class view
 
     .. method:: stylesheet($href)
 
-        (static) Adds a new stylesheet link that is printed later from view::head().
+        (static) Adds a new stylesheet link that is printed later from View::head().
 
         :param string $href: The href attribute from the link.
 
@@ -373,7 +373,7 @@ Class view
 
         .. code-block:: php
 
-            view::setViewFile('admin/settings.php','new-package');
+            View::setViewFile('admin/settings.php','new-package');
             /*
             src/new-package/views/admin/settings.php
             overrides
@@ -452,7 +452,7 @@ Class view
         .. code-block:: php
 
             $img = ["image1.png","image2.png"];
-            list($file,$stacked) = view::thumb_stack($img, "tmp/stacked_file.png",80);
+            list($file,$stacked) = View::thumb_stack($img, "tmp/stacked_file.png",80);
 
             /* Returned values
 
@@ -483,7 +483,7 @@ Class db
         .. code-block:: php
 
             $result1 = $db->query("SELECT title,author FROM post;");
-            $result2 = $db->query("SELECT title,author FROM post WHERE user_id=?;",[session::user_id()]);
+            $result2 = $db->query("SELECT title,author FROM post WHERE user_id=?;",[Session::user_id()]);
 
 
     .. method:: get($q, $args)

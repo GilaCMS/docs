@@ -5,7 +5,7 @@ Themes change the look and style of your website. You can also change the theme 
 
 **What themes do**
 
-- They override the view files from the packages. View files in packages are placed in a **views/** folder, in themes are placed directly in their root folder. For example when a controller will try to render a view file from the package core it will call **view::renderFile('blog-post.php','core')**. If exists the file **themes/<selected-theme>/blog-post.php** it will rendered instead of **src/core/views/blog-post**
+- They override the view files from the packages. View files in packages are placed in a **views/** folder, in themes are placed directly in their root folder. For example when a controller will try to render a view file from the package core it will call **View::renderFile('blog-post.php','core')**. If exists the file **themes/<selected-theme>/blog-post.php** it will rendered instead of **src/core/views/blog-post**
 - They override the response files of the widgets. These files are placed in **widgets/** folder of the theme. For example, **themes/<selected-theme>/widgets/text.php** will replace **src/core/widgets/text/text.php** when a widget of text will be rendered. This is useful when you want to add styling to widgets similar to the theme. Note that you don't have to create folders for each widget.
 
 **Structure**
@@ -57,7 +57,7 @@ We create *load.php* file:
 ```
 <?php
 
-view::$parent_theme = 'gila-blog';
+View::$parent_theme = 'gila-blog';
 ... copy here the code of themes/gila-blog/load.php
 ```
 We need to let view class know which is the parent theme, so first the rendering methods will try to find the view files in the parent theme when they fail to find theme in the selected(child) theme.
@@ -82,9 +82,9 @@ Make a copy of *gila-blog* and name it *my-clone-theme*. In *package.json* file 
 Some use case of load.php
 ```
 // add new widget areas that theme includes
-array_push(gila::$widget_area, 'footer','sidebar','post.after');
+array_push(Gila::$widget_area, 'footer','sidebar','post.after');
 
 // include stylesheet
-view::stylesheet('lib/font-awesome/css/font-awesome.min.css');
+View::stylesheet('lib/font-awesome/css/font-awesome.min.css');
 
 ```
