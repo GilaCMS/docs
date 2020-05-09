@@ -130,7 +130,7 @@ View::menu('mainmenu', 'tpl/menu.php');
 ```
 
 
-### widget_area ()
+### widgetArea ()
 (static) Prints the widgets of a specific area.
 
 **Parameters**
@@ -159,7 +159,7 @@ View::getWidgetArea('sidebar');
 - $widget_file:string (optional) Alternative wiget View file
 
 
-### img ($src, $prefix='', $max=180)
+### img ()
 (static) Returns the html markup for an image or thumbnail image
 
 **Parameters**
@@ -170,6 +170,9 @@ View::getWidgetArea('sidebar');
 Example
 ```
 View::img('assets/image.png', 'md/', 500);
+
+// for images in private folders, preix is not used, so you can skip it
+View::img('data/uploads/image.png', 500);
 ```
 
 
@@ -182,7 +185,7 @@ View::img('assets/image.png', 'md/', 500);
 - $max:int (optional) The maximum width or height of thumbnail in pixels. Default=180
 
 
-### thumb_stack ()
+### thumbStack ()
 (static) Returns path to revisioned stucked image and the list of stucked photos. If image does not exist it will be created on the fly.
 
 **Parameters**
@@ -194,7 +197,7 @@ Example:
 
 ```
 $img = ["image1.png","image2.png"];
-list($file,$stacked) = View::thumb_stack($img, "tmp/stacked_file.png",80);
+list($file,$stacked) = View::thumbStack($img, "tmp/stacked_file.png",80);
 
 /* Returned values
 
@@ -207,7 +210,7 @@ $stacked[1]: false (2nd image was not stacked)
 ```
 
 
-### thumb_srcset ($src, $sizes = [1200,320])
+### thumbSrcset ()
 (static) Returns an array of resized versions of an image
 
 **Parameters**
