@@ -30,7 +30,7 @@ Event::listen('post.after', function(){
     foreach ($tags as $tag) echo " <a href='tag/$tag'>#$tag</a>";
 });
 ```
-This function will run when the *post.after* event is dispatched. That happens with *Event::fire('post.after');* or *Event::widget_area('post.after');* from *single-post.php* view file.
+This function will run when the *post.after* event is dispatched. That happens with *Event::fire('post.after');* or *Event::widgetArea('post.after');* from *single-post.php* view file.
 
 **logo.png** is the package's logo and is displayed in the package list.
 
