@@ -15,7 +15,7 @@ Gila::controller('my-ctrl', 'my_package/controllers/ctrl','myctrl');
 ```
 
 
-### route($r, $fn)
+### route ()
 (static) Registers a function call on a specific path.
 
 **Parameters**
@@ -41,7 +41,7 @@ Gila::route('blog', function(){ blog::ppp = 24; });
 ```
 
 
-### action($c, $action, $fn)
+### action ()
 (static) Registers a new action or replaces an existing for a controller.
 
 **Parameters**
