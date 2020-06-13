@@ -1,11 +1,11 @@
-## Class gTable
+## Class Table
 
-Class gTable is a tool to make queries to the database, that escapes sql injections and checks the user permissions for you.
+Class Table is a tool to make queries to the database, that escapes sql injections and checks the user permissions for you.
 
 How to create an instance:
 ```
-$userTable = new gTable('user');
-$userTable = new gTable('src/core/tables/user.php');
+$userTable = new Table('user');
+$userTable = new Table('src/core/tables/user.php');
 ```
 
 **Parameters**
@@ -21,7 +21,7 @@ The permissions that will be send will override this array:
   'delete'=> ['admin']
 ]
 ```
-So, by default the created gTable instance uses the admin permission, and it will compare them with the permissions that the table [schema](schemas.html#table-schema) accepts. The The keys of the array can have a string array of permissions or boolean (true|false) for value.
+So, by default the created Table instance uses the admin permission, and it will compare them with the permissions that the table [schema](schemas.html#table-schema) accepts. The The keys of the array can have a string array of permissions or boolean (true|false) for value.
 
 
 ### name ()
@@ -42,7 +42,7 @@ Returns true if an action is permited based on permissions. When a field name is
 The permissions that will be send will override this array:
 ```
 $permissions = user::permissions(Session::user_id());
-$userTable = new gTable('user', $permissions);
+$userTable = new Table('user', $permissions);
 $userTable->can('read', 'password');
 $userTable->can('delete'); // create & delete are not specified for fields 
 ```

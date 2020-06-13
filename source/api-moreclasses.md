@@ -1,6 +1,6 @@
 # More classes
 
-## Class gpost
+## Class HttpPost
 
 Make easy post requests from the server with the constructor of the class.
 Use:
@@ -8,7 +8,7 @@ Use:
 $postData = ['id'=> 100];
 $args = ['type'=> 'x-www-form-urlencoded'];
 
-$response = new gpost('https://api.example.com/get', $postData, $args);
+$response = new HttpPost('https://api.example.com/get', $postData, $args);
 $list = $response->json();
 ```
 **Parameters**
@@ -41,7 +41,7 @@ Returns a header value. If header is not specified, it returns the array of head
 
 
 ### set ()
-(static) Sets the prefix arguments of a base gpost
+(static) Sets the prefix arguments of a base HttpPost
 
 **Parameters**
 - $name:string the base name
@@ -53,19 +53,19 @@ $postData = ['id'=> 100];
 $args = ['type'=> 'x-www-form-urlencoded'];
 
 // directly to endpoint
-$response = new gpost('https://api.example.com/get', $postData, $args);
+$response = new HttpPost('https://api.example.com/get', $postData, $args);
 
 // using a base, you can skip sending empty arguments as third parameter,
 // and send the base api name
 $args['url] = 'https://api.example.com/';
 $args['header'] = ['Authorization'=> 'Bearer <token>'];
-gpost::set('api_ex', $args);
-$response = new gpost('get', $postData, 'api_ex');
+HttpPost::set('api_ex', $args);
+$response = new HttpPost('get', $postData, 'api_ex');
 
 ```
 
 
-## Class gForm
+## Class Form
 
 Displays forms
 
@@ -107,7 +107,7 @@ Compares a value to the stored token in session. Returns boolean
 
 Example
 ```
-gForm::html([
+Form::html([
   'group'=>[
     'type'=>'select',
     'options'=>[0=>'Group A', 0=>'Group B']
@@ -130,7 +130,7 @@ gForm::html([
 
 
 ### addInputType ()
-(static) Create a new input type for gForm class.
+(static) Create a new input type for Form class.
 
 **Parameters**
 - $name:string the input type name
@@ -143,10 +143,45 @@ gForm::html([
 
 Example
 ```
-gForm::addInputType('group-select', function($name, $field, $value) {
+Form::addInputType('group-select', function($name, $field, $value) {
   // a web coomponent that will be rendered with vuejs
   $valueProp = 'value="' . $value . '"';
   $dataProp = 'data-group="' . json_encode($field['options']) . '"';
   return "<group-select $valueProp $dataProp></group-select>";
 });
+```
+
+
+## Class Cache
+Caches data or a page for faster loads.
+
+### remember ()
+Loads or updates a string.
+
+**Parameters**
+- $name:string The item name to save the data 
+- $time:int Time in seconds to keep the value
+- $fn:function The function that calculates and return the string if it is not cached
+- $uniques:array A list of values that expire the cache if they change
+
+**Example**
+```
+Cache::remember('post-'.$id, 3600, function($list) use($id){
+  return 'Post#'.$id.'. Updated at '.data($list[0]);
+}, [Gila::mt('post')]);
+```
+
+### page ()
+Saves or loads the rest of the output from cache. The remember() method should be prefered but when you have a lot of requests and the output is not probably going to change soon, this method can give a faster response.
+
+**Parameters**
+- $name:string The item name to save the data 
+- $time:int Time in seconds to keep the value
+- $uniques:array A list of values that expire the cache if they change
+
+**Example**
+```
+if(Session::userId()===0) {
+  Cache::page('page.post-'.$id, 3600, [Gila::mt('post')]);
+}
 ```

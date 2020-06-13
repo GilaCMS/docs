@@ -37,11 +37,11 @@ Have methods that outputs the HTML
 (static) Returns the path of the current theme.
 
 
-### head($meta=[])
+### head()
 (static) Prints all the head information in <head> tag.
 
 **Parameters**
-- $file:Array (optional) Meta values to be printed.
+- $meta:Array (optional) Meta values to be printed.
 
 Example
 ```
@@ -94,7 +94,7 @@ src/core/Views/admin/settings.php
 
 
 ### renderFile ()
-(static) Prints the View file alone from theme.
+(static) Prints the view file without header and footer.
 
 **Parameters**
 - $file:string The file path.
@@ -102,7 +102,7 @@ src/core/Views/admin/settings.php
 
 
 ### includeFile ()
-(static) Includes the View file without passing the.
+(static) Prints a partial view file.
 
 **Parameters**
 - $file:string Relative path of the View file.

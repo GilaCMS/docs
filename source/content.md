@@ -43,11 +43,3 @@ You only add or edit the names of the categories.
 Media are the images that you want to use for your posts. They are saved as files and not in the database like the other content types. The root directory of media is */assets*. The files and subfolders of */assets* are visible in the public by the path *mysite.com/assets* so you should not upload files or images that you don't want to be found from search engines.
 
 ![Media](assets/media.png)
-
-## Logs
-
-In this page you can navigate inside the log files of the installation.
-
-## DB Backups
-
-You can create a new database backup and then download it or restore(Load) it later.

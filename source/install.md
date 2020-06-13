@@ -7,7 +7,7 @@ Before beginning with installation make sure that your web host or local server 
 
 - Apache 2/ Nginx server
 - MySQL / MariaDB server
-- PHP 7.0+ with the following extensions *mysqli, zip, mysqlnd, json, gd* and *mod_rewrite* enabled
+- PHP 7.2+ with the following extensions *mysqli, zip, mysqlnd, json, gd* and *mod_rewrite* enabled
 
 If you want to install Gila CMS in your local machine and not sure how to prepare your server don't hesitate to ask for help on [Gitter](https://gitter.im/GilaCMS/Lobby)
 
@@ -17,7 +17,7 @@ On **nginx** server you will need to configure the redirects in */etc/nginx/site
 ```
 location / {
     index index.php index.html index.htm;
-    rewrite gila/(?!install)(?!src)(?!themes)(?!lib)(?!assets)(?!tmp)(?!robots.txt)(.*)$ /gila/index.php?url=$1 last;
+    rewrite gila/(?!install)(?!src)(?!themes)(?!assets)(?!tmp)(?!robots.txt)(.*)$ /gila/index.php?url=$1 last;
 }
 ```
 
@@ -31,7 +31,7 @@ And add these lines after *DocumentRoot /var/www/html*
     AllowOverride All
 </Directory>
 ```
-If you need to activate mod_rewrite for apache
+If you need to activate mod_rewrite in Linux:
 ```
 sudo a2enmod rewrite
 ```

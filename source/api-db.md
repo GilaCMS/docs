@@ -1,4 +1,4 @@
-## Class db
+## Class Db
 Class db prepare statements for mysql queries to the connected database.
 We use the global ``$db`` instance to access its methods.
 

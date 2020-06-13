@@ -9,6 +9,8 @@ In the administration menu you the Administration option gives a sub menu of the
 - [**Packages**](#packages)
 - [**Themes**](#themes)
 - [**Settings**](#settings)
+- [**Logs**](#logs)
+- [**DB Backups**](#db-backups)
 <br>
 
 
@@ -82,6 +84,7 @@ On Administration->Settings page and we can make the following configurations
 - **Website URL** the url path for exmple 'https://mysite.com'
 - **Admin Email** sets the email of the administration.
 - **New users can register** adds the registration form for the visitors so they can register as users.
+- **New users activation** How the new users are activated.
 - **Theme** changes the look and style of your website. You can also change the theme from *Administration->Themes*
 - **Timezone** The dates and times saved in posts, logs and the rest of the content will be based on the selected timezone.
 - **Language** The language of the website and the administration menu.
@@ -106,7 +109,15 @@ The following settings can be set directly in *config.php* but you be careful, b
 - **cors** (Cross-Origin Resource Sharing) An array of domains that your website will respond in requests.
 <br>
 
-## PHPinfo
+## Logs
+
+In this page you can navigate inside the log files of the installation.
+
+## DB Backups
+
+You can create a new database backup and then download it or restore(Load) it later.
+
+## /admin/phpinfo
 
 This option will display the settings of the php moduls on the server. This is for informational purposes only. DO NOT share screenshots in the public of this page as it includes data about the server configuration.
 

@@ -32,13 +32,13 @@ Contents:
    :maxdepth: 2
    :caption: Api:
 
+   api-router
    api-gila
    api-view
    api-event
    api-db
    api-table
-   api-gpost
-   api-gForm
+   api-moreclasses
 
 .. toctree::
    :maxdepth: 2

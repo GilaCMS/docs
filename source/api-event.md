@@ -27,3 +27,16 @@ Returns the result of the handler.
 - $event:string The event name.
 - $default:mixed The value to return if there was no handler called.
 - $params:array (optional) Parameters to send to handler.
+
+
+### Basic events
+load
+head
+foot
+sendmail
+validateUserPassword
+recaptcha
+login.btn
+login.callback
+admin::media
+admin::media-view
