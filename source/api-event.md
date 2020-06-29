@@ -8,7 +8,7 @@ Registers and fires events (hooks)
 
 **Parameters**
 - $event:string The event name.
-- $handler:(function) The function to call.
+- $handler:(function) The function to call. The functions should expect the parameters sent from *Event::fire()*, and return value when is called from *Event::get()*
 
 
 ### fire ()
@@ -30,13 +30,12 @@ Returns the result of the handler.
 
 
 ### Basic events
-load
-head
-foot
-sendmail
-validateUserPassword
-recaptcha
-login.btn
-login.callback
-admin::media
-admin::media-view
+- **load** Runs after all packages where loaded. Useful to overrite values
+- **head** Runs inside *&lt;head&gt;* tag in a public page
+- **foot**  Runs inside *&lt;head&gt;* tag in a public page
+- **sendmail** Replaces *mail()* function in Sendmail class
+- **validateUserPassword** Run from *User::create()* to accept the new password
+- **recaptcha.form** Can print add a recaptha input in post form like register/contact-form
+- **recaptcha** is called to verify the recaptcha code send from form
+- **login.btn** can print new buttons in login form
+- **login.callback** Runs from /login/callback endpoint

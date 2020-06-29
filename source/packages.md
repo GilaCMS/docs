@@ -24,7 +24,7 @@ A simple **package.json** file:
 	"version":"1.0.0",
 	"description":"A short descriptive text of your package for what it does.",
 	"url":"package_url.com",
-    "author":"Your Name"
+  "author":"Your Name"
 }
 ```
 
@@ -109,10 +109,10 @@ Gila::contentInit('mytable', function(&$table) {
 // register a controller
 // all /blog/* request are processed from class Blog in
 // blog/controllers/blogController.php
-Gila::controller('blog', 'blog/controllers/blogController', 'Blog');
+Router::controller('blog', 'blog/controllers/blogController', 'Blog');
 
 // add a new action for blog controller (/blog/topics)
-Gila::action('blog','topics',function(){
+Router::action('blog','topics',function(){
   View::render('blog-topics.php', 'mypackage');
 });
 

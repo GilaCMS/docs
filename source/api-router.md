@@ -21,13 +21,15 @@ Router::controller('my-ctrl', 'my_package/controllers/ctrl','myctrl');
 **Parameters**
 - $r:string The path
 - $fn:function Callback for the route
-- $method:string (optional)
+- $method:string (optional) GET|POST
+- $permissions:string (optional) User persmissions that restrict access
 
 Examples:
 ```
 Router::route('some.txt', function(){ echo 'Some text.'; });
 # route with regex
 Router::route('hello/(.*)', function($x){ echo 'Hello '.$x; });
+Router::route('edit_page_/(.*)', function($x){ ... }, 'POST', 'editor');
 ```
 
 
