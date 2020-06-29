@@ -21,5 +21,5 @@ You can help us spread the word about Gila CMS! We would surely appreciate it!
 
 ### Where you can get help
 
-- Join [Slack](https://join.slack.com/t/gilacms/shared_invite/enQtMzU5OTg5OTUzMDQ3LWFiZThjMTliOGQ0NWQyOGRiZTM2ZDlmYTkxODAzZWRlOWJmNmVjNDZkYThjODRjZjdkMmNmOTU3MWUxMDlhZTc) or [Gitter](https://gitter.im/GilaCMS/Lobby)
+- Join [Gitter](https://gitter.im/GilaCMS/Lobby)
 - Ask on stackoverflow using the tag **gilacms**

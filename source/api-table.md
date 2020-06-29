@@ -117,3 +117,13 @@ Deletes a row from the database table
 
 **Parameters**
 - $id:int the value of primary key
+
+### update ()
+Updates or creates table in database based on schema. Can be used from update.php file from your package.
+
+Example
+```
+Gila::content('post','core/tables/post.php');
+$postTable = new Table('post');
+$postTable->update();
+```

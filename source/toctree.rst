@@ -35,6 +35,7 @@ Contents:
    api-router
    api-gila
    api-view
+   api-session
    api-event
    api-db
    api-table

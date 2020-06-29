@@ -75,6 +75,7 @@ The title to display at content administration.
 (Optional) Associative array of user permissions required to run the actions. Example:
 ```
 'permissions'=>[
+    'read'=>['admin','content-contributor','content-editor'],
     'create'=>['admin','content-contributor'],
     'update'=>['admin','content-editor'],
     'delete'=>['admin']
@@ -98,7 +99,7 @@ Number of results per page in content administration.
 
 (Optional) A relative path to the language prefix that translates the strings set in thetable schema like permissions and field titles.
 
-- **search-box** (boolean)
+- **search_box** (boolean)
 
 (Optional) If true, it displays a search box in content administration.
 
@@ -110,7 +111,7 @@ Number of results per page in content administration.
 
 (Optional) An array of commands that will be displayed in content administration.
 
-- **search-boxes**
+- **search_boxes**
 
 (Optional) An array of field names.  Their search filters will be displayed in content administration as.
 
@@ -145,6 +146,13 @@ Example child for a *shop_order* content type:
 ]
 ```
 
+- **meta_table** (array)
+
+(Optional) Set a default meta table for the meta fields of schema table. This table will also be created when the schema table is updated. Example:
+```
+'meta_table'=> ['usermeta', 'user_id', 'vartype', 'value']
+```
+
 
 
 ## Field Schema
@@ -162,21 +170,25 @@ The default value to use in input field.
 
 - **type** (string)
 
-The field type. Specifies how the data is processed. If *input-type* is not specified it will also be used as input type. These values can be:
-    - text
-    - select
-    - meta
+The field type. Specifies how the data is processed. If *input_type* is not specified it will also be used as input type. These values can be:
+  - text
+  - number
+  - select
+  - meta
 
-- **input-type** (string)
+- **input_type** (string)
 
-Specifies what input type will be used. Default values for 1.8.0: select, meta, radio, postcategory, media, textarea, tinymce, checkbox, switcher, list (list cannot be used in table schemas)
+Specifies what input type will be used. Default values for 1.8.0: select, meta, radio, postcategory, media, textarea, tinymce, checkbox, list (list cannot be used in table schemas)
 
-- **allow-tags** (boolean/string)
+- **allow_tags** (boolean/string)
 
 Lets the field value keep html tags or remove them. The default value of *allow-tags* is false.
 
 Example
 ```
-"allow-tags": "<a><p><ul><li>",
+"allow_tags": "<a><p><ul><li>",
 ```
 
+- **options** (boolean/string)
+
+When type is *select* then an option attributes is required for the values
