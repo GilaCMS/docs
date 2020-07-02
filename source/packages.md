@@ -11,9 +11,10 @@ lang/
 package.json
 load.php
 logo.png
+update.php
 ```
 
-The folders are optional but very useful to organize better the code. The file **package.json** is a must have as it has the basic information of the package -without it the package is invisible- and the **load.php** is the file that will register new values and events of the package.
+The folders are optional but very useful to organize better the code. The only requires files are the **package.json** which has the basic information of the package, and the **load.php**
 
 ## package.json
 
@@ -118,3 +119,23 @@ Router::action('blog','topics',function(){
 
 
 ```
+
+## logo.png
+
+An optional small(120x120px) png file
+
+## update.php
+
+This file is excecuted when a package is activated or downloaded (while active). It serves to update the database schema if the package requires it.
+
+## assets/
+
+When package is activated, the files from this folder will be copied in a public folder *assets/{package-name}/*
+
+## views/
+
+The view files are added here. they can be rendered like this:
+```
+View::render('view-file.php', '[package-name]');
+```
+
