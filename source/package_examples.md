@@ -61,7 +61,7 @@ widgets/twitter-timeline/twitter-timeline.php
 <?php
 
 // registers the widget name and its path
-Gila::widgets([
+Config::widgets([
     'twitter-timeline'=>'twitter-timelines/widgets/twitter-timeline'
 ]);
 ```
@@ -78,12 +78,12 @@ $options=[
 **widgets/twitter-timeline/twitter-timeline.php** is the view file of the widget, it will generate the html code. We use the embedding Twitter content from [here](https://publish.twitter.com)
 ```
 <?php
-$account = Gila::option('twitter-timelines.accountID','gilacms');
+$account = Config::option('twitter-timelines.accountID','gilacms');
 ?>
 <a class="twitter-timeline" data-height="400" href="https://twitter.com/<?=$account?>">Tweets by <?=$account?></a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 ```
-**Gila::option()** gets the option of the package that we set up in the package settings. A default value can be used if the option is null.
+**Config::option()** gets the option of the package that we set up in the package settings. A default value can be used if the option is null.
 
 Activate the package. Now in */admin/widgets* you can create a new widget with type *twitter-timeline* and set the widget area *sidebar* or *dashboard* to see it.
 
@@ -111,7 +111,7 @@ load.php
 
 // make changes to the user content type
 
-Gila::contentInit('user', function(&$table){
+Config::contentInit('user', function(&$table){
     $table['fields']['useraddress'] = [
         'title'=>"Address",   //the label
         'type'=>'meta',       //the values of the field will be stored in a meta table

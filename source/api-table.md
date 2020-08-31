@@ -123,7 +123,7 @@ Updates or creates table in database based on schema. Can be used from update.ph
 
 Example
 ```
-Gila::content('post','core/tables/post.php');
+Config::content('post','core/tables/post.php');
 $postTable = new Table('post');
 $postTable->update();
 ```

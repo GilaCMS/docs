@@ -168,7 +168,7 @@ Loads or updates a string.
 ```
 Cache::remember('post-'.$id, 3600, function($list) use($id){
   return 'Post#'.$id.'. Updated at '.data($list[0]);
-}, [Gila::mt('post')]);
+}, [Config::mt('post')]);
 ```
 
 ### page ()
@@ -182,6 +182,6 @@ Saves or loads the rest of the output from cache. The remember() method should b
 **Example**
 ```
 if(Session::userId()===0) {
-  Cache::page('page.post-'.$id, 3600, [Gila::mt('post')]);
+  Cache::page('page.post-'.$id, 3600, [Config::mt('post')]);
 }
 ```

@@ -60,8 +60,8 @@ You can get the option values like that:
 // options are saved using as prefix the package's folder name
 // for example if the package has the folder my_package/
 
-$option1 = Gila::option("my_package.option1");
-$lang = Gila::option("my_package.lang","en"); // use default value 'en'
+$option1 = Config::option("my_package.option1");
+$lang = Config::option("my_package.lang","en"); // use default value 'en'
 ```
 More information for [**package.json schema**](schemas.html##package-json).
 
@@ -84,23 +84,23 @@ Some things you can do in a load file:
 <?php
 
 // add menu item or menu sub item
-Gila::amenu(['mymenuitem'=>['Item',"myctr",'icon'=>'link']]);
-Gila::amenu_child('mymenuitem',['Sub Item',"myctr/sub",'icon'=>'link']);
+Config::amenu(['mymenuitem'=>['Item',"myctr",'icon'=>'link']]);
+Config::amenu_child('mymenuitem',['Sub Item',"myctr/sub",'icon'=>'link']);
 
 // add an event listener
 Event::listen('load', function() {
   // this function will run after all load.php from active packages
-  if(Gila::hasPrivilege('admin')==false) {
+  if(Config::hasPrivilege('admin')==false) {
     View::renderFile('landing-page.php', 'mypackage');
     exit;
   }
 }
 
 // register new content type
-Gila::content('mytable', 'mypackage/tables/mytable.php');
+Config::content('mytable', 'mypackage/tables/mytable.php');
 
 // add new column on an existing content type
-Gila::contentInit('mytable', function(&$table) {
+Config::contentInit('mytable', function(&$table) {
     $table['fields']['newfield'] = [
         'title'=>"New Field",   // the label to display
         'qtype'=>'varchar(80)', // the column type at database schema

@@ -33,7 +33,7 @@ Contents:
    :caption: Api:
 
    api-router
-   api-gila
+   api-config
    api-view
    api-session
    api-event

@@ -82,7 +82,7 @@ Make a copy of *gila-blog* and name it *my-clone-theme*. In *package.json* file 
 Some use case of load.php
 ```
 // add new widget areas that theme includes
-array_push(Gila::$widget_area, 'footer','sidebar','post.after');
+array_push(Config::$widget_area, 'footer','sidebar','post.after');
 
 // include stylesheet
 View::stylesheet('lib/font-awesome/css/font-awesome.min.css');

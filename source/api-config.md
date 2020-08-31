@@ -1,4 +1,4 @@
-## Class Gila
+## Class Config
 Common methods for Gila CMS
 
 
@@ -10,7 +10,7 @@ Common methods for Gila CMS
 
 Example:
 ```
-Gila::addLang('mypackages/lang/');
+Config::addLang('mypackages/lang/');
 ```
 
 
@@ -36,7 +36,7 @@ Gila::addLang('mypackages/lang/');
 Example: 
         
 ```
-Gila::widgets( [‘wdg’=>’my_package/widgets/wdg’] );
+Config::widgets( [‘wdg’=>’my_package/widgets/wdg’] );
 ```
 
 
@@ -49,7 +49,7 @@ Gila::widgets( [‘wdg’=>’my_package/widgets/wdg’] );
 
 Example:        
 ```
-Gila::content( 'mytable', 'package_name/content/mytable.php' );
+Config::content( 'mytable', 'package_name/content/mytable.php' );
 ```
 
 
@@ -62,7 +62,7 @@ Gila::content( 'mytable', 'package_name/content/mytable.php' );
 
 Example:    
 ```
-Gila::contentInit( 'mytable', function(&$table){
+Config::contentInit( 'mytable', function(&$table){
     // unlist a column from content administration
     &$table['fields']['column1']['list] = false;
 });
@@ -81,7 +81,7 @@ Gila::contentInit( 'mytable', function(&$table){
 
 Example:     
 ```     
-Gila::amenu([
+Config::amenu([
   'item'=>['Item','controller/action','icon'=>'item-icon']
 ]);
 ```
@@ -96,7 +96,7 @@ Gila::amenu([
 
 Example:    
 ```
-Gila::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon']);
+Config::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon']);
 ```
 
 
@@ -158,8 +158,8 @@ Gila::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon']
 
 Examples:
 ```
-$url1 = Gila::make_url('blog','post',[1]);`` returns mysite.com/blog/post/1
-$url1 = Gila::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
+$url1 = Config::make_url('blog','post',[1]);`` returns mysite.com/blog/post/1
+$url1 = Config::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
 ```
 
 
@@ -172,7 +172,7 @@ $url1 = Gila::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
 
 Example:
 ```
-Gila::mt('my-table')
+Config::mt('my-table')
 ```
 
 
@@ -186,6 +186,6 @@ Gila::mt('my-table')
 Example:
         
 ```
-Gila::updateMt('my-table')
+Config::updateMt('my-table')
 
 ```
