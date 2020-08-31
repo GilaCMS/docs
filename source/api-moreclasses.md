@@ -185,3 +185,25 @@ if(Session::userId()===0) {
   Cache::page('page.post-'.$id, 3600, [Config::mt('post')]);
 }
 ```
+
+## Class UserNotification
+
+### send ()
+Creates a notification for a user
+
+**Parameters**
+- $user_id:int The id of the receiver 
+- $type:string The type of notification
+- $details:string (optional) The message to display to the receiver
+- $url:string (optional) A link that is related to the notification
+
+**Example**
+```
+UserNotification::send(3, 'new_user', 'A new user was registered', 'admin/user/40');
+```
+
+### countNew ()
+Returns the number of unread notifications
+
+**Parameters**
+- $type:string (optional) The type of notification
