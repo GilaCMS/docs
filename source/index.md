@@ -2,15 +2,15 @@
 # About
 
 Gila CMS is an open-source and free content management system built with php7. Built with MVC architecture, is very easy to develop on it any customized solution. It is licensed under BSD 3-Clause License.
-The website is [gilacms.com](http://gilacms.com)
+The website is [gilacms.com](https://gilacms.com)
 
 ### Why choose Gila?
 
 Gila CMS is a good option for self-hosted blogs or startup websites
-- Installs by default a blogging system with social integrations.
+- Installs by default a blogging system.
 - No coding skills are required to install or maintain the website
-- Themes that include are responsive, that makes it accessible in all devices.
-- It is fast, and compresses the content where it needs to.
+- It is lightweight and fast.
+- Easy to build on it.
 
 ### Spreading the word!
 
@@ -21,5 +21,5 @@ You can help us spread the word about Gila CMS! We would surely appreciate it!
 
 ### Where you can get help
 
-- Join [Gitter](https://gitter.im/GilaCMS/Lobby)
 - Ask on stackoverflow using the tag **gilacms**
+- Join the Developers [Newsletter](https://tinyletter.com/gilacms)
