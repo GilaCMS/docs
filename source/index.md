@@ -21,5 +21,5 @@ You can help us spread the word about Gila CMS! We would surely appreciate it!
 
 ### Where you can get help
 
-- Ask on stackoverflow using the tag **gilacms**
+- Ask on stackoverflow using the tag **gilacms** (response will be fast)
 - Join the Developers [Newsletter](https://tinyletter.com/gilacms)

@@ -9,7 +9,6 @@ Before beginning with installation make sure that your web host or local server 
 - MySQL / MariaDB server
 - PHP 7.2+ with the following extensions *mysqli, zip, mysqlnd, json, gd, xml* and *mod_rewrite* enabled
 
-If you want to install Gila CMS in your local machine and not sure how to prepare your server don't hesitate to ask for help on [Gitter](https://gitter.im/GilaCMS/Lobby)
 
 First unzip gila in a public html folder e.g */var/www/html/gila* and make sure that the folder is writable from the application.
 
