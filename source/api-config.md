@@ -125,7 +125,7 @@ Config::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon
 - $pass:string The string to be hashed.
 
 
-### option ()
+### getOption ()
 (static) Gets an option value.
 
 **Parameters**
@@ -148,18 +148,27 @@ Config::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon
 - $path:string Folder path.
 
 
-### make_url ()
-(static) Generates a url. Return the full url path to print.
+### url ()
+(static) Generates a url. Return the url path to print.
 
 **Parameters**
-- $c:string The controller.
-- $action:string The action.
+- $str:string The path.
 - $args:Array (optional) The query parameters in array.
 
 Examples:
 ```
-$url1 = Config::make_url('blog','post',[1]);`` returns mysite.com/blog/post/1
-$url1 = Config::make_url('blog','',['page1']);`` returns mysite.com/blog/page1
+$url = Config::url('blog/post',['id'=>1]);`` returns mysite.com/blog/post?id=1
+```
+
+### base ()
+(static) Generates a url. Returns the full url path to print.
+
+**Parameters**
+- $str:string The path.
+
+Examples:
+```
+$url = Config::base('blog/post?id=1');`` returns https://mysite.com/blog/post?id=1
 ```
 
 

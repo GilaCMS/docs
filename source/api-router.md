@@ -82,8 +82,9 @@ Router::onAction('blog', 'topics', function(){ View::set('new_variable', 'value'
 - $action:string The action
 - $fn:function Callback
 
-Example:
-```
-Router::action('blog', 'topics', function(){ blog::tagsAction(); });
-```
+### getController ()
+(static) Returns the name of the controller that runs. Default: as set in the settings
+
+### getAction ()
+(static) Returns the name of the action that runs. Default: 'index'
 
