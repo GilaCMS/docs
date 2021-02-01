@@ -100,15 +100,15 @@ Config::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon
 ```
 
 
-### config ()
-(static) Gets the value of configuration element.
+### get ()
+(static) Gets the value of configuration/option element.
 
 **Parameters**
 - $key:string Index of the element.
 
 
-### setConfig ()
-(static) Sets the value of configuration element.
+### set ()
+(static) Sets the value of configuration/option element.
 
 **Parameters**
 - $key:string Index of the element.
@@ -125,20 +125,11 @@ Config::amenu_child('item', ['Child Item','controller/action','icon'=>'item-icon
 - $pass:string The string to be hashed.
 
 
-### getOption ()
-(static) Gets an option value.
+### getArray ()
+(static) Gets an option value in array form if it was saved in json format.
 
 **Parameters**
 - string $option: Option name.
-- string $default: (optional) The value to return if the option has not a saved value.
-
-
-### setOption ()
-(static) Sets an option value.
-
-**Parameters**
-- $option:string Option name.
-- $default:string The value to set.
 
 
 ### dir ()

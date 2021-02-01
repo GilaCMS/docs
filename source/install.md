@@ -7,7 +7,7 @@ Before beginning with installation make sure that your web host or local server 
 
 - Apache 2/ Nginx server
 - MySQL / MariaDB server
-- PHP 7.2+ with the following extensions *mysqli, zip, mysqlnd, json, gd, xml* and *mod_rewrite* enabled
+- PHP 7.4+ with the following extensions *mysqli, mbstring, mysqlnd, json, gd, xml* and *mod_rewrite* enabled
 
 
 First unzip gila in a public html folder e.g */var/www/html/gila* and make sure that the folder is writable from the application.
@@ -16,7 +16,7 @@ On **nginx** server you will need to configure the redirects in */etc/nginx/site
 ```
 location / {
     index index.php index.html index.htm;
-    rewrite gila/(?!install)(?!src)(?!themes)(?!assets)(?!tmp)(?!robots.txt)(.*)$ /gila/index.php?url=$1 last;
+    rewrite gila/(?!assets)(?!tmp)(?!robots.txt)(.*)$ /gila/index.php?p=$1 last;
 }
 ```
 
@@ -35,7 +35,7 @@ If you need to activate mod_rewrite in Linux:
 sudo a2enmod rewrite
 ```
 
-Don't forget to restart your server if you made any changes.
+Don't forget to restart your server when you make changes.
 
 In order to proceed with the installation, you will need your **database settings**. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. More precisely you need the database hostname, the database name, the database username and password.
 <br>

@@ -17,3 +17,5 @@ Return True or false.
 **Parameters**
 - $pri:string/Array The privilege(s) to check.
 
+### permissions ()
+(static) Get the list of the permissions for the current user.
