@@ -121,9 +121,6 @@ You can create a new database backup and then download it or restore(Load) it la
 
 This option will display the settings of the php moduls on the server. This is for informational purposes only. DO NOT share screenshots in the public of this page as it includes data about the server configuration.
 
-## /admin/sql
-
-In this page you can review your database, only administrators have access.
 
 ## /admin/content
 

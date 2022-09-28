@@ -34,6 +34,14 @@ $result = $db->get("SELECT title,author FROM post;");
 ```
 
 
+### getAssoc ()
+Runs a query and returns the results as an associative array.
+
+**Parameters**
+- $q:string The query.
+- $args:array (optional) Values to prepare the statement.
+
+
 ### gen ()
 Runs a query and returns a generator that yields the rows.
 
@@ -44,6 +52,21 @@ Runs a query and returns a generator that yields the rows.
 Example:
 ```
 $generator = $db->gen("SELECT title,author FROM post;");
+```
+
+
+### getOne ()
+Runs a query and returns the first result as an array.
+
+**Parameters**
+- $q:string The query.
+- $args:array (optional) Values to prepare the statement.
+
+Example:
+```
+$result = $db->get("SELECT title,author FROM post;");
+// Returns
+[0=>'Lorem ipsum', 'title'=>'Lorem ipsum', 1=>'John', 'author'=>'John']
 ```
 
 
@@ -65,6 +88,21 @@ $result = $db->get("SELECT title,author FROM post;");
 ```
 
 
+### value ()
+Runs a query and returns the value of the first column of the first row of the results.
+
+**Parameters**
+- $q:string The query.
+- $args:array (optional) Values to prepare the statement.
+
+Example:
+```
+$res = $db->get("SELECT title FROM post WHERE id=1;");
+// returns
+'Lorem ipsum'
+```
+
+
 ### getList ()
 Runs a query and returns an array with the values of the first columns from the results.
 
@@ -80,8 +118,8 @@ $titles = $db->get("SELECT title,author FROM post;");
 ```
 
 
-### value ()
-Runs a query and returns the value of the first column of the first row of the results.
+### getOptions ()
+Returns an associative array using the first column as keys, and the second column as values.
 
 **Parameters**
 - $q:string The query.
@@ -89,10 +127,9 @@ Runs a query and returns the value of the first column of the first row of the r
 
 Example:
 ```
-$res = $db->get("SELECT title FROM post WHERE id=1;");
+$res = $db->get("SELECT id, title FROM post;");
 // returns
-'Lorem ipsum'
-```
+[1=>'Lorem ipsum', 2=>'Lorem ipsum2']
 
 
 ### error ()

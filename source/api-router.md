@@ -7,7 +7,6 @@ The class that manages the routes and request parameters
 **Parameters**
 - $c:string Controllers name
 - $file:string Controller's filepath without the php extension
-- $name:string Optional. Controller's class name, $c is used by default
 
 Example:
 ```
@@ -31,6 +30,23 @@ Router::route('some.txt', function(){ echo 'Some text.'; });
 Router::route('hello/(.*)', function($x){ echo 'Hello '.$x; });
 Router::route('edit_page_/(.*)', function($x){ ... }, 'POST', 'editor');
 ```
+
+### post ()
+(static) Registers a new route.
+
+**Parameters**
+- $r:string The path
+- $fn:function Callback for the route
+- $permissions:string (optional) User persmissions that restrict access
+
+
+### get ()
+(static) Registers a new route.
+
+**Parameters**
+- $r:string The path
+- $fn:function Callback for the route
+- $permissions:string (optional) User persmissions that restrict access
 
 
 ### onController ()
