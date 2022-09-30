@@ -6,8 +6,8 @@ See the documentation published on [readthedocs.io](https://gila-cms.readthedocs
 
 To install sphinx on your linux machine
 ```
-sudo apt-get install pip3
-sudo pip3 install sphinx recommonmark
+sudo apt-get install pip
+sudo pip install sphinx recommonmark
 ```
 To generate the html
 ```

@@ -16,7 +16,6 @@ Contents:
    install
    content
    admin
-   imigration
 
 .. toctree::
    :maxdepth: 2
@@ -47,7 +46,6 @@ Contents:
 
    auth
    cm
-   fm
 
 
 Indices and tables

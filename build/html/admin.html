@@ -1,41 +1,23 @@
 
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Administration &mdash; Gila CMS 1.11.7 documentation</title>
-  
 
-  
-  
-    <link rel="shortcut icon" href="_static/gila-logo.svg"/>
-  
-  
-  
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <title>Administration &#8212; Gila CMS 2.0.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic_mod.css?v=0.7.0-1" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <script src="_static/js/petite-vue.js"></script>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Structure" href="structure.html" />
     <link rel="prev" title="Content" href="content.html" />
@@ -55,78 +37,111 @@
 
 </script>
 
-</head>
+  </head><body>
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
+<div id="top_nav">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
 
-          
-            <a href="toctree.html" class="icon icon-home"> Gila CMS
-          
+    <nav>
+        <p id="toggle_sidebar">
+            <a href="#" title="Toggle sidebar">|||</a>
+        </p>
+        <h1><a href="toctree.html" title="Go to homepage">Gila CMS 2.0.3 documentation</a></h1>
 
-          
-          </a>
+        <a id="mode_toggle" href="#" @click.prevent="handleClick" :title="mode">
+    <template v-if="mode == 'light'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_light"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M67.48,18.073c1.913,-1.912 1.913,-5.018 0,-6.931c-1.912,-1.912 -5.018,-1.912 -6.931,0l-6.798,6.799c-1.912,1.912 -1.912,5.018 0,6.931c1.913,1.912 5.018,1.912 6.931,-0l6.798,-6.799Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.728,61.108c1.912,-1.913 1.912,-5.018 -0,-6.931c-1.913,-1.913 -5.019,-1.913 -6.931,-0l-6.799,6.798c-1.912,1.913 -1.912,5.019 0,6.931c1.913,1.913 5.019,1.913 6.931,0l6.799,-6.798Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.682,54.177c-1.913,-1.913 -5.018,-1.913 -6.931,-0c-1.912,1.913 -1.912,5.018 0,6.931l6.798,6.798c1.913,1.913 5.019,1.913 6.931,0c1.913,-1.912 1.913,-5.018 0,-6.931l-6.798,-6.798Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M4.901,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901l-0,9.614c-0,2.705 2.196,4.901 4.9,4.901c2.705,-0 4.901,-2.196 4.901,-4.901l0,-9.614Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M18.929,11.142c-1.912,-1.912 -5.018,-1.912 -6.931,0c-1.912,1.913 -1.912,5.019 0,6.931l6.799,6.799c1.912,1.912 5.018,1.912 6.931,-0c1.912,-1.913 1.912,-5.019 -0,-6.931l-6.799,-6.799Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.108,34.623c-2.705,0 -4.901,2.196 -4.901,4.901c-0,2.705 2.196,4.901 4.901,4.901l9.614,0c2.705,0 4.901,-2.196 4.901,-4.901c-0,-2.705 -2.196,-4.901 -4.901,-4.901l-9.614,0Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
 
-          
+    <template v-if="mode == 'dark'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_dark"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><circle cx="39.311" cy="39.524" r="15.734" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.212,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.901,2.196 -4.901,4.901c0,2.705 2.197,4.901 4.901,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.662,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.989,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.732,61.103c1.91,-1.91 1.91,-5.011 0,-6.921l-0.009,-0.01c-1.91,-1.91 -5.012,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.909,1.91 5.011,1.91 6.92,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.672,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.52,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l-0,-0.01c-0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.212,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.901,2.196 -4.901,4.901c0,2.704 2.197,4.9 4.901,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.73,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 -0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.098,34.623c-2.699,0 -4.891,2.192 -4.891,4.892l-0,0.019c-0,2.699 2.192,4.891 4.891,4.891c2.7,0 4.892,-2.192 4.892,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.892,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+
+    <template v-if="mode == 'darkest'">
+        <svg width="100%" height="100%" viewBox="0 0 79 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g id="mode_darkest"><rect id="Bounds" x="0" y="-0" width="78.623" height="79.049" style="fill:none;"/><path d="M39.315,23.791c8.684,-0 15.734,7.05 15.734,15.733c0,8.684 -7.05,15.734 -15.734,15.734c-8.683,0 -15.733,-7.05 -15.733,-15.734c-0,-8.683 7.05,-15.733 15.733,-15.733Zm0,4.737c6.069,0 10.997,4.927 10.997,10.996c-0,6.069 -4.928,10.996 -10.997,10.996c-6.068,0 -10.996,-4.927 -10.996,-10.996c0,-6.069 4.928,-10.996 10.996,-10.996Z" style="fill:#fff;"/><g id="beams"><g id="beam"><path id="beam1" serif:id="beam" d="M44.216,14.515c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,0 -4.9,2.196 -4.9,4.901c-0,2.705 2.196,4.901 4.9,4.901c2.705,0 4.901,-2.196 4.901,-4.901Z" style="fill:#fff;"/></g><g id="beam2" serif:id="beam"><path id="beam3" serif:id="beam" d="M60.666,24.892c1.902,-1.902 1.902,-4.99 0,-6.892l-0.04,-0.039c-1.901,-1.902 -4.989,-1.902 -6.891,-0c-1.901,1.901 -1.901,4.989 0,6.891l0.04,0.04c1.902,1.901 4.99,1.901 6.891,-0Z" style="fill:#fff;"/></g><g id="beam4" serif:id="beam"><path id="beam5" serif:id="beam" d="M25.737,61.103c1.909,-1.91 1.909,-5.011 -0,-6.921l-0.01,-0.01c-1.91,-1.91 -5.011,-1.91 -6.921,-0c-1.91,1.91 -1.91,5.011 -0,6.921l0.01,0.01c1.91,1.91 5.011,1.91 6.921,-0Z" style="fill:#fff;"/></g><g id="beam6" serif:id="beam"><path id="beam7" serif:id="beam" d="M60.676,54.167c-1.907,-1.907 -5.004,-1.907 -6.911,0l-0.02,0.02c-1.907,1.907 -1.907,5.004 0,6.911c1.907,1.907 5.004,1.907 6.911,-0l0.02,-0.02c1.907,-1.907 1.907,-5.004 0,-6.911Z" style="fill:#fff;"/></g><g id="beam8" serif:id="beam"><path id="beam9" serif:id="beam" d="M14.524,34.623c-2.702,0 -4.896,2.194 -4.896,4.896l0,0.01c0,2.702 2.194,4.896 4.896,4.896c2.702,0 4.896,-2.194 4.896,-4.896l0,-0.01c0,-2.702 -2.194,-4.896 -4.896,-4.896Z" style="fill:#fff;"/></g><g id="beam10" serif:id="beam"><path id="beam11" serif:id="beam" d="M44.216,64.534c0,-2.705 -2.196,-4.901 -4.901,-4.901c-2.704,-0 -4.9,2.196 -4.9,4.901c-0,2.704 2.196,4.9 4.9,4.9c2.705,0 4.901,-2.196 4.901,-4.9Z" style="fill:#fff;"/></g><g id="beam12" serif:id="beam"><path id="beam13" serif:id="beam" d="M25.734,17.943c-1.911,-1.911 -5.015,-1.911 -6.926,0l-0.005,0.005c-1.911,1.911 -1.911,5.015 0,6.926c1.911,1.911 5.015,1.911 6.926,0l0.005,-0.005c1.911,-1.911 1.911,-5.014 0,-6.926Z" style="fill:#fff;"/></g><g id="beam14" serif:id="beam"><path id="beam15" serif:id="beam" d="M64.103,34.623c-2.7,0 -4.892,2.192 -4.892,4.892l-0,0.019c-0,2.699 2.192,4.891 4.892,4.891c2.699,0 4.891,-2.192 4.891,-4.891l0,-0.019c0,-2.7 -2.192,-4.892 -4.891,-4.892Z" style="fill:#fff;"/></g></g></g></svg>
+    </template>
+</a>
+
+<script>
+(function() {
+    const LOCAL_STORAGE_KEY = 'piccoloThemeMode'
+
+    var initialMode = localStorage.getItem(LOCAL_STORAGE_KEY)
+
+    if (initialMode) {
+        // Make sure the value in local storage is valid
+        if (['light', 'dark', 'darkest'].indexOf(initialMode) == -1) {
+            initialMode = 'light'
+            localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+        }
+    } else {
+        // Check if the client prefers dark mode
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            initialMode = 'dark'
+        } else {
+            initialMode = 'light'
+        }
+        localStorage.setItem(LOCAL_STORAGE_KEY, initialMode)
+    }
+
+    document.documentElement.dataset.mode = initialMode
+
+    PetiteVue.createApp({
+        'mode': initialMode,
+        handleClick() {
+            let currentMode = this.mode
+
+            if (currentMode == 'light') {
+                this.mode = 'dark'
+            } else if (currentMode == 'dark') {
+                this.mode = 'darkest'
+            } else if (currentMode == 'darkest') {
+                this.mode = 'light'
+            }
+
+            document.documentElement.dataset.mode = this.mode
+            localStorage.setItem(LOCAL_STORAGE_KEY, this.mode)
+
+            console.log(this.mode)
+        }
+    }).mount('#mode_toggle')
+})()
+</script>
+            <p class="mobile_search_link">
+                <a href="search.html" title="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 64" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                        <path d="M14.873 40.009c-2.315-3.943-3.642-8.532-3.642-13.429C11.231 11.91 23.141 0 37.811 0s26.58 11.91 26.58 26.58-11.91 26.58-26.58 26.58a26.44 26.44 0 0 1-14.277-4.161L9.739 62.794a3.12 3.12 0 0 1-4.413 0L.913 58.382c-1.217-1.218-1.217-3.196 0-4.413l13.96-13.96zM37.811 8.054c10.225 0 18.526 8.301 18.526 18.526s-8.301 18.526-18.526 18.526-18.526-8.301-18.526-18.526S27.586 8.054 37.811 8.054z" fill="#fff" />
+                    </svg>
+                </a>
+            </p>
+        
+
+        <div class="searchbox_wrapper">
             
-            
-              <div class="version">
-                1.11
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+    </nav>
 </div>
 
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">User Manual</span></p>
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="content.html">Content</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Administration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#users">Users</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#user-roles">User Roles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#permissions">Permissions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Administration</a></li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#main-menu">Main Menu</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#widgets">Widgets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#packages">Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#themes">Themes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#settings">Settings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#basic-settings">Basic Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#advanced-setting">Advanced Setting</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#phpinfo">PHPinfo</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Programmers Guide</span></p>
+<p class="caption" role="heading"><span class="caption-text">Programmers Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Packages</a></li>
@@ -134,231 +149,215 @@
 <li class="toctree-l1"><a class="reference internal" href="themes.html">Themes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="schemas.html">Schemas</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Api:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Api:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api-gila.html">Class gila</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-view.html">Class view</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-event.html">Class event</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-db.html">Class db</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-table.html">Class gTable</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-gpost.html">More classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-router.html">Class Router</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-config.html"># Class Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-view.html">Class View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-session.html">Class Session</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-event.html">Class Event</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-db.html">Class Db</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-table.html">Class Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-moreclasses.html">More classes</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Web Api:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Web Api:</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="auth.html">Authentication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cm.html">Content Manager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fm.html">File Manager</a></li>
 </ul>
 
-            
-          
         </div>
       </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="toctree.html">Gila CMS</a>
-        
-      </nav>
 
 
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="toctree.html">Docs</a> &raquo;</li>
-        
-      <li>Administration</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
-            <a href="_sources/admin.md.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="administration">
-<h1>Administration<a class="headerlink" href="#administration" title="Permalink to this headline">¶</a></h1>
+  <section id="administration">
+<h1>Administration<a class="headerlink" href="#administration" title="Permalink to this heading">¶</a></h1>
 <p>In the administration menu you the Administration option gives a sub menu of the basic administration areas</p>
 <ul class="simple">
-<li><a class="reference external" href="#users"><strong>Users</strong></a></li>
-<li><a class="reference external" href="#mainmenu"><strong>Main Menu</strong></a></li>
-<li><a class="reference external" href="#widgets"><strong>Widgets</strong></a></li>
-<li><a class="reference external" href="#packages"><strong>Packages</strong></a></li>
-<li><a class="reference external" href="#themes"><strong>Themes</strong></a></li>
-<li><a class="reference external" href="#settings"><strong>Settings</strong></a></li>
+<li><p><strong>Users</strong></p></li>
+<li><p><strong>Main Menu</strong></p></li>
+<li><p><strong>Widgets</strong></p></li>
+<li><p><strong>Packages</strong></p></li>
+<li><p><strong>Themes</strong></p></li>
+<li><p><strong>Settings</strong></p></li>
+<li><p><strong>Logs</strong></p></li>
+<li><p><strong>DB Backups</strong></p></li>
 </ul>
-<br><div class="section" id="users">
-<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h2>
+<section id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this heading">¶</a></h2>
 <p>Users are the persons that you can grand access to website and give them privileges to create or edit content. On <em>Users</em> tab you can add new or modify existing users.</p>
-<div class="section" id="user-roles">
-<h3>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this headline">¶</a></h3>
-<p>On <em>Roles</em> you can add new roles for the users. Roles represent job functions and through them users acquire specific permissions.
-<img alt="_images/user-roles.png" src="_images/user-roles.png" />Roles</p>
-</div>
-<div class="section" id="permissions">
-<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h3>
-<p>On <em>Permissions</em> you can set the common permissions that all registered users can have or to specific user roles. Permissions grand to the users access to resources or perform certain operations.
-<img alt="_images/user-permissions.png" src="_images/user-permissions.png" />Permissions
-<br></p>
-</div>
-</div>
-<div class="section" id="main-menu">
-<h2>Main Menu<a class="headerlink" href="#main-menu" title="Permalink to this headline">¶</a></h2>
+<section id="user-roles">
+<h3>User Roles<a class="headerlink" href="#user-roles" title="Permalink to this heading">¶</a></h3>
+<p>On <em>Roles</em> you can add new roles for the users. Roles represent job functions and through them users acquire specific permissions.</p>
+<img alt="_images/user-roles.png" src="_images/user-roles.png" />
+</section>
+<section id="permissions">
+<h3>Permissions<a class="headerlink" href="#permissions" title="Permalink to this heading">¶</a></h3>
+<p>On <em>Permissions</em> you can set the common permissions that all registered users can have or to specific user roles. Permissions grand to the users access to resources or perform certain operations.</p>
+<img alt="_images/user-permissions.png" src="_images/user-permissions.png" />
+</section>
+</section>
+<section id="main-menu">
+<h2>Main Menu<a class="headerlink" href="#main-menu" title="Permalink to this heading">¶</a></h2>
 <p>The main menu is displayed in the navigation bar of the front pages of the website. By default the menu will include a link to the home page, the post categories and the publish pages. In this area you can modify the with the menu editor.
-This <a class="reference external" href="https://www.youtube.com/watch?v=CFIQ-DWoeMY">video</a> demonstrates quickly how you can edit the menu:
-<br></p>
-</div>
-<div class="section" id="widgets">
-<h2>Widgets<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h2>
-<p>Widgets are some blocks that you can show them on the layout of the website and improve the user experience of the visitors. Widgets can be for example <em>menus, comment sections, text blocks, lists of links</em>.
+This <a class="reference external" href="https://www.youtube.com/watch?v=CFIQ-DWoeMY">video</a> demonstrates quickly how you can edit the menu:</p>
+</section>
+<section id="widgets">
+<h2>Widgets<a class="headerlink" href="#widgets" title="Permalink to this heading">¶</a></h2>
+<p>Widgets are blocks that you can show them on the layout of the website and improve the user experience of the visitors. Widgets can be for example <em>menus, comment sections, text blocks, lists of links</em>.
 Every page have four values:</p>
 <ul class="simple">
-<li><strong>ID</strong>: a unique identifier</li>
-<li><strong>Title</strong>: the title of the widget</li>
-<li><strong>Type</strong>: widget type</li>
-<li><strong>Widget Area</strong>: is where the widget will be displayed. Can be an area in a view from the website theme or the administration.</li>
-<li><strong>Position</strong>: the position of the widget in the widget area.</li>
-<li><strong>Active</strong>: if the widget is visible or not.</li>
+<li><p><strong>ID</strong>: a unique identifier</p></li>
+<li><p><strong>Title</strong>: the title of the widget</p></li>
+<li><p><strong>Type</strong>: widget type</p></li>
+<li><p><strong>Widget Area</strong>: is where the widget will be displayed. Can be an area in a view from the website theme or the administration.</p></li>
+<li><p><strong>Position</strong>: the position of the widget in the widget area.</p></li>
+<li><p><strong>Active</strong>: if the widget is visible or not.</p></li>
 </ul>
-<p><strong>Notice:</strong> When you create a new widget you can set the type of the widget, this field cannot not be changed later since it determines the widget’s structure of the data.
-<br></p>
-</div>
-<div class="section" id="packages">
-<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
+<p><strong>Notice:</strong> When you create a new widget you can set the type of the widget, this field cannot not be changed later since it determines the widget’s structure of the data.</p>
+</section>
+<section id="packages">
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">¶</a></h2>
 <p>Packages give new functionalities on your web application. They may add a specific widget, a few new links in the administration menu or add new content and new templates to show the content.
 For example <em>Facebook Comments Plugin</em> add a facebook comments section below every page post. <em>Featured Posts Grid</em> show the thumbnails photos from featured posts in the front page of a blog theme.</p>
 <p>You can administrate packages from Administration-&gt;Packages</p>
-<p><img alt="_images/packages.png" src="_images/packages.png" />Packages</p>
+<img alt="_images/packages.png" src="_images/packages.png" />
 <p>The installed packages usually show an <strong>Options</strong> button. By clicking this button you can change some  parameters for the specific package. When you save the settings the changes will take effect by reloading the page.</p>
-<p><img alt="_images/packages-options.png" src="_images/packages-options.png" />Packages
-<br></p>
-</div>
-<div class="section" id="themes">
-<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/packages-options.png" src="_images/packages-options.png" />
+</section>
+<section id="themes">
+<h2>Themes<a class="headerlink" href="#themes" title="Permalink to this heading">¶</a></h2>
 <p>Themes change the look and style of your website. They use different colors and fonts and helps your visitors identify your website and improve their user experience (UX).</p>
 <p>You can select the theme from Administration-&gt;Themes</p>
-<p><img alt="_images/themes.png" src="_images/themes.png" />Themes</p>
-<p>The selected theme usually shows an <strong>Options</strong> button. By clicking this button you can change some  options for the theme like the header image (logo) of the website or the main color.
-<br></p>
-</div>
-<div class="section" id="settings">
-<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/themes.png" src="_images/themes.png" />
+<p>The selected theme usually shows an <strong>Options</strong> button. By clicking this button you can change some  options for the theme like the header image (logo) of the website or the main color.</p>
+</section>
+<section id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this heading">¶</a></h2>
 <p>On Administration-&gt;Settings page and we can make the following configurations</p>
-<div class="section" id="basic-settings">
-<h3>Basic Settings<a class="headerlink" href="#basic-settings" title="Permalink to this headline">¶</a></h3>
+<section id="basic-settings">
+<h3>Basic Settings<a class="headerlink" href="#basic-settings" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
-<li><strong>Title</strong> is the website title. It will appear up from the menu if we don’t use a logo from the theme options.</li>
-<li><strong>Description</strong> is a small text that describes the website.</li>
-<li><strong>Website URL</strong> the url path for exmple ‘https://mysite.com’</li>
-<li><strong>Admin Email</strong> sets the email of the administration.</li>
-<li><strong>New users can register</strong> adds the registration form for the visitors so they can register as users.</li>
-<li><strong>Theme</strong> changes the look and style of your website. You can also change the theme from <em>Administration-&gt;Themes</em></li>
-<li><strong>Timezone</strong> The dates and times saved in posts, logs and the rest of the content will be based on the selected timezone.</li>
-<li><strong>Language</strong> The language of the website and the administration menu.</li>
-<li><strong>Admin Logo</strong> set the image to display to administration menu and login screen.</li>
-<li><strong>Favicon</strong> set the icon for your website.</li>
+<li><p><strong>Title</strong> is the website title. It will appear up from the menu if we don’t use a logo from the theme options.</p></li>
+<li><p><strong>Description</strong> is a small text that describes the website.</p></li>
+<li><p><strong>Website URL</strong> the url path, for example ‘<a class="reference external" href="https://mysite.com">https://mysite.com</a>’</p></li>
+<li><p><strong>Admin Email</strong> sets the email of the administration.</p></li>
+<li><p><strong>New users can register</strong> adds the registration form for the visitors so they can register as users.</p></li>
+<li><p><strong>New users activation</strong> How the new users are activated.</p></li>
+<li><p><strong>Theme</strong> changes the look and style of your website. You can also change the theme from <em>Administration-&gt;Themes</em></p></li>
+<li><p><strong>Timezone</strong> The dates and times saved in posts, logs and the rest of the content will be based on the selected timezone.</p></li>
+<li><p><strong>Language</strong> The language of the website and the administration menu.</p></li>
+<li><p><strong>Admin Logo</strong> set the image to display to administration menu and login screen.</p></li>
+<li><p><strong>Favicon</strong> set the icon for your website.</p></li>
 </ul>
-</div>
-<div class="section" id="advanced-setting">
-<h3>Advanced Setting<a class="headerlink" href="#advanced-setting" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="advanced-setting">
+<h3>Advanced Setting<a class="headerlink" href="#advanced-setting" title="Permalink to this heading">¶</a></h3>
 <p>You change these setting if you are developing or set up the installtion.</p>
 <ul class="simple">
-<li><strong>Use CDN</strong> Use CDN for static files of popular libraries (jquery.js, vue.js). It’s not advised for local installation where internet connection may fail.</li>
-<li><strong>Pretty Urls</strong> turns <em>?c=blog&amp;action=tag&amp;tag=linux</em> into <em>blog/tag/linux</em>. If is not selected by default then your apache server may not have the <em>mod_rewrite</em> enabled.</li>
-<li><strong>Default controller</strong> The controller that will be used if the calling path do not provide it as first parameter. For example the <strong>Admin</strong> controller is used when we call mysite.com/admin but when we call <em>mysite.com</em> or <em>mysite.com/my-post</em> the default controller will be used, which is <strong>Blog</strong>, so these paths are egual with <em>mysite.com</em> and <em>mysite.com/my-post</em>. There is not need to change the default controller unless you want to change how the website will be used.</li>
-<li><strong>Environment</strong> If changes to <em>Development</em> the website wont use the combine <em>load.php</em> from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.</li>
-<li><strong>Check For Updates</strong> will automatically search for new updates on packages and display alerts.</li>
-<li><strong>Use WEBP</strong> your website will save resized images as webp images, their size is al least 10% small from jpeg or png.</li>
+<li><p><strong>Use CDN</strong> Use CDN for static files of popular libraries (jquery.js, vue.js). It’s not advised for local installation where internet connection may fail.</p></li>
+<li><p><strong>Pretty Urls</strong> turns <em>?c=blog&amp;action=tag&amp;tag=linux</em> into <em>blog/tag/linux</em>. If is not selected by default then your apache server may not have the <em>mod_rewrite</em> enabled.</p></li>
+<li><p><strong>Default controller</strong> The controller that will be used if the calling path do not provide it as first parameter. For example the <strong>Admin</strong> controller is used when we call mysite.com/admin but when we call <em>mysite.com</em> or <em>mysite.com/my-post</em> the default controller will be used, which is <strong>Blog</strong>, so these paths are egual with <em>mysite.com</em> and <em>mysite.com/my-post</em>. There is not need to change the default controller unless you want to change how the website will be used.</p></li>
+<li><p><strong>Environment</strong> If changes to <em>Development</em> the website wont use the combine <em>load.php</em> from the packages and will display all notices and errors of the back end. Must use it when you make changes in the code.</p></li>
+<li><p><strong>Check For Updates</strong> will automatically search for new updates on packages and display alerts.</p></li>
+<li><p><strong>Use WEBP</strong> your website will save resized images as webp images, their size is al least 10% small from jpeg or png.</p></li>
+<li><p><strong>Max Media Upload (px)</strong> The maximum width and height of uploaded images (in pixels). If these values are set, then the uploaded images with bigger sizes will be resized. This is a way to avoid excessive use of disk space from photos.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="phpinfo">
-<h2>PHPinfo<a class="headerlink" href="#phpinfo" title="Permalink to this headline">¶</a></h2>
+<p>The following settings can be set directly in <em>config.php</em> but you be careful, because they could create security issues with your website.</p>
+<ul class="simple">
+<li><p><strong>trusted_domains</strong> An array of domains that your website will work. For example the main domain, the ip and parked domains.</p></li>
+<li><p><strong>cors</strong> (Cross-Origin Resource Sharing) An array of domains that your website will respond in requests.</p></li>
+</ul>
+</section>
+</section>
+<section id="logs">
+<h2>Logs<a class="headerlink" href="#logs" title="Permalink to this heading">¶</a></h2>
+<p>In this page you can navigate inside the log files of the installation.</p>
+</section>
+<section id="db-backups">
+<h2>DB Backups<a class="headerlink" href="#db-backups" title="Permalink to this heading">¶</a></h2>
+<p>You can create a new database backup and then download it or restore(Load) it later.</p>
+</section>
+<section id="admin-phpinfo">
+<h2>/admin/phpinfo<a class="headerlink" href="#admin-phpinfo" title="Permalink to this heading">¶</a></h2>
 <p>This option will display the settings of the php moduls on the server. This is for informational purposes only. DO NOT share screenshots in the public of this page as it includes data about the server configuration.</p>
-</div>
-</div>
+</section>
+<section id="admin-content">
+<h2>/admin/content<a class="headerlink" href="#admin-content" title="Permalink to this heading">¶</a></h2>
+<p>In this page you can see all the registered tables in your system.</p>
+</section>
+</section>
 
 
-           </div>
-           
+            <div class="clearer"></div>
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="structure.html" class="btn btn-neutral float-right" title="Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="content.html" class="btn btn-neutral float-left" title="Content" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2017-2019, Vasileios Zoumpourlis
-
-    </p>
-  </div> 
-
-</footer>
-
         </div>
       </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
     
-   
+        <div id="show_right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon"><</span><span>Page contents<span></a></p>
+        </div>
 
-</body>
+        <div id="right_sidebar">
+            <p><a class="toggle_right_sidebar" href="#"><span class="icon">></span><span>Page contents:<span></a></p>
+            <div class="page_toc">
+                <ul>
+<li><a class="reference internal" href="#">Administration</a><ul>
+<li><a class="reference internal" href="#users">Users</a><ul>
+<li><a class="reference internal" href="#user-roles">User Roles</a></li>
+<li><a class="reference internal" href="#permissions">Permissions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#main-menu">Main Menu</a></li>
+<li><a class="reference internal" href="#widgets">Widgets</a></li>
+<li><a class="reference internal" href="#packages">Packages</a></li>
+<li><a class="reference internal" href="#themes">Themes</a></li>
+<li><a class="reference internal" href="#settings">Settings</a><ul>
+<li><a class="reference internal" href="#basic-settings">Basic Settings</a></li>
+<li><a class="reference internal" href="#advanced-setting">Advanced Setting</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#logs">Logs</a></li>
+<li><a class="reference internal" href="#db-backups">DB Backups</a></li>
+<li><a class="reference internal" href="#admin-phpinfo">/admin/phpinfo</a></li>
+<li><a class="reference internal" href="#admin-content">/admin/content</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+    
+
+      <div class="clearer"></div>
+    </div>
+    <div class="button_nav_wrapper">
+        <div class="button_nav">
+            <div class="left">
+                
+                <a href="content.html">
+                    <span class="icon"><</span><span>Content</span></a>
+                
+            </div>
+
+            <div class="right">
+                
+                    <a href="structure.html"><span>Structure</span><span class="icon">></span></a>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017-2022, Vasileios Zoumpourlis.
+    </div>
+
+<p id="theme_credit">Styled using the <a href="https://github.com/piccolo-orm/piccolo_theme">Piccolo Theme</a></p>
+  </body>
 </html>

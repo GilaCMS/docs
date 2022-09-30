@@ -29,7 +29,7 @@ import os
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.todo',
+    'sphinx.ext.todo', 'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -53,7 +53,7 @@ master_doc = 'toctree'
 
 # General information about the project.
 project = u'Gila CMS'
-copyright = u'2017-2021, Vasileios Zoumpourlis'
+copyright = u'2017-2022, Vasileios Zoumpourlis'
 author = u'Vasileios Zoumpourlis'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -114,13 +114,12 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
-html_theme = "sphinx_rtd_theme"
-html_theme_path = ["_themes", ]
+html_theme = "piccolo_theme"
+html_theme_path = ["_themes"]
 
 html_theme_options = {
-    'collapse_navigation': True,
-    'display_version': True,
+#    'collapse_navigation': True,
+#    'display_version': True,
 }
 #     'navigation_depth': 3,
 
