@@ -119,7 +119,7 @@ Number of results per page in content administration.
 
 * **search_boxes**
 
-(Optional) An array of field names.  Their search filters will be displayed in content administration as.
+(Optional) An array of field names.  Their search filters will be displayed in content administration.
 
 * **children** (assoc array)
 
@@ -182,15 +182,16 @@ The default value to use in input field.
 
 * **type** (string)
 
-The field type. Specifies how the data is processed. If *input_type* is not specified it will also be used as input type. These values can be:
+The field type. Specifies how the data is processed. If *input_type* is not specified, it will also be used as input type. These values can be:
   * text
   * number
   * select
   * meta
+  * time
 
 * **input_type** (string)
 
-Specifies what input type will be used. Default values for 1.8.0: select, meta, radio, postcategory, media, textarea, tinymce, checkbox, list (list cannot be used in table schemas)
+Specifies what input type will be used. Options: select, meta, radio, postcategory, media, textarea, tinymce, checkbox, list (list cannot be used in table schemas)
 
 * **allow_tags** (boolean/string)
 
