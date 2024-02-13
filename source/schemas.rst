@@ -72,6 +72,10 @@ The title to display at content administration.
 
 (Optional) The field name that is the primary key on database table. Default value is *id*.
 
+* **clean_residual** (boolean)
+
+(Optional) If true, after deleting a row, meta data and linked rows from children tables will be removed too.
+
 * **permissions** (assoc array)
 
 (Optional) Associative array of user permissions required to run the actions. Example:
@@ -121,9 +125,33 @@ Number of results per page in content administration.
 
 (Optional) An array of field names.  Their search filters will be displayed in content administration.
 
+* **root_tables** (assoc array)
+
+(Optional) Tables in hierarchy that will be shown as breadcrumb at /admin/contentNav/{table}. Key is the root table and the value is the child's table field key.
+
+.. code-block:: bash
+
+  'root_tables'=>[
+      'subcategory'=>'subcategory_id',
+      'category'=>'parent_id',
+  ]
+
+
+* **child_tables** (assoc array)
+
+(Optional) Tables that link on current table. They are shown in tabs at /admin/contentNav/{table}. Key is the table name and the value is the child's field key.
+
+.. code-block:: bash
+
+  'child_tables'=>[
+      'resource'=>'post_id',
+      'page_post'=>'post_id',
+  ]
+
+
 * **children** (assoc array)
 
-(Optional) References to other content types that are partials of the parent content. The index of a child must be an existing content type. The child is an associative array with two indeces:
+(Optional) References to other content types that are partials of the parent content. The index of a child must be an existing content type. The difference from child_tables is that with this option, the list in displayed on the edition of the parent row. The child is an associative array with two indeces:
     * **parent_id** (string) The field of child table that points to the parent's id.
     * **list** (array) The listed fields of child table. The schema of the child must result in the same list of fields.
 
